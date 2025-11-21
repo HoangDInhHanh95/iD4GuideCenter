@@ -1,11 +1,10 @@
 <?php
 
-// 1) Load tokens.css (toàn cục hoặc chỉ cho trang chủ)
 wp_enqueue_style(
-    'id4-globals',
-    get_stylesheet_directory_uri() . '/assets/css/globals.css',
+    'id4-global-css',
+    get_stylesheet_directory_uri() . '/assets/css/global.css',
     [],
-    filemtime(get_stylesheet_directory() . '/assets/css/globals.css')
+    filemtime(get_stylesheet_directory() . '/assets/css/global.css')
 );
 
 
