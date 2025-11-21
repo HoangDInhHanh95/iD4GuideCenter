@@ -13,10 +13,9 @@ add_action('wp_enqueue_scripts', function () {
         );
     }
 
-    // Chỉ load TRANG CHỦ
+    // Chỉ load chỉ TRANG CHỦ
     if (is_front_page()) {
-
-
+        // CSS TRANG CHỦ
         $home = get_stylesheet_directory() . '/assets/css/trangchu/trang-chu.css';
         if (file_exists($home)) {
             wp_enqueue_style(
@@ -24,6 +23,28 @@ add_action('wp_enqueue_scripts', function () {
                 get_stylesheet_directory_uri() . '/assets/css/trangchu/trang-chu.css',
                 array('id4-global-css'), // ← global load trước
                 filemtime($home)
+            );
+        }
+
+        // về chúng tôi
+        $ve_chung_toi = get_stylesheet_directory() . '/assets/css/trangchu/ve-chung-toi.css';
+        if (file_exists($ve_chung_toi)) {
+            wp_enqueue_style(
+                'id4-ve-chung-toi-css',
+                get_stylesheet_directory_uri() . '/assets/css/trangchu/ve-chung-toi.css',
+                array('id4-global-css'), // ← global load trước
+                filemtime($ve_chung_toi)
+            );
+        }
+
+        // TẠI SAO NÊN CHỌN ID-4 GUIDE CENTER
+        $tsnc_iD4_guide_center = get_stylesheet_directory() . '/assets/css/trangchu/TSNC-ID-4-GUIDE-CENTER.css';
+        if (file_exists($tsnc_iD4_guide_center)) {
+            wp_enqueue_style(
+                'id4-TSNC-ID-4-GUIDE-CENTER-css',
+                get_stylesheet_directory_uri() . '/assets/css/trangchu/TSNC-ID-4-GUIDE-CENTER.css',
+                array('id4-global-css'), // ← global load trước
+                filemtime($tsnc_iD4_guide_center)
             );
         }
 

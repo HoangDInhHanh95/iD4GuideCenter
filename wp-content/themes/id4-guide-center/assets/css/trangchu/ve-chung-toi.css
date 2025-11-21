@@ -1,0 +1,130 @@
+:root {
+    /* --- 1. MÀU SẮC (COLORS) --- */
+    --id4-container-color-xam: #f3f3f3;
+    --id4-button-color: #2e3192;
+    --id4-bordrer-color: #2e3192;
+
+    /* --- 2. FONT CHỮ (TYPOGRAPHY) --- */
+    /* Thin 100 - ExtraLight 200 - Light 300 - Regular 400 - 
+    Medium 500 - SemiBold 600 - Bold 700 - ExtraBold 800 - Black 900 */
+    --id4-font-main: 'Open Sans';
+    --id4-font-weight-big-bold: 900;
+    --id4-font-weight-small-bold: 700;
+    --id4-font-weight-title: 600;
+    --id4-font-weight-desript: 400;
+
+    /* Lưu ý: Font cần được load trong Flatsome hoặc Google Fonts trước */
+    --id4-font-size-title: 32px;
+    --id4-font-size-desription: 18px;
+
+    /* --- 
+        3. KÍCH THƯỚC & KHOẢNG CÁCH (DIMENSIONS & SPACING) 
+        - 
+    --- */
+    --id4-container-width: 1100px;
+
+    --id4-header-height: 80px;
+    --id4-spacing-block: 40px;
+
+    --id4-spacing-sm: 8px;
+    --id4-spacing-md: 16px;
+    --id4-spacing-lg: 32px;
+
+    /* --- 4. MÀU SẮC CHỮ --- */
+    --id4-color-text-title: #2e3192;
+    --id4-color-text-desription: #000000;
+
+    /* --- 4. BORDER & RADIUS --- */
+    --id4-border-radius-card: 28px;
+    --id4-border-radius-card-small: 16px;
+
+    /* --- 5. Khoảng cách --- */
+    --id4-text-indent: 25px;
+}
+
+
+/* Thiết lập cơ bản */
+.id4_guide_vtt-about-us-section {
+    background-color: var(--id4-container-color-xam);
+    padding: var(--id4-spacing-block) 0;
+    font-family: var(--id4-font-main);
+    text-align: center;
+}
+
+.id4_guide_vtt-container {
+    max-width: var(--id4-container-width);
+    margin: 0 auto;
+}
+
+/* Tiêu đề chính */
+.id4_guide_vtt-main-title {
+    font-family: var(--id4-font-main);
+    font-size: var(--id4-font-size-title);
+    color: var(--id4-color-text-title);
+    font-weight: var(--id4-font-weight-title);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Tiêu đề phụ */
+.id4_guide_vtt-subtitle {
+    font-size: var(--id4-font-size-desription);
+    color: var(--id4-color-text-desription);
+    margin-bottom: 16px;
+    font-style: italic;
+}
+
+/* Nội dung mô tả */
+.id4_guide_vtt-description-content {
+    font-family: var(--id4-font-main);
+    font-size: var(--id4-font-size-desription);
+    text-indent: var(--id4-text-indent);
+    font-weight: var(--id4-font-weight-desript);
+
+    line-height: 1.6;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+/* --- MEDIA QUERIES CHO RESPONSIVE --- */
+
+/* Tablet (Màn hình nhỏ hơn 992px) */
+@media (max-width: 991px) {
+    .id4_guide_vtt-about-us-section {
+        padding: 60px 0;
+    }
+
+    .id4_guide_vtt-main-title {
+        font-size: 28px;
+    }
+
+    .id4_guide_vtt-subtitle {
+        font-size: 16px;
+    }
+
+    .id4_guide_vtt-description-content {
+        font-size: 15px;
+        padding: 0 2%;
+    }
+}
+
+/* Mobile (Màn hình nhỏ hơn 576px) */
+@media (max-width: 575px) {
+    .id4_guide_vtt-about-us-section {
+        padding: 40px 0;
+    }
+
+    .id4_guide_vtt-main-title {
+        font-size: 24px;
+    }
+
+    .id4_guide_vtt-subtitle {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .id4_guide_vtt-description-content {
+        font-size: 14px;
+        padding: 0;
+    }
+}
