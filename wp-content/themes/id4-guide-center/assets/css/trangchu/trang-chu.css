@@ -1,4 +1,216 @@
-.test-thu h1 {
-    font-size: 50px;
-    color: red;
+:root {
+    /* --- 1. MÀU SẮC (COLORS) --- */
+    --id4-container-color: #f3f3f3;
+    --id4-button-color: #2e3192;
+    --id4-bordrer-color: #2e3192;
+
+
+    /* --- 2. FONT CHỮ (TYPOGRAPHY) --- */
+    /* Thin 100 - ExtraLight 200 - Light 300 - Regular 400 - 
+    Medium 500 - SemiBold 600 - Bold 700 - ExtraBold 800 - Black 900 */
+    --id4-font-main: 'Open Sans';
+    --id4-font-weight-big-bold: 900;
+    --id4-font-weight-small-bold: 900;
+    --id4-font-weight-title: 600;
+    --id4-font-weight-desript: 400;
+
+
+
+
+    /* Lưu ý: Font cần được load trong Flatsome hoặc Google Fonts trước */
+    --id4-font-size-title: 32px;
+    --id4-font-size-desription: 18px;
+
+    /* --- 
+        3. KÍCH THƯỚC & KHOẢNG CÁCH (DIMENSIONS & SPACING) 
+        - 
+    --- */
+    --id4-container-width: 1200px;
+
+    --id4-header-height: 80px;
+    --id4-spacing-block: 40px;
+
+    --id4-spacing-sm: 8px;
+    --id4-spacing-md: 16px;
+    --id4-spacing-lg: 32px;
+
+    /* --- 4. MÀU SẮC CHỮ --- */
+    --id4-color-text-title: #2e3192;
+    --id4-color-text-desription: #000000;
+
+    /* --- 4. BORDER & RADIUS --- */
+    --id4-border-radius-card: 28px;
+    --id4-border-radius-card-small: 16px;
+
+    /* --- 5. Khoảng cách --- */
+    --id4-text-indent: 25px;
+}
+
+
+/* Thiết lập cơ bản */
+/* Thiết lập cơ bản */
+.iD4_guide-section {
+    background-color: var(--id4-container-color);
+    padding: var(--id4-spacing-block) 0;
+}
+
+.iD4_guide-container {
+    max-width: var(--id4-container-width);
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Bố cục chính sử dụng Flexbox */
+.iD4_guide-content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.iD4_guide-text-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.iD4_guide-image-content {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Hình ảnh thực tế */
+.iD4_guide-actual-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0.85;
+    /* Giảm độ đậm của hình ảnh để giống mẫu hơn */
+    max-width: 550px;
+    /* Giới hạn kích thước tối đa của hình ảnh trên desktop */
+}
+
+.iD4_guide-title {
+    font-family: var(--id4-font-main);
+    font-size: var(--id4-font-size-title);
+    color: var(--id4-color-text-title);
+    font-weight: var(--id4-font-weight-title);
+    margin-bottom: 20px;
+}
+
+.iD4_guide-description {
+    font-family: var(--id4-font-main);
+    font-size: var(--id4-font-size-desription);
+    font-weight: var(--id4-font-weight-desript);
+    color: var(--id4-color-text-desription);
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-indent: var(--id4-text-indent);
+}
+
+/* Kiểu dáng nút bấm */
+.iD4_guide-actions {
+    display: flex;
+    /* gap: 15px; */
+}
+
+.iD4_guide-btn {
+    padding: 4px 40px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: var(--id4-font-main);
+    font-size: var(--id4-font-weight-desript);
+    font-weight: var(--id4-font-weight-desript);
+    transition: background-color 0.3s, opacity 0.3s, color 0.3s, border-color 0.3s;
+    text-decoration: none;
+}
+
+/* Trạng thái Primary (Màu xanh đậm) */
+.iD4_guide-btn-primary {
+    background-color: var(--id4-button-color);
+    border: 1px solid var(--id4-bordrer-color);
+    color: white;
+}
+
+.iD4_guide-btn-primary:hover {
+    background-color: var(--id4-button-color);
+}
+
+/* Trạng thái Secondary (Viền xanh) */
+.iD4_guide-btn-secondary {
+    background-color: transparent;
+    color: var(--id4-button-color);
+    border: 1px solid var(--id4-bordrer-color);
+}
+
+.iD4_guide-btn-secondary:hover {
+    background-color: var(--id4-bordrer-color);
+}
+
+
+/* --- MEDIA QUERIES CHO RESPONSIVE --- */
+
+/* 1. Tablet (Màn hình từ 768px trở lên) */
+@media (max-width: 1024px) {
+    .iD4_guide-content-wrapper {
+        gap: 30px;
+    }
+
+    .iD4_guide-title {
+        font-size: 24px;
+    }
+
+    .iD4_guide-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* 2. Mobile (Màn hình nhỏ hơn 768px) */
+@media (max-width: 767px) {
+    .iD4_guide-content-wrapper {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+
+    .iD4_guide-text-content,
+    .iD4_guide-image-content {
+        max-width: 100%;
+    }
+
+    .iD4_guide-text-content {
+        text-align: center;
+    }
+
+    .iD4_guide-title {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .iD4_guide-description {
+        font-size: 15px;
+    }
+
+    .iD4_guide-actions {
+        justify-content: center;
+        /* flex-direction: column; */
+        /* gap: 10px; */
+    }
+
+    .iD4_guide-btn {
+        font-family: var(--id4-font-main);
+        font-size: var(--id4-font-weight-desript);
+        font-weight: var(--id4-font-weight-desript);
+        width: 100%;
+    }
+
+    .iD4_guide-image-content {
+        justify-content: center;
+    }
+
+    .iD4_guide-actual-image {
+        max-width: 90%;
+    }
 }
