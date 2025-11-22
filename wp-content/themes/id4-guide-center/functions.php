@@ -48,7 +48,30 @@ add_action('wp_enqueue_scripts', function () {
             );
         }
 
-        // JS TRANG CHỦ
+        // Quy trình đơn giản để phẫu thuật cấy ghép implant có hướng dẫn
+        $QTPTCG_impplant = get_stylesheet_directory() . '/assets/css/trangchu/QTPTCG_impplant.css';
+        if (file_exists($QTPTCG_impplant)) {
+            wp_enqueue_style(
+                'id4-QTPTCG-impplant-css',
+                get_stylesheet_directory_uri() . '/assets/css/trangchu/QTPTCG_impplant.css',
+                array('id4-global-css'), // ← global load trước
+                filemtime($QTPTCG_impplant)
+            );
+        }
+
+        //2 block iD-4 guide và stacktable guide center
+        $guide_stacktable_guide = get_stylesheet_directory() . '/assets/css/trangchu/guide-stacktable-guide.css';
+        if (file_exists($guide_stacktable_guide)) {
+            wp_enqueue_style(
+                'id4-guide-stacktable-guide-css',
+                get_stylesheet_directory_uri() . '/assets/css/trangchu/guide-stacktable-guide.css',
+                array('id4-global-css'), // ← global load trước
+                filemtime($guide_stacktable_guide)
+            );
+        }
+
+
+        // JS TRANG CHỦ guide-stacktable-guide
         $home_js = get_stylesheet_directory() . '/assets/js/trangchu/trang-chu.js';
 
         if (file_exists($home_js)) {

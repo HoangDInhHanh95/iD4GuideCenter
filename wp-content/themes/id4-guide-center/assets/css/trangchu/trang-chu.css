@@ -1,7 +1,7 @@
 /* Thiết lập cơ bản */
 .iD4_guide-section {
     background-color: var(--id4-container-color-xam);
-    padding: var(--id4-spacing-block) 0;
+    padding: 80px 0 40px 0;
 }
 
 .iD4_guide-container {
