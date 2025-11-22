@@ -1,0 +1,291 @@
+:root {
+    /* --- 1. MÀU SẮC (COLORS) --- */
+    --id4-container-color-xam: #f3f3f3;
+    --id4-button-color: #2e3192;
+    --id4-bordrer-color: #2e3192;
+
+    /* --- 2. FONT CHỮ (TYPOGRAPHY) --- */
+    /* Thin 100 - ExtraLight 200 - Light 300 - Regular 400 - 
+    Medium 500 - SemiBold 600 - Bold 700 - ExtraBold 800 - Black 900 */
+    --id4-font-main: 'Open Sans';
+    --id4-font-weight-big-bold: 900;
+    --id4-font-weight-small-bold: 700;
+    --id4-font-weight-title: 600;
+    --id4-font-weight-desript: 400;
+
+    /* Lưu ý: Font cần được load trong Flatsome hoặc Google Fonts trước */
+    --id4-font-size-title: 32px;
+    --id4-font-size-desription: 18px;
+
+    /* --- 
+        3. KÍCH THƯỚC & KHOẢNG CÁCH (DIMENSIONS & SPACING) 
+        - 
+    --- */
+    --id4-container-width: 1100px;
+
+    --id4-header-height: 80px;
+    --id4-spacing-block: 40px;
+
+    --id4-spacing-sm: 8px;
+    --id4-spacing-md: 16px;
+    --id4-spacing-lg: 32px;
+
+    /* --- 4. MÀU SẮC CHỮ --- */
+    --id4-color-text-title: #2e3192;
+    --id4-color-text-desription: #000000;
+
+    /* --- 4. BORDER & RADIUS --- */
+    --id4-border-radius-card: 28px;
+    --id4-border-radius-card-small: 16px;
+
+    /* --- 5. Khoảng cách --- */
+    --id4-text-indent: 25px;
+}
+
+/* --- 1. CSS CHUNG --- */
+/* Reset CSS chỉ áp dụng trong phạm vi wrapper này */
+.id4_DNBS_KT_section-wrapper * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style nền tảng cho Wrapper (thay thế cho body cũ) */
+.id4_DNBS_KT_section-wrapper {
+
+    background-color: #ffffff;
+    line-height: 1.6;
+    width: 100%;
+    display: block;
+}
+
+.id4_DNBS_KT_container {
+    max-width: var(--id4-container-width);
+    margin: 0 auto;
+    padding: 70px 0px 80px 0px;
+}
+
+/* Tiêu đề chính */
+.id4_DNBS_KT_main-title {
+    font-family: var(--id4-font-main);
+    color: var(--id4-color-text-title);
+    font-size: var(--id4-font-size-title);
+    font-weight: var(--id4-font-weight-title);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Wrapper chứa 2 cột */
+/* Khoảng cách giữa chữ và hình */
+.id4_DNBS_KT_profile-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+/* CỘT TEXT (Mặc định Desktop: order 1) */
+.id4_DNBS_KT_info-col {
+    flex: 1;
+    order: 1;
+}
+
+.id4_DNBS_KT_doctor-name {
+    font-family: var(--id4-font-main);
+    color: var(--id4-color-text-title);
+    font-size: var(--id4-font-size-title);
+    font-weight: var(--id4-font-weight-title);
+    margin-bottom: 5px;
+}
+
+.id4_DNBS_KT_doctor-title {
+    font-family: var(--id4-font-main);
+    color: var(--id4-color-text-title);
+    font-weight: var(--id4-font-weight-title);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.id4_DNBS_KT_description {
+    font-family: var(--id4-font-main);
+    font-weight: var(--id4-font-weight-desript);
+    color: var(--id4-color-text-desription);
+    font-size: var(--id4-font-size-desription);
+    text-indent: var(--id4-text-indent);
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* CỘT HÌNH ẢNH (Mặc định Desktop: order 2) */
+.id4_DNBS_KT_images-col {
+    flex: 1;
+    order: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.id4_DNBS_KT_img-card {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.id4_DNBS_KT_img-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Kích thước hình trên Desktop */
+.id4_DNBS_KT_img-side {
+    height: 280px;
+    margin-top: 30px;
+}
+
+/* Hình 2 bên thấp hơn */
+.id4_DNBS_KT_img-center {
+    height: 380px;
+    flex: 1.3;
+    z-index: 2;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* PHẦN QUOTE DƯỚI CÙNG */
+.id4_DNBS_KT_bottom-quote-section {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 45px;
+}
+
+.id4_DNBS_KT_bottom-quote-section::before,
+.id4_DNBS_KT_bottom-quote-section::after {
+    position: absolute;
+    top: -10px;
+    font-size: 80px;
+    color: #d1d5e6;
+    font-family: serif;
+    line-height: 1;
+}
+
+.id4_DNBS_KT_bottom-quote-section::before {
+    content: "“";
+    left: 0;
+}
+
+.id4_DNBS_KT_bottom-quote-section::after {
+    content: "”";
+    right: 0;
+}
+
+.id4_DNBS_KT_quote-text {
+    font-family: var(--id4-font-main);
+    font-style: italic;
+    font-size: var(--id4-font-size-desription);
+    color: var(--id4-color-text-desription);
+    font-weight: var(--id4-font-weight-desript);
+    text-align: justify;
+    text-indent: var(--id4-text-indent);
+}
+
+/* --- 2. RESPONSIVE TABLET (Màn hình < 992px) --- */
+@media (max-width: 992px) {
+    .id4_DNBS_KT_profile-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* ĐẢO VỊ TRÍ: Hình lên trên, Chữ xuống dưới */
+    .id4_DNBS_KT_images-col {
+        order: 1;
+        width: 100%;
+    }
+
+    .id4_DNBS_KT_info-col {
+        order: 2;
+        width: 100%;
+        text-align: center;
+    }
+
+    .id4_DNBS_KT_description {
+        text-align: justify;
+    }
+
+    /* Thu nhỏ hình một chút cho Tablet */
+    .id4_DNBS_KT_img-side {
+        height: 220px;
+    }
+
+    .id4_DNBS_KT_img-center {
+        height: 300px;
+    }
+}
+
+/* --- 3. RESPONSIVE MOBILE (Màn hình < 768px) --- */
+@media (max-width: 768px) {
+    .id4_DNBS_KT_container {
+        padding: 30px 15px;
+    }
+
+    .id4_DNBS_KT_main-title {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .id4_DNBS_KT_profile-wrapper {
+        gap: 20px;
+    }
+
+    /* CANH GIỮA TOÀN BỘ TEXT */
+    .id4_DNBS_KT_info-col {
+        text-align: center;
+    }
+
+    .id4_DNBS_KT_description {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .id4_DNBS_KT_doctor-name {
+        font-size: 24px;
+    }
+
+    .id4_DNBS_KT_doctor-title {
+        font-size: 15px;
+    }
+
+    /* XỬ LÝ HÌNH ẢNH TRÊN MOBILE */
+    .id4_DNBS_KT_images-col {
+        gap: 8px;
+    }
+
+    .id4_DNBS_KT_img-side {
+        height: 140px;
+        margin-top: 15px;
+    }
+
+    .id4_DNBS_KT_img-center {
+        height: 190px;
+    }
+
+    /* XỬ LÝ QUOTE TRÊN MOBILE */
+    .id4_DNBS_KT_bottom-quote-section {
+        padding: 10px 30px;
+    }
+
+    .id4_DNBS_KT_bottom-quote-section::before,
+    .id4_DNBS_KT_bottom-quote-section::after {
+        font-size: 50px;
+        top: -5px;
+    }
+
+    .id4_DNBS_KT_quote-text {
+        font-size: 14px;
+    }
+}

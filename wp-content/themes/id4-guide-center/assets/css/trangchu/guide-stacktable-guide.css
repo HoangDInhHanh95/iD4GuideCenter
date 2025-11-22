@@ -81,7 +81,7 @@
 
 /* Div bao bọc hình ảnh và text */
 .id4_guide_stacktable_product-content {
-    padding: 25px;
+    padding: 25px 25px 0px 25px;
     padding-top: 0;
     display: flex;
     flex-direction: column;
@@ -121,10 +121,12 @@
 }
 
 .id4_guide_stacktable_product-description {
-    font-size: 0.95em;
+    font-family: var(--id4-font-main);
+    font-weight: var(--id4-font-weight-desript);
+    font-size: 16px;
+    text-indent: var(--id4-text-indent);
     line-height: 1.6;
-    color: #555;
-    /* padding-left: 10px; */
+    color: var(--id4-color-text-desription);
     text-align: justify;
 }
 
@@ -154,18 +156,19 @@
 
 /* MÀU NÚT CHO CARD 1 */
 .id4_guide_stacktable_cta-button {
-    background-color: #3f51b5;
+    background-color: var(--id4-button-color);
     color: white;
 }
 
 /* MÀU NÚT CHO CARD 2 */
 .id4_guide_stacktable_primary-button {
-    background-color: #3f51b5;
+    background-color: var(--id4-button-color);
     color: white;
 }
 
 .id4_guide_stacktable_cta-button:hover {
-    opacity: 0.9;
+    background-color: var(--id4-button-color);
+    color: white;
 }
 
 /* --- RESPONSIVE MEDIA QUERIES --- */

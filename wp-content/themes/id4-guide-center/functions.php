@@ -70,8 +70,29 @@ add_action('wp_enqueue_scripts', function () {
             );
         }
 
+        //2 block iD-4 guide và stacktable guide center
+        $BDCG_Implant_chi_vs = get_stylesheet_directory() . '/assets/css/trangchu/BDCG-Implant-chi-vs.css';
+        if (file_exists($BDCG_Implant_chi_vs)) {
+            wp_enqueue_style(
+                'id4-BDCG-Implant-chi-vs-css',
+                get_stylesheet_directory_uri() . '/assets/css/trangchu/BDCG-Implant-chi-vs.css',
+                array('id4-global-css'), // ← global load trước
+                filemtime($BDCG_Implant_chi_vs)
+            );
+        }
 
-        // JS TRANG CHỦ guide-stacktable-guide
+
+        //2 ĐỘI NGŨ BÁC SĨ VÀ KỸ THUẬT VIÊN DNBS_kT_iD_4_guide 
+        $DNBS_kT_iD_4_guide = get_stylesheet_directory() . '/assets/css/trangchu/DNBS_kT_iD_4_guide.css';
+        if (file_exists($DNBS_kT_iD_4_guide)) {
+            wp_enqueue_style(
+                'id4-DNBS_kT_iD_4_guide-css',
+                get_stylesheet_directory_uri() . '/assets/css/trangchu/DNBS_kT_iD_4_guide.css',
+                array('id4-global-css'), // ← global load trước
+                filemtime($DNBS_kT_iD_4_guide)
+            );
+        }
+        // JS TRANG CHỦ guide-stacktable-guide 
         $home_js = get_stylesheet_directory() . '/assets/js/trangchu/trang-chu.js';
 
         if (file_exists($home_js)) {

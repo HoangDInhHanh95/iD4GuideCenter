@@ -113,7 +113,7 @@
     }
 
     .iD4_guide-btn {
-        padding: 10px 20px;
+        padding: 6px 20px;
         font-size: 14px;
     }
 }
@@ -151,9 +151,8 @@
 
     .iD4_guide-btn {
         font-family: var(--id4-font-main);
-        font-size: var(--id4-font-weight-desript);
-        font-weight: var(--id4-font-weight-desript);
-        width: 100%;
+        font-weight: var(--id4-font-weight-small-bold);
+
     }
 
     .iD4_guide-image-content {

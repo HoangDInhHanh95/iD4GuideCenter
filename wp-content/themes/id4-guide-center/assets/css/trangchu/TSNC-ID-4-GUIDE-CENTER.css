@@ -76,7 +76,7 @@
     font-family: var(--id4-font-main);
     font-size: var(--id4-font-size-desription);
     font-weight: var(--id4-font-weight-small-bold);
-    color: #333;
+    color: var(--id4-color-text-desription);
     margin-bottom: 10px;
 
 }
@@ -85,9 +85,9 @@
     font-family: var(--id4-font-main);
     font-weight: var(--id4-font-weight-desript);
     text-indent: var(--id4-text-indent);
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.6;
-    color: #555;
+    color: var(--id4-color-text-desription);
 }
 
 /* --- MEDIA QUERIES CHO RESPONSIVE --- */
