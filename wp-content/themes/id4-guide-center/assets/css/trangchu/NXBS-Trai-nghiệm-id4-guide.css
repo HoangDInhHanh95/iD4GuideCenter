@@ -1,0 +1,269 @@
+:root {
+    /* --- 1. MÀU SẮC (COLORS) --- */
+    --id4-container-color-xam: #f3f3f3;
+    --id4-button-color: #2e3192;
+    --id4-bordrer-color: #2e3192;
+
+    /* --- 2. FONT CHỮ (TYPOGRAPHY) --- */
+    /* Thin 100 - ExtraLight 200 - Light 300 - Regular 400 - 
+    Medium 500 - SemiBold 600 - Bold 700 - ExtraBold 800 - Black 900 */
+    --id4-font-main: 'Open Sans';
+    --id4-font-weight-big-bold: 900;
+    --id4-font-weight-small-bold: 700;
+    --id4-font-weight-title: 600;
+    --id4-font-weight-desript: 400;
+
+    /* Lưu ý: Font cần được load trong Flatsome hoặc Google Fonts trước */
+    --id4-font-size-title: 32px;
+    --id4-font-size-desription: 18px;
+
+    /* --- 
+        3. KÍCH THƯỚC & KHOẢNG CÁCH (DIMENSIONS & SPACING) 
+        - 
+    --- */
+    --id4-container-width: 1100px;
+
+    --id4-header-height: 80px;
+    --id4-spacing-block: 40px;
+
+    --id4-spacing-sm: 8px;
+    --id4-spacing-md: 16px;
+    --id4-spacing-lg: 32px;
+
+    /* --- 4. MÀU SẮC CHỮ --- */
+    --id4-color-text-title: #2e3192;
+    --id4-color-text-desription: #000000;
+
+    /* --- 4. BORDER & RADIUS --- */
+    --id4-border-radius-card: 28px;
+    --id4-border-radius-card-small: 16px;
+
+    /* --- 5. Khoảng cách --- */
+    --id4-text-indent: 25px;
+
+
+    --arrow-width: 40px;
+    --arrow-height: 35px;
+    --arrow-border-width: 3px;
+}
+
+
+.id4-guide-cg-noi-gi-testimonials-section {
+    padding: 80px 0px;
+    background-color: var(--id4-container-color-xam);
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.id4-guide-cg-noi-gi-testimonials-section__title {
+    font-family: var(--id4-font-main);
+    font-size: var(--id4-font-size-title);
+    font-weight: var(--id4-font-weight-title);
+    color: var(--id4-color-text-title);
+    text-transform: uppercase;
+    margin-bottom: 23px;
+}
+
+.id4-guide-cg-noi-gi-testimonials-section__container {
+    max-width: var(--id4-container-width);
+    margin: 0 auto;
+    position: relative;
+}
+
+.id4-guide-cg-noi-gi-testimonials-section__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.id4-guide-cg-noi-gi-testimonial-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.id4-guide-cg-noi-gi-testimonial-item__card {
+    width: 100%;
+    border: 2px solid var(--id4-bordrer-color);
+    border-radius: 16px;
+    padding: 40px 25px 35px;
+    position: relative;
+    background-color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.id4-guide-cg-noi-gi-testimonial-item__card::before,
+.id4-guide-cg-noi-gi-testimonial-item__card::after {
+    content: "";
+    position: absolute;
+    left: 75%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: calc(var(--arrow-width) / 2) solid transparent;
+    border-right: calc(var(--arrow-width) / 2) solid transparent;
+}
+
+.id4-guide-cg-noi-gi-testimonial-item__card::after {
+    bottom: calc(var(--arrow-height) * -1);
+    border-top: var(--arrow-height) solid var(--id4-bordrer-color);
+    z-index: 0;
+}
+
+.id4-guide-cg-noi-gi-testimonial-item__card::before {
+    bottom: calc((var(--arrow-height) - var(--arrow-border-width)) * -1);
+    border-top: calc(var(--arrow-height) - var(--arrow-border-width)) solid #ffffff;
+    z-index: 1;
+}
+
+.id4-guide-cg-noi-gi-testimonial-item__quote-icon {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    z-index: 2;
+    content: "";
+    width: 40px;
+    height: 30px;
+    background-image: url("http://localhost/iD4Center/wp-content/uploads/2025/09/icon-dau-ngoac@4x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.id4-guide-cg-noi-gi-testimonial-item__text {
+    padding-top: 15px;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #000;
+    position: relative;
+    z-index: 1;
+    text-align: justify;
+}
+
+.id4-guide-cg-noi-gi-testimonial-item__author {
+    margin-top: 35px;
+}
+
+.id4-guide-cg-noi-gi-testimonial-item__avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    background-color: #e9efff;
+}
+
+.id4-guide-cg-noi-gi-testimonial-item__name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: varv(--id4-color-text-title);
+}
+
+.id4-guide-cg-noi-gi-slider-controls {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.id4-guide-cg-noi-gi-slider-btn {
+    background-color: var(--id4-bordrer-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.id4-guide-cg-noi-gi-slider-btn:hover {
+    background-color: var(--id4-color-text-title);
+}
+
+.id4-guide-cg-noi-gi-slider-pagination {
+    display: flex;
+    gap: 10px;
+    margin: 0 20px;
+    justify-content: center;
+}
+
+.id4-guide-cg-noi-gi-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.id4-guide-cg-noi-gi-dot.id4-guide-cg-noi-gi-active {
+    background-color: var(--id4-bordrer-color);
+}
+
+@media (max-width: 767px) {
+    .id4-guide-cg-noi-gi-testimonials-section {
+        padding: 50px 15px;
+    }
+
+    .id4-guide-cg-noi-gi-testimonials-section__title {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+
+    .id4-guide-cg-noi-gi-testimonial-slider {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .id4-guide-cg-noi-gi-testimonials-section__grid {
+        display: flex;
+        grid-template-columns: none;
+        gap: 0;
+    }
+
+    .id4-guide-cg-noi-gi-testimonials-section__grid.id4-guide-cg-noi-gi-is-transitioning {
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .id4-guide-cg-noi-gi-testimonial-item {
+        flex: 0 0 100%;
+        padding: 0 5px;
+    }
+
+    .id4-guide-cg-noi-gi-slider-controls {
+        display: block;
+        text-align: center;
+    }
+
+    .id4-guide-cg-noi-gi-slider-pagination {
+        display: inline-flex;
+    }
+
+    .id4-guide-cg-noi-gi-slider-btn {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        z-index: 10;
+        display: none;
+    }
+
+    .id4-guide-cg-noi-gi-slider-btn.id4-guide-cg-noi-gi-prev {
+        left: 0;
+    }
+
+    .id4-guide-cg-noi-gi-slider-btn.id4-guide-cg-noi-gi-next {
+        right: 0;
+    }
+}

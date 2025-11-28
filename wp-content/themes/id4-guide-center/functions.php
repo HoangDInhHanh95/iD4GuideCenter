@@ -13,6 +13,16 @@ add_action('wp_enqueue_scripts', function () {
         );
     }
 
+    $iD4_footer = get_stylesheet_directory() . '/assets/css/footer.css';
+    if (file_exists($iD4_footer)) {
+        wp_enqueue_style(
+            'id4-footer-css',
+            get_stylesheet_directory_uri() . '/assets/css/footer.css',
+            array(),
+            filemtime($iD4_footer)
+        );
+    }
+
     // Chỉ load chỉ TRANG CHỦ
     if (is_front_page()) {
         // CSS TRANG CHỦ
@@ -92,6 +102,19 @@ add_action('wp_enqueue_scripts', function () {
                 filemtime($DNBS_kT_iD_4_guide)
             );
         }
+
+        // NXBS-Trai-nghiệm-id4-guide Chuyên gia nói gì về ID-4 Solution
+        $NXBS_Trai_nghiệm_id4_guide = get_stylesheet_directory() . '/assets/css/trangchu/NXBS-Trai-nghiệm-id4-guide.css';
+        if (file_exists($NXBS_Trai_nghiệm_id4_guide)) {
+            wp_enqueue_style(
+                'id4-NXBS-Trai-nghiệm-id4-guide-css',
+                get_stylesheet_directory_uri() . '/assets/css/trangchu/NXBS-Trai-nghiệm-id4-guide.css',
+                array('id4-global-css'), // ← global load trước
+                filemtime($NXBS_Trai_nghiệm_id4_guide)
+            );
+        }
+
+
         // JS TRANG CHỦ guide-stacktable-guide 
         $home_js = get_stylesheet_directory() . '/assets/js/trangchu/trang-chu.js';
 
@@ -107,7 +130,7 @@ add_action('wp_enqueue_scripts', function () {
         }
     }
 
-    // JS GUIDE
+    // JS GUIDE 
     // $bs_id4_guide_js = get_stylesheet_directory() . '/assets/js/bs-id4-guide.js';
 
     // if (file_exists($bs_id4_guide_js)) {

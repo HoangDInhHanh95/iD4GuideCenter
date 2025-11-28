@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Parisienne&family=Paytone+One&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Rochester&family=Sigmar+One&display=swap');
 
 
-
 :root {
     /* --- 1. MÀU SẮC (COLORS) --- */
     --id4-container-color-xam: #f3f3f3;
@@ -45,4 +44,9 @@
 
     /* --- 5. Khoảng cách --- */
     --id4-text-indent: 25px;
+
+    /* thêm kích thước cho thẻ trỏ xuống */
+    --arrow-width: 40px;
+    --arrow-height: 35px;
+    --arrow-border-width: 3px;
 }

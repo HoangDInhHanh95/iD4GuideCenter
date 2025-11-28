@@ -1,0 +1,222 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+:root {
+    /* --- 1. MÀU SẮC (COLORS) --- */
+    --id4-container-color-xam: #f3f3f3;
+    --id4-button-color: #2e3192;
+    --id4-bordrer-color: #2e3192;
+
+    /* --- 2. FONT CHỮ (TYPOGRAPHY) --- */
+    /* Thin 100 - ExtraLight 200 - Light 300 - Regular 400 - 
+    Medium 500 - SemiBold 600 - Bold 700 - ExtraBold 800 - Black 900 */
+    --id4-font-main: 'Open Sans';
+    --id4-font-weight-big-bold: 900;
+    --id4-font-weight-small-bold: 700;
+    --id4-font-weight-title: 600;
+    --id4-font-weight-desript: 400;
+
+    /* Lưu ý: Font cần được load trong Flatsome hoặc Google Fonts trước */
+    --id4-font-size-title: 32px;
+    --id4-font-size-desription: 18px;
+
+    /* --- 
+        3. KÍCH THƯỚC & KHOẢNG CÁCH (DIMENSIONS & SPACING) 
+        - 
+    --- */
+    --id4-container-width: 1100px;
+
+    --id4-header-height: 80px;
+    --id4-spacing-block: 40px;
+
+    --id4-spacing-sm: 8px;
+    --id4-spacing-md: 16px;
+    --id4-spacing-lg: 32px;
+
+    /* --- 4. MÀU SẮC CHỮ --- */
+    --id4-color-text-title: #2e3192;
+    --id4-color-text-desription: #000000;
+
+    /* --- 4. BORDER & RADIUS --- */
+    --id4-border-radius-card: 28px;
+    --id4-border-radius-card-small: 16px;
+
+    /* --- 5. Khoảng cách --- */
+    --id4-text-indent: 25px;
+
+
+    --arrow-width: 40px;
+    --arrow-height: 35px;
+    --arrow-border-width: 3px;
+}
+
+
+/* CSS đã được cập nhật prefix thành id4_footer */
+.id4_footer {
+    font-family: var(--id4-font-main);
+    background-color: var(--id4-button-color);
+    color: #ffffff;
+    padding: 50px 0;
+    /* Căn giữa toàn bộ nội dung bằng Flexbox */
+    display: flex;
+    justify-content: center;
+}
+
+.id4_footer-container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.id4_footer-col {
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.id4_footer-col h4 {
+    font-family: var(--id4-font-main);
+    font-weight: var(--id4-font-weight-title);
+    color: #ffffff;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.id4_footer-logo {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.id4_footer-logo sup {
+    font-size: 12px;
+}
+
+.id4_footer-title-spacer {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    visibility: hidden;
+    display: block;
+}
+
+.id4_footer-info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.id4_footer-info-item i {
+    margin-right: 12px;
+    margin-top: 5px;
+    min-width: 16px;
+    text-align: center;
+}
+
+.id4_footer-map-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.id4_footer-map-button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.id4_footer-map-button i {
+    margin-right: 8px;
+}
+
+.id4_footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.id4_footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.id4_footer-col ul li a {
+    font-family: var(--id4-font-main);
+    font-weight: var(--id4-font-weight-small-bold);
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.id4_footer-col ul li a:hover {
+    color: #e0e0e0;
+    padding-left: 5px;
+}
+
+.id4_footer-social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 10px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.id4_footer-social-links a:hover {
+    color: #0056a4;
+    background-color: #ffffff;
+}
+
+.id4_footer-fanpage-img {
+    margin-top: 25px;
+}
+
+.id4_footer-fanpage-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* CSS cho Responsive */
+
+@media (min-width: 992px) {
+    .id4_footer-col {
+        width: 25%;
+    }
+}
+
+@media (max-width: 991.98px) and (min-width: 768px) {
+    .id4_footer-col {
+        width: 50%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .id4_footer-col {
+        width: 100%;
+    }
+
+    .id4_footer-title-spacer {
+        display: none;
+    }
+}
