@@ -13,6 +13,7 @@ add_action('wp_enqueue_scripts', function () {
         );
     }
 
+    // css footer
     $iD4_footer = get_stylesheet_directory() . '/assets/css/footer.css';
     if (file_exists($iD4_footer)) {
         wp_enqueue_style(
@@ -22,6 +23,9 @@ add_action('wp_enqueue_scripts', function () {
             filemtime($iD4_footer)
         );
     }
+
+
+
 
     // Chỉ load chỉ TRANG CHỦ
     if (is_front_page()) {
@@ -117,14 +121,24 @@ add_action('wp_enqueue_scripts', function () {
 
         // JS TRANG CHỦ guide-stacktable-guide 
         $home_js = get_stylesheet_directory() . '/assets/js/trangchu/trang-chu.js';
-
         if (file_exists($home_js)) {
-
             wp_enqueue_script(
                 'id4-trang-chu-js',
                 get_stylesheet_directory_uri() . '/assets/js/trangchu/trang-chu.js',
                 array('jquery'),                 // nếu cần jQuery – có thể bỏ nếu không dùng
                 filemtime($home_js),           // cache-busting
+                true                             // load ở footer
+            );
+        }
+
+        // bác sĩ nói gì về id4 guide center
+        $NXBS_Trai_nghiem_id4_guide = get_stylesheet_directory() . '/assets/js/trangchu/NXBS-Trai-nghiệm-id4-guide.js';
+        if (file_exists($NXBS_Trai_nghiem_id4_guide)) {
+            wp_enqueue_script(
+                'id4-NXBS_Trai_nghiem_id4_guide-js',
+                get_stylesheet_directory_uri() . '/assets/js/trangchu/NXBS-Trai-nghiệm-id4-guide.js',
+                array('jquery'),                 // nếu cần jQuery – có thể bỏ nếu không dùng
+                filemtime($NXBS_Trai_nghiem_id4_guide),           // cache-busting
                 true                             // load ở footer
             );
         }
