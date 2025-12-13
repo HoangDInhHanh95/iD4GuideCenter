@@ -139,7 +139,6 @@ add_action('wp_enqueue_scripts', function () {
             );
         }
 
-
         // JS TRANG CHỦ guide-stacktable-guide 
         $home_js = get_stylesheet_directory() . '/assets/js/trangchu/trang-chu.js';
         if (file_exists($home_js)) {
@@ -164,17 +163,19 @@ add_action('wp_enqueue_scripts', function () {
             );
         }
     }
+    // Chỉ load trang iD4 SOLUTION
+    // iD4 SOLUTION CSS and JS
+    if (is_page('id4-solution')) {
 
-    // JS GUIDE 
-    // $bs_id4_guide_js = get_stylesheet_directory() . '/assets/js/bs-id4-guide.js';
-
-    // if (file_exists($bs_id4_guide_js)) {
-    //     wp_enqueue_script(
-    //         'id4-bs-guide-js',
-    //         get_stylesheet_directory_uri() . '/assets/js/bs-id4-guide.js',
-    //         ['jquery'],
-    //         filemtime($bs_id4_guide_js),
-    //         true
-    //     );
-    // }
+        // CSS iD4 SOLUTION lập kế hoach điều trị 
+        $iD4_solution_css = get_stylesheet_directory() . '/assets/css/iD4solution/iD4-solution.css';
+        if (file_exists($iD4_solution_css)) {
+            wp_enqueue_style(
+                'id4-solution-css',
+                get_stylesheet_directory_uri() . '/assets/css/iD4solution/iD4-solution.css',
+                array('id4-global-css'), // ← global load trước
+                filemtime($iD4_solution_css)
+            );
+        }
+    }
 }, 20); // <-- đóng hook

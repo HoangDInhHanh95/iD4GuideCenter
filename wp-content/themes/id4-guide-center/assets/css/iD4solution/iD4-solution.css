@@ -1,0 +1,296 @@
+/* File: assets/css/global.css */
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Parisienne&family=Paytone+One&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Rochester&family=Sigmar+One&display=swap');
+
+
+:root {
+    /* --- 1. MÀU SẮC (COLORS) --- */
+    --id4-container-color-xam: #f5f5f7;
+    --id4-button-color: #2e3192;
+    --id4-bordrer-color: #2e3192;
+
+    /* --- 2. FONT CHỮ (TYPOGRAPHY) --- */
+    /* Thin 100 - ExtraLight 200 - Light 300 - Regular 400 - 
+    Medium 500 - SemiBold 600 - Bold 700 - ExtraBold 800 - Black 900 */
+    --id4-font-main: 'Open Sans';
+    --id4-font-weight-big-bold: 900;
+    --id4-font-weight-small-bold: 700;
+    --id4-font-weight-title: 600;
+    --id4-font-weight-desript: 400;
+
+    /* Lưu ý: Font cần được load trong Flatsome hoặc Google Fonts trước */
+    --id4-font-size-title: 32px;
+    --id4-font-size-desription: 16px;
+
+    /* --- 
+        3. KÍCH THƯỚC & KHOẢNG CÁCH (DIMENSIONS & SPACING) 
+    --- */
+    --id4-container-width: 1100px;
+
+    --id4-header-height: 80px;
+    --id4-spacing-block: 40px;
+    --id4-spacing-block-lg: 80px;
+
+    --id4-spacing-sm: 8px;
+    --id4-spacing-md: 16px;
+    --id4-spacing-lg: 32px;
+
+    /* --- 4. MÀU SẮC CHỮ --- */
+    --id4-color-text-title: #2e3192;
+    --id4-color-text-desription: #000000;
+
+    /* --- 4. BORDER & RADIUS --- */
+    --id4-border-radius-card: 28px;
+    --id4-border-radius-card-small: 16px;
+
+    /* --- 5. Khoảng cách --- */
+    --id4-text-indent: 25px;
+
+    /* thêm kích thước cho thẻ trỏ xuống */
+    --arrow-width: 40px;
+    --arrow-height: 35px;
+    --arrow-border-width: 3px;
+}
+
+/* ============================================================
+           CSS COMPONENT (Tiền tố: id4_solution_)
+============================================================ */
+
+.id4_solution_wrapper {
+    /* Biến màu sắc cục bộ */
+    font-family: var(--id4-font-main);
+    background-color: var(--id4-container-color-xam);
+    color: var(--id4-color-text-desription);
+    line-height: 1.6;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Reset box-sizing cho tất cả phần tử con */
+.id4_solution_wrapper *,
+.id4_solution_wrapper *::before,
+.id4_solution_wrapper *::after {
+    box-sizing: border-box;
+}
+
+/* Nền kẻ sọc */
+.id4_solution_background {
+    width: 100%;
+    padding: var(--id4-spacing-block-lg) 20px;
+    display: flex;
+    justify-content: center;
+    background-position: center top;
+}
+
+.id4_solution_container {
+    max-width: var(--id4-container-width);
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Layout Flexbox */
+.id4_solution_row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+/* Cột nội dung */
+.id4_solution_col_content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.id4_solution_brand {
+    color: var(--id4-color-text-title);
+    font-size: var(--id4-font-size-title);
+    font-weight: var(--id4-font-weight-title);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.id4_solution_title {
+    color: var(--id4-color-text-title);
+    font-size: var(--id4-font-size-title);
+    font-weight: var(--id4-font-weight-title);
+    margin: 0 0 25px 0;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.id4_solution_desc p {
+    margin-bottom: 15px;
+    font-size: var(--id4-font-size-desription);
+    color: var(--id4-color-text-desription);
+    font-weight: var(--id4-font-weight-desript);
+    text-align: justify;
+    margin-top: 0;
+    text-indent: var(--id4-text-indent);
+}
+
+/* Nút bấm */
+.id4_solution_actions {
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
+}
+
+.id4_solution_btn {
+    font-family: var(--id4-font-main);
+    font-size: var(--id4-font-size-desription);
+    font-weight: var(--id4-font-weight-small-bold);
+    display: inline-block;
+    padding: 10px 40px;
+    background-color: var(--id4-button-color);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.id4_solution_btn_primary {
+    background-color: var(--id4-button-color);
+    color: #fff !important;
+    border: 2px solid var(--id4-button-color);
+    /* box-shadow: 0 4px 10px rgba(49, 60, 163, 0.2); */
+}
+
+.id4_solution_btn_primary:hover {
+    background-color: #252d7a;
+    border-color: #252d7a;
+    transform: translateY(-2px);
+}
+
+.id4_solution_btn_outline {
+    background-color: transparent;
+    color: var(--id4-button-color) !important;
+    border: 2px solid var(--id4-button-color);
+}
+
+.id4_solution_btn_outline:hover {
+    background-color: rgba(49, 60, 163, 0.05);
+}
+
+/* Thống kê */
+.id4_solution_stats {
+    /* margin-top: 20px; */
+    display: flex;
+    gap: 50px;
+    padding-top: 40px;
+}
+
+.id4_solution_stat_item {
+    /* display: flex; */
+    flex-direction: column;
+}
+
+.id4_solution_stat_num {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--id4-color-text-title);
+    line-height: 1.2;
+}
+
+.id4_solution_stat_label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-top: 5px;
+}
+
+/* Cột hình ảnh */
+.id4_solution_col_image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.id4_solution_col_image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    /* Bóng đổ tạo khối 3D */
+    /* filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15)); */
+    /* Animation */
+    animation: id4_solution_floatIn 1s ease-out;
+}
+
+@keyframes id4_solution_floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+
+/* Tablet (< 992px) */
+@media (max-width: 992px) {
+    .id4_solution_row {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .id4_solution_col_content {
+        max-width: 100%;
+        order: 2;
+        /* Đẩy chữ xuống dưới */
+    }
+
+    .id4_solution_col_image {
+        order: 1;
+        /* Đưa ảnh lên trên */
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .id4_solution_col_image img {
+        max-height: 400px;
+    }
+}
+
+/* Mobile (< 600px) */
+@media (max-width: 600px) {
+    .id4_solution_title {
+        font-size: 28px;
+    }
+
+    .id4_solution_desc p {
+        text-align: left;
+        text-align: justify;
+        text-indent: var(--id4-text-indent);
+    }
+
+    .id4_solution_actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .id4_solution_btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .id4_solution_stats {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .id4_solution_stat_item {
+        width: 45%;
+    }
+}
