@@ -24,8 +24,29 @@ add_action('wp_enqueue_scripts', function () {
         );
     }
 
+    // css button header
+    $button_header = get_stylesheet_directory() . '/assets/css/iD4header.css';
+    if (file_exists($button_header)) {
+        wp_enqueue_style(
+            'id4-iD4header-css',
+            get_stylesheet_directory_uri() . '/assets/css/iD4header.css',
+            array(),
+            filemtime($button_header)
+        );
+    }
 
 
+    // js button header
+    $button_header_js = get_stylesheet_directory() . '/assets/js/button-header.js';
+    if (file_exists($button_header_js)) {
+        wp_enqueue_script(
+            'id4-button-header-js',
+            get_stylesheet_directory_uri() . '/assets/js/button-header.js',
+            array('jquery'),                 // nếu cần jQuery – có thể bỏ nếu không dùng
+            filemtime($button_header_js),           // cache-busting
+            true                             // load ở footer
+        );
+    }
 
     // Chỉ load chỉ TRANG CHỦ
     if (is_front_page()) {

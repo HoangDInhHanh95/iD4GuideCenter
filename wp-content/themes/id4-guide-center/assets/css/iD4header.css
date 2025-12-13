@@ -1,0 +1,115 @@
+/* body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f0f0f0;
+        font-family: sans-serif;
+      } */
+
+/* 1. Thiết lập biến và khung bao */
+.id4_button_header_container {
+    /* Khai báo biến màu cục bộ */
+    --id4_color_primary: #2a3285;
+    /* Xanh dương đậm */
+    --id4_color_white: #ffffff;
+    /* Trắng */
+    --id4_color_hover_dark: #1e2466;
+    /* Xanh tối hơn khi hover */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 2. Style chung cho các nút */
+.id4_button_header_btn {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid var(--id4_color_primary);
+    display: inline-block;
+    line-height: 1.5;
+    text-align: center;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+/* 3. Trạng thái MẶC ĐỊNH */
+/* Nút Trái */
+.id4_button_header_left {
+    background-color: var(--id4_color_white);
+    color: var(--id4_color_primary);
+}
+
+/* Nút Phải */
+.id4_button_header_right {
+    background-color: var(--id4_color_primary);
+    color: var(--id4_color_white);
+}
+
+/* 4. Logic TƯƠNG TÁC (Dựa vào class JS thêm vào container) */
+
+/* --- KHI HOVER NÚT TRÁI --- */
+.id4_button_header_container.hovering-left .id4_button_header_left {
+    background-color: var(--id4_color_primary);
+    color: var(--id4_color_white);
+}
+
+.id4_button_header_container.hovering-left .id4_button_header_right {
+    background-color: var(--id4_color_white);
+    color: var(--id4_color_primary);
+}
+
+/* --- KHI HOVER NÚT PHẢI --- */
+.id4_button_header_container.hovering-right .id4_button_header_right {
+    background-color: var(--id4_color_hover_dark);
+    border-color: var(--id4_color_hover_dark);
+    color: var(--id4_color_white);
+}
+
+.id4_button_header_container.hovering-right .id4_button_header_left {
+    background-color: var(--id4_color_white);
+    color: var(--id4_color_primary);
+}
+
+/* Hiệu ứng Active */
+.id4_button_header_btn:active {
+    transform: scale(0.96);
+}
+
+/* 5. RESPONSIVE */
+@media (max-width: 992px) {
+    .id4_button_header_container {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .id4_button_header_btn {
+        font-size: 15px;
+        padding: 10px 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .id4_button_header_container {
+        flex-direction: column;
+    }
+
+    .id4_button_header_btn {
+        width: 100%;
+        max-width: 350px;
+        display: block;
+    }
+}

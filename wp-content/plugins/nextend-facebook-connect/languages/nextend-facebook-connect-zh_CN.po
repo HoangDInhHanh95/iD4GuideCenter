@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: nextend-facebook-connect\n"
-"POT-Creation-Date: 2025-11-12 14:15+0100\n"
-"PO-Revision-Date: 2025-11-12 14:15+0100\n"
+"POT-Creation-Date: 2025-11-27 12:55+0100\n"
+"PO-Revision-Date: 2025-11-27 12:55+0100\n"
 "Last-Translator: \n"
 "Language-Team: nextend-facebook-connect\n"
 "Language: zh_CN\n"
@@ -1337,6 +1337,17 @@ msgstr "解除链接成功."
 msgid "Unlink is not allowed!"
 msgstr ""
 
+msgid "Unlink failed: nonce is invalid"
+msgstr ""
+
+#, php-format
+msgid "You are attempting to unlink your WordPress account from %s."
+msgstr ""
+
+#, php-format
+msgid "Do you really want to %1$s unlink %2$s it?"
+msgstr ""
+
 msgid "The test was successful"
 msgstr "测试成功"
 
@@ -1564,8 +1575,7 @@ msgstr ""
 
 #, php-format
 msgid ""
-"You will end up in the %1$s. If you see a modal window appear, close it or "
-"click on %2$s."
+"You will end up in the %1$s. If you see a modal window appear, close it."
 msgstr ""
 
 #, fuzzy, php-format
@@ -1677,10 +1687,13 @@ msgstr ""
 
 #, php-format
 msgid ""
-"After a successful Business Verification, you need to go to the %1$s tab, "
-"and open the review request with the %2$s button. Fill in any missing fields "
-"here, then submit the form for review, and wait until it is approved by "
-"Meta, which may take several days."
+"After completing the  Business Verification, go to the %1$s tab and click "
+"the %2$s button. You will then see several steps that must be completed. "
+"When you select a step, a button will appear that redirects you to the page "
+"where you need to fill out the corresponding form. Once all steps are "
+"completed, click the %3$s button and wait for Meta to approve your App "
+"Review request, which may take several days. You can learn more about the "
+"required details for each step on the official %4$s page."
 msgstr ""
 
 #, fuzzy, php-format
@@ -1690,17 +1703,9 @@ msgstr "命名您的项目，然后点击创建按钮"
 
 #, php-format
 msgid ""
-"To obtain access to permissions, you must answer some questions about your "
-"data handling practices, click on the %1$s link, that you find next to %2$s "
-"and answer questions about the data handling."
-msgstr ""
-
-#, php-format
-msgid ""
 "Currently your app is in Development Mode which also means that people "
-"outside of your business can not use it. To change this, click on the %1$s "
-"option on the left side again, and publish your app by clicking on the blue "
-"%1$s button at the bottom right corner."
+"outside of your business can not use it. To change this, click on the blue "
+"%s button at the bottom right corner."
 msgstr ""
 
 #, fuzzy, php-format

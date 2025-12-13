@@ -2,7 +2,7 @@
 defined('ABSPATH') || die();
 /** @var $this NextendSocialProviderAdmin */
 
-$lastUpdated = '2025-05-05';
+$lastUpdated = '2025-11-26';
 
 $provider = $this->getProvider();
 ?>
@@ -37,7 +37,7 @@ $provider = $this->getProvider();
                 <li><?php printf(__('Click on the %1$s button, read the documents listed below the requirements, then click %1$s again.', 'nextend-facebook-connect'), '"<b>Next</b>"'); ?></li>
                 <li><?php printf(__('Check the App details in the %1$s, and then press the %2$s button.', 'nextend-facebook-connect'), '"Overview"', '"<b>Go to dashboard</b>"'); ?></li>
                 <li><?php printf(__('Complete the security check if you are prompted with the modal.', 'nextend-facebook-connect')); ?></li>
-                <li><?php printf(__('You will end up in the %1$s. If you see a modal window appear, close it or click on %2$s.', 'nextend-facebook-connect'), '"Dashboard"', '"<b>Go to dashboard</b>"'); ?></li>
+                <li><?php printf(__('You will end up in the %1$s. If you see a modal window appear, close it.', 'nextend-facebook-connect'), '"Dashboard"'); ?></li>
                 <li><?php printf(__('Click on the %1$s tab on the left side and then click on the %2$s button that appears next to the %3$s item.', 'nextend-facebook-connect'), '"<b>Use cases</b>"', '"<b>Customize</b>"', '"<b>Authenticate and request data from users with Facebook Login</b>"'); ?></li>
                 <li><?php printf(__('Below the %1$s section, find the %2$s permission and click on the %3$s button.', 'nextend-facebook-connect'), '"<b>Permissions</b>"', '"<b>email</b>"', '"<b>Add</b>"'); ?></li>
                 <li><?php printf(__('Press the %1$s option that you can find below the %2$s section.', 'nextend-facebook-connect'), '"<b>Settings</b>"', '"<b>Facebook Login</b>"'); ?></li>
@@ -72,10 +72,9 @@ $provider = $this->getProvider();
                 <li><?php printf(__('Select %1$s platform, then press %2$s and enter the following URL into the %3$s field: %4$s', 'nextend-facebook-connect'), '"<b>Website</b>"', '"<b>Next</b>"', '"<b>Website > Site URL</b>"', '<b>' . site_url() . '</b>'); ?></li>
                 <li><?php printf(__('Press the %s button.', 'nextend-facebook-connect'), '"<b>Save changes</b>"'); ?></li>
                 <li><?php printf(__('By default, your application only has Standard Access for the %1$s and %2$s permissions, which means that only you can log in with it. To get Advanced Access you will need to go trough the %3$s, that you can start on the %4$s tab on the left side.', 'nextend-facebook-connect'), '"public_profile"', '"email"', '<a href="https://developers.facebook.com/docs/development/release/business-verification" target="_blank">Business Verification</a>', '"<b>Review > Verification</b>"'); ?></li>
-                <li><?php printf(__('After a successful Business Verification, you need to go to the %1$s tab, and open the review request with the %2$s button. Fill in any missing fields here, then submit the form for review, and wait until it is approved by Meta, which may take several days.', 'nextend-facebook-connect'), '"<b>Review > App Review</b>"', '"<b>Edit</b>"'); ?></li>
+                <li><?php printf(__('After completing the  Business Verification, go to the %1$s tab and click the %2$s button. You will then see several steps that must be completed. When you select a step, a button will appear that redirects you to the page where you need to fill out the corresponding form. Once all steps are completed, click the %3$s button and wait for Meta to approve your App Review request, which may take several days. You can learn more about the required details for each step on the official %4$s page.', 'nextend-facebook-connect'), '"<b>Review > App Review</b>"', '"<b>Next</b>"', '"<b>Submit for review</b>"', '<a href="https://developers.facebook.com/docs/resp-plat-initiatives/appreview/tutorial" target="_blank">App Review - Tutorial</a>'); ?></li>
                 <li><?php printf(__('Once your verification is completed, click on the %1$s tab. ', 'nextend-facebook-connect'), '"<b>Publish</b>"'); ?></li>
-                <li><?php printf(__('To obtain access to permissions, you must answer some questions about your data handling practices, click on the %1$s link, that you find next to %2$s and answer questions about the data handling.', 'nextend-facebook-connect'), '"<b>Go to data handling questions</b>"', '"<b>Data handling questions</b>"'); ?></li>
-                <li><?php printf(__('Currently your app is in Development Mode which also means that people outside of your business can not use it. To change this, click on the %1$s option on the left side again, and publish your app by clicking on the blue %1$s button at the bottom right corner.', 'nextend-facebook-connect'), '"<b>Publish</b>"'); ?></li>
+                <li><?php printf(__('Currently your app is in Development Mode which also means that people outside of your business can not use it. To change this, click on the blue %s button at the bottom right corner.', 'nextend-facebook-connect'), '"<b>Publish</b>"'); ?></li>
                 <li><?php printf(__('After everything is done, click on the %1$s tab, then click %2$s.', 'nextend-facebook-connect'), '"<b>App settings</b>"', '"<b>Basic</b>"') ?></li>
                 <li><?php printf(__('At the top of the page you can find your %1$s and you can see your %2$s if you click on the %3$s button. These will be needed in plugin’s settings.', 'nextend-facebook-connect'), '"<b>App ID</b>"', '"<b>App secret</b>"', 'Show'); ?></li>
             </ol>
