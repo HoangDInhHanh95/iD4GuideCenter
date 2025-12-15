@@ -48,6 +48,17 @@ add_action('wp_enqueue_scripts', function () {
         );
     }
 
+    //2 block iD-4 guide và stacktable guide center
+    $BDCG_Implant_chi_vs = get_stylesheet_directory() . '/assets/css/BDCG-Implant-chi-vs.css';
+    if (file_exists($BDCG_Implant_chi_vs)) {
+        wp_enqueue_style(
+            'id4-BDCG-Implant-chi-vs-css',
+            get_stylesheet_directory_uri() . '/assets/css/BDCG-Implant-chi-vs.css',
+            array('id4-global-css'), // ← global load trước
+            filemtime($BDCG_Implant_chi_vs)
+        );
+    }
+
     // Chỉ load chỉ TRANG CHỦ
     if (is_front_page()) {
         // CSS TRANG CHỦ
@@ -102,17 +113,6 @@ add_action('wp_enqueue_scripts', function () {
                 get_stylesheet_directory_uri() . '/assets/css/trangchu/guide-stacktable-guide.css',
                 array('id4-global-css'), // ← global load trước
                 filemtime($guide_stacktable_guide)
-            );
-        }
-
-        //2 block iD-4 guide và stacktable guide center
-        $BDCG_Implant_chi_vs = get_stylesheet_directory() . '/assets/css/trangchu/BDCG-Implant-chi-vs.css';
-        if (file_exists($BDCG_Implant_chi_vs)) {
-            wp_enqueue_style(
-                'id4-BDCG-Implant-chi-vs-css',
-                get_stylesheet_directory_uri() . '/assets/css/trangchu/BDCG-Implant-chi-vs.css',
-                array('id4-global-css'), // ← global load trước
-                filemtime($BDCG_Implant_chi_vs)
             );
         }
 
