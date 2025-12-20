@@ -1,0 +1,779 @@
+ @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Parisienne&family=Paytone+One&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Rochester&family=Sigmar+One&display=swap');
+
+ :root {
+     /* --- 1. MÀU SẮC (COLORS) --- */
+     --id4-container-color-xam: #f5f5f7;
+     --id4-button-color: #2e3192;
+     --id4-bordrer-color: #2e3192;
+     /* --- 2. FONT CHỮ (TYPOGRAPHY) --- */
+     /* Thin 100 - ExtraLight 200 - Light 300 - Regular 400 -
+            Medium 500 - SemiBold 600 - Bold 700 - ExtraBold 800 - Black 900 */
+     --id4-font-main: 'Open Sans';
+     --id4-font-weight-big-bold: 900;
+     --id4-font-weight-small-bold: 700;
+     --id4-font-weight-title: 600;
+     --id4-font-weight-desript: 400;
+     /* Lưu ý: Font cần được load trong Flatsome hoặc Google Fonts trước */
+     --id4-font-size-title: 32px;
+     --id4-font-size-desription: 18px;
+     /* ---
+    3. KÍCH THƯỚC & KHOẢNG CÁCH (DIMENSIONS & SPACING)
+    --- */
+     --id4-container-width: 1100px;
+     --id4-header-height: 80px;
+     --id4-spacing-block: 40px;
+     --id4-spacing-sm: 8px;
+     --id4-spacing-md: 16px;
+     --id4-spacing-lg: 32px;
+     /* --- 4. MÀU SẮC CHỮ --- */
+     --id4-color-text-title: #2e3192;
+     --id4-color-text-desription: #000000;
+     /* --- 4. BORDER & RADIUS --- */
+     --id4-border-radius-card: 28px;
+     --id4-border-radius-card-small: 16px;
+     /* --- 5. Khoảng cách --- */
+     --id4-text-indent: 25px;
+     /* thêm kích thước cho thẻ trỏ xuống */
+     --arrow-width: 40px;
+     --arrow-height: 35px;
+     --arrow-border-width: 3px;
+ }
+
+ /* --- 1. CORE RESET SCOPED --- */
+
+ #iD4_guide_CXCMC_impant_wrapper {
+     background-color: #ffffff;
+     color: var(--id4-color-text-desription);
+     line-height: 1.6;
+     font-family: var(--id4-font-main);
+     box-sizing: border-box;
+     width: 100%;
+     overflow-x: hidden;
+     position: relative;
+ }
+
+ #iD4_guide_CXCMC_impant_wrapper * {
+     box-sizing: border-box;
+ }
+
+ #iD4_guide_CXCMC_impant_wrapper img {
+     max-width: 100%;
+     height: auto;
+     display: block;
+ }
+
+ .iD4_guide_CXCMC_impant_container {
+     max-width: var(--id4-container-width);
+     margin: 0 auto;
+     padding: 0 20px;
+ }
+
+ /* --- 2. HEADER & TABS (UPDATED UI) --- */
+
+ .iD4_guide_CXCMC_impant_header {
+     text-align: center;
+     padding: var(--id4-spacing-block) 0 20px;
+ }
+
+ .iD4_guide_CXCMC_impant_header h1 {
+     color: var(--id4-color-text-title);
+     font-size: var(--id4-font-size-title);
+     font-weight: var(--id4-font-weight-big-bold);
+     text-transform: uppercase;
+     margin-bottom: 10px;
+     margin-top: 0;
+     line-height: 1.3;
+ }
+
+ .iD4_guide_CXCMC_impant_sub-header {
+     font-size: var(--id4-font-size-desription);
+     color: #666;
+     margin-bottom: 30px;
+     font-weight: var(--id4-font-weight-title);
+     max-width: 800px;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ /* TAB NAV - NEW PILL SHAPE STYLE */
+
+ .iD4_guide_CXCMC_impant_tab-nav {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 0;
+     margin-bottom: var(--id4-spacing-block);
+     flex-wrap: nowrap;
+ }
+
+ .iD4_guide_CXCMC_impant_tab-btn {
+     padding: 6px 40px;
+     border: 2px solid var(--id4-bordrer-color);
+     background: transparent;
+     color: var(--id4-button-color);
+     font-weight: var(--id4-font-weight-small-bold);
+     cursor: pointer;
+     transition: all 0.3s ease;
+     font-size: 1rem;
+     white-space: nowrap;
+     border-radius: 0;
+ }
+
+ /* FIX: bỏ margin mặc định của theme trên button */
+
+ .iD4_guide_CXCMC_impant_tab-nav .iD4_guide_CXCMC_impant_tab-btn {
+     margin: 0 !important;
+ }
+
+ /* FIX: đảm bảo không có gap */
+
+ .iD4_guide_CXCMC_impant_tab-nav {
+     gap: 0 !important;
+ }
+
+ /* FIX: dính sát viền (chống hở do border 2px) */
+
+ .iD4_guide_CXCMC_impant_tab-nav .iD4_guide_CXCMC_impant_tab-btn+.iD4_guide_CXCMC_impant_tab-btn {
+     margin-left: -2px;
+     /* đúng bằng border-width */
+ }
+
+ /* Left Button Styling */
+
+ .iD4_guide_CXCMC_impant_tab-btn:first-child {
+     border-top-left-radius: 30px;
+     border-bottom-left-radius: 30px;
+     border-right: none;
+ }
+
+ /* Right Button Styling */
+
+ .iD4_guide_CXCMC_impant_tab-btn:last-child {
+     border-top-right-radius: 30px;
+     border-bottom-right-radius: 30px;
+ }
+
+ /* Active State */
+
+ .iD4_guide_CXCMC_impant_tab-btn.active {
+     background: var(--id4-button-color);
+     color: #ffffff;
+ }
+
+ .iD4_guide_CXCMC_impant_tab-btn:hover:not(.active) {
+     background-color: rgba(46, 49, 146, 0.05);
+ }
+
+ /* --- 3. TAB CONTENT HANDLING --- */
+
+ .iD4_guide_CXCMC_impant_tab-content {
+     display: none;
+     animation: iD4_guide_CXCMC_impant_fadeIn 0.5s;
+ }
+
+ .iD4_guide_CXCMC_impant_tab-content.active {
+     display: block;
+ }
+
+ @keyframes iD4_guide_CXCMC_impant_fadeIn {
+     from {
+         opacity: 0;
+         transform: translateY(10px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ /* --- 4. HERO SECTION (FLEXBOX LAYOUT) --- */
+
+ .iD4_guide_CXCMC_impant_hero-section {
+     display: flex;
+     flex-wrap: wrap;
+     gap: var(--id4-spacing-block);
+     margin-bottom: 60px;
+     align-items: flex-start;
+     justify-content: space-between;
+ }
+
+ .iD4_guide_CXCMC_impant_hero-text {
+     flex: 1 1 400px;
+     width: 50%;
+ }
+
+ .iD4_guide_CXCMC_impant_hero-image {
+     flex: 1 1 400px;
+     width: 50%;
+     background-color: #eee;
+     border-radius: 12px;
+     min-height: 650px;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+     background-size: cover;
+     background-position: center;
+     position: relative;
+ }
+
+ .iD4_guide_CXCMC_impant_hero-text h2 {
+     color: var(--id4-color-text-title);
+     margin-bottom: 15px;
+     margin-top: 0;
+     line-height: 1.3;
+     font-size: 1.6rem;
+     font-weight: var(--id4-font-weight-title);
+ }
+
+ .iD4_guide_CXCMC_impant_features-list {
+     list-style: none;
+     margin: 20px 0;
+     padding: 0;
+ }
+
+ .iD4_guide_CXCMC_impant_features-list li {
+     position: relative;
+     padding-left: 25px;
+     margin-bottom: 15px;
+     font-size: 0.95rem;
+ }
+
+ .iD4_guide_CXCMC_impant_features-list li::before {
+     content: "✔";
+     position: absolute;
+     left: 0;
+     top: 0;
+     color: var(--id4-button-color);
+     font-weight: bold;
+     font-size: 1.1rem;
+ }
+
+ /* --- CTA BUTTONS GROUP --- */
+
+ .iD4_guide_CXCMC_impant_cta-group {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     gap: 15px;
+     margin-top: 25px;
+     width: 100%;
+ }
+
+ .iD4_guide_CXCMC_impant_btn {
+     padding: 12px 25px;
+     text-decoration: none;
+     font-weight: var(--id4-font-weight-title);
+     font-size: 0.9rem;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     gap: 5px;
+     white-space: nowrap;
+     border-radius: 30px;
+ }
+
+ .iD4_guide_CXCMC_impant_cta-group .iD4_guide_CXCMC_impant_btn {
+     flex: 1;
+     width: auto;
+     min-width: 0;
+     text-align: center;
+ }
+
+ .iD4_guide_CXCMC_impant_btn-primary {
+     background-color: var(--id4-button-color);
+     color: #ffffff;
+     border: 1px solid var(--id4-bordrer-color);
+ }
+
+ .iD4_guide_CXCMC_impant_btn-outline {
+     background-color: transparent;
+     color: var(--id4-button-color);
+     border: 1px solid var(--id4-bordrer-color);
+ }
+
+ .iD4_guide_CXCMC_impant_btn:hover {
+     opacity: 0.9;
+     transform: translateY(-2px);
+ }
+
+ .iD4_guide_CXCMC_impant_certification-badge {
+     background: rgba(255, 255, 255, 0.95);
+     padding: 15px 20px;
+     margin: 20px;
+     border-radius: var(--id4-border-radius-card-small);
+     font-size: 0.8rem;
+     font-weight: var(--id4-font-weight-title);
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+ }
+
+ /* --- 5. VIDEO SECTION --- */
+
+ .iD4_guide_CXCMC_impant_video-section {
+     display: flex;
+     flex-wrap: wrap;
+     gap: var(--id4-spacing-block);
+     margin-bottom: 60px;
+     align-items: center;
+ }
+
+ .iD4_guide_CXCMC_impant_video-placeholder {
+     flex: 1 1 400px;
+     width: 50%;
+     background-color: #000;
+     border-radius: 12px;
+     aspect-ratio: 16/9;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     position: relative;
+     cursor: pointer;
+     overflow: hidden;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+ }
+
+ .iD4_guide_CXCMC_impant_video-text {
+     flex: 1 1 400px;
+     width: 50%;
+ }
+
+ .iD4_guide_CXCMC_impant_video-text h3 {
+     color: var(--id4-color-text-title);
+     margin-bottom: 15px;
+     margin-top: 0;
+     line-height: 1.3;
+     font-size: 1.3rem;
+     font-weight: var(--id4-font-weight-title);
+ }
+
+ .iD4_guide_CXCMC_impant_play-btn {
+     width: 60px;
+     height: 60px;
+     background: rgba(46, 49, 146, 0.9);
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #ffffff;
+     font-size: 24px;
+     box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3);
+     transition: all 0.3s ease;
+     z-index: 2;
+ }
+
+ .iD4_guide_CXCMC_impant_video-placeholder:hover .iD4_guide_CXCMC_impant_play-btn {
+     transform: scale(1.1);
+     background: var(--id4-button-color);
+ }
+
+ /* --- 6. PROCESS STEPS --- */
+
+ .iD4_guide_CXCMC_impant_process-section {
+     text-align: center;
+     margin-bottom: 80px;
+ }
+
+ .iD4_guide_CXCMC_impant_steps-nav {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: var(--id4-spacing-block);
+     position: relative;
+     max-width: 900px;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ .iD4_guide_CXCMC_impant_steps-nav::before {
+     content: "";
+     position: absolute;
+     top: 40px;
+     left: 40px;
+     right: 40px;
+     height: 2px;
+     background: #e0e0e0;
+     z-index: -1;
+ }
+
+ .iD4_guide_CXCMC_impant_step-item {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     cursor: pointer;
+     background: #ffffff;
+     padding: 0 10px;
+     position: relative;
+ }
+
+ .iD4_guide_CXCMC_impant_step-icon {
+     width: 80px;
+     height: 80px;
+     border-radius: 50%;
+     border: 2px solid #e0e0e0;
+     background: #ffffff;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-bottom: 15px;
+     transition: all 0.3s ease;
+     /* padding: 15px; */
+ }
+
+ .iD4_guide_CXCMC_impant_step-icon img {
+     width: 100%;
+     height: 100%;
+     object-fit: contain;
+     filter: grayscale(100%);
+     opacity: 0.6;
+     transition: all 0.3s ease;
+ }
+
+ .iD4_guide_CXCMC_impant_step-label {
+     font-size: 0.85rem;
+     font-weight: var(--id4-font-weight-small-bold);
+     color: #999;
+     text-transform: uppercase;
+ }
+
+ .iD4_guide_CXCMC_impant_step-item.active .iD4_guide_CXCMC_impant_step-label {
+     color: var(--id4-color-text-title);
+ }
+
+ /* --- STEP DETAIL CARD --- */
+
+ .iD4_guide_CXCMC_impant_step-detail-card {
+     background: var(--id4-container-color-xam);
+     border-radius: 20px;
+     padding: var(--id4-spacing-block);
+     display: flex;
+     flex-wrap: wrap;
+     gap: var(--id4-spacing-block);
+     align-items: center;
+     text-align: left;
+ }
+
+ .iD4_guide_CXCMC_impant_step-content {
+     flex: 1 1 300px;
+ }
+
+ .iD4_guide_CXCMC_impant_step-content h3 {
+     color: #4a5dc7;
+     margin-bottom: 5px;
+     font-size: 0.9rem;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     font-weight: var(--id4-font-weight-small-bold);
+     margin-top: 0;
+ }
+
+ .iD4_guide_CXCMC_impant_step-content h4 {
+     font-size: 1.8rem;
+     margin-bottom: 20px;
+     color: var(--id4-color-text-title);
+     font-weight: var(--id4-font-weight-big-bold);
+     margin-top: 0;
+ }
+
+ .iD4_guide_CXCMC_impant_step-media-wrapper {
+     position: relative;
+     flex: 0 1 400px;
+     width: 100%;
+     border-radius: 12px;
+     overflow: hidden;
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+     cursor: pointer;
+     background: #000;
+ }
+
+ .iD4_guide_CXCMC_impant_step-media-wrapper::before {
+     content: "";
+     display: block;
+     padding-top: 56.25%;
+ }
+
+ .iD4_guide_CXCMC_impant_step-media-wrapper img {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     opacity: 0.7;
+     transition: all 0.3s ease;
+ }
+
+ .iD4_guide_CXCMC_impant_step-media-wrapper:hover img {
+     opacity: 0.9;
+     transform: scale(1.05);
+ }
+
+ .iD4_guide_CXCMC_impant_step-play-icon {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 50px;
+     height: 50px;
+     background: rgba(255, 255, 255, 0.9);
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: var(--id4-button-color);
+     font-size: 20px;
+     z-index: 2;
+     pointer-events: none;
+ }
+
+ /* --- 7. NAV BUTTONS (Steps) --- */
+
+ .iD4_guide_CXCMC_impant_nav-buttons {
+     width: 100%;
+     display: flex;
+     align-items: center;
+     margin-top: 30px;
+     padding-top: 20px;
+     position: relative;
+ }
+
+ .iD4_guide_CXCMC_impant_dots {
+     display: flex;
+     gap: var(--id4-spacing-sm);
+ }
+
+ .iD4_guide_CXCMC_impant_dot {
+     width: 40px;
+     height: 10px;
+     background: #ddd;
+     border-radius: 50px;
+     transition: all 0.3s ease;
+ }
+
+ .iD4_guide_CXCMC_impant_dot.active {
+     background: var(--id4-button-color);
+     transform: scale(1.2);
+ }
+
+ /* --- DEFAULT (DESKTOP/TABLET) STYLES --- */
+
+ @media (min-width: 769px) {
+     .iD4_guide_CXCMC_impant_nav-buttons {
+         justify-content: space-between;
+     }
+
+     .iD4_guide_CXCMC_impant_nav-buttons .iD4_guide_CXCMC_impant_btn {
+         border-radius: 50px;
+         min-width: 150px;
+     }
+
+     .iD4_guide_CXCMC_impant_nav-buttons .iD4_guide_CXCMC_impant_btn-outline {
+         border: 1px solid var(--id4-bordrer-color);
+     }
+ }
+
+ /* --- MOBILE STYLES --- */
+
+ @media (max-width: 768px) {
+
+     .iD4_guide_CXCMC_impant_hero-section,
+     .iD4_guide_CXCMC_impant_video-section,
+     .iD4_guide_CXCMC_impant_step-detail-card {
+         flex-direction: column;
+         align-items: stretch;
+     }
+
+     .iD4_guide_CXCMC_impant_hero-section {
+         flex-direction: column-reverse;
+     }
+
+     .iD4_guide_CXCMC_impant_hero-image,
+     .iD4_guide_CXCMC_impant_hero-text,
+     .iD4_guide_CXCMC_impant_video-placeholder,
+     .iD4_guide_CXCMC_impant_video-text,
+     .iD4_guide_CXCMC_impant_step-content,
+     .iD4_guide_CXCMC_impant_step-media-wrapper {
+         width: 100%;
+         flex: auto;
+     }
+
+     .iD4_guide_CXCMC_impant_step-media-wrapper {
+         order: -1;
+         margin-bottom: 20px;
+     }
+
+     .iD4_guide_CXCMC_impant_tab-nav {
+         flex-direction: row;
+     }
+
+     .iD4_guide_CXCMC_impant_tab-btn {
+         width: auto;
+         flex: 1;
+         padding: 10px 5px;
+         font-size: 0.9rem;
+     }
+
+     .iD4_guide_CXCMC_impant_cta-group {
+         gap: 10px;
+     }
+
+     .iD4_guide_CXCMC_impant_cta-group .iD4_guide_CXCMC_impant_btn {
+         padding: 10px 5px;
+         font-size: 0.85rem;
+         white-space: normal;
+         line-height: 1.2;
+     }
+
+     .iD4_guide_CXCMC_impant_header h1 {
+         font-size: 1.4rem;
+     }
+
+     .iD4_guide_CXCMC_impant_steps-nav {
+         overflow-x: auto;
+         justify-content: flex-start;
+         gap: 15px;
+         padding-bottom: 10px;
+         padding-left: 5px;
+         scrollbar-width: none;
+     }
+
+     .iD4_guide_CXCMC_impant_steps-nav::-webkit-scrollbar {
+         display: none;
+     }
+
+     .iD4_guide_CXCMC_impant_steps-nav::before {
+         display: none;
+     }
+
+     .iD4_guide_CXCMC_impant_step-icon {
+         width: 75px;
+         height: 75px;
+         min-width: 75px;
+         padding: 12px;
+     }
+
+     .iD4_guide_CXCMC_impant_nav-buttons {
+         justify-content: space-between;
+         gap: 15px;
+         border-top: none;
+         margin-top: 20px;
+     }
+
+     .iD4_guide_CXCMC_impant_nav-buttons::before {
+         display: none;
+     }
+
+     .iD4_guide_CXCMC_impant_nav-buttons .iD4_guide_CXCMC_impant_btn {
+         border-radius: 30px;
+         padding: 12px 20px;
+         font-size: 0.95rem;
+         flex: 1;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+         white-space: nowrap;
+         height: auto;
+         width: auto;
+         box-shadow: none;
+         line-height: normal;
+         flex-direction: row;
+     }
+
+     .iD4_guide_CXCMC_impant_nav-buttons .iD4_guide_CXCMC_impant_btn-outline {
+         background-color: #ffffff;
+         color: var(--id4-button-color);
+         border: 1px solid var(--id4-bordrer-color);
+     }
+
+     .iD4_guide_CXCMC_impant_nav-buttons .iD4_guide_CXCMC_impant_btn-primary {
+         background-color: var(--id4-button-color);
+         color: #ffffff;
+         border: 1px solid var(--id4-bordrer-color);
+     }
+
+     .iD4_guide_CXCMC_impant_dots {
+         display: none;
+     }
+ }
+
+ /* --- 8. VIDEO POPUP --- */
+
+ .iD4_guide_CXCMC_impant_video-modal {
+     display: none;
+     position: fixed;
+     z-index: 999999;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     overflow: auto;
+     background-color: rgba(0, 0, 0, 0.9);
+     align-items: center;
+     justify-content: center;
+     animation: iD4_guide_CXCMC_impant_fadeIn 0.3s;
+ }
+
+ .iD4_guide_CXCMC_impant_modal-content {
+     position: relative;
+     width: 90%;
+     max-width: 900px;
+     aspect-ratio: 16/9;
+     background-color: #000;
+     border-radius: var(--id4-border-radius-card-small);
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .iD4_guide_CXCMC_impant_close-modal {
+     color: #fff;
+     position: absolute;
+     top: -40px;
+     right: 0;
+     font-size: 35px;
+     font-weight: bold;
+     cursor: pointer;
+     z-index: 1000000;
+ }
+
+ .iD4_guide_CXCMC_impant_modal-video-tag {
+     width: 100%;
+     height: 100%;
+     border-radius: var(--id4-border-radius-card-small);
+     object-fit: contain;
+     outline: none;
+ }
+
+ /* =========================================================
+   FIX THEO YÊU CẦU:
+   - Không bấm/click => icon BG xám
+   - Bấm/click (active) => icon BG xanh
+   (đặt ở CUỐI để chắc chắn ghi đè)
+========================================================= */
+
+ .iD4_guide_CXCMC_impant_step-item .iD4_guide_CXCMC_impant_step-icon {
+     background: #606060 !important;
+     border: 2px solid #e0e0e0 !important;
+     transform: none !important;
+ }
+
+ .iD4_guide_CXCMC_impant_step-item .iD4_guide_CXCMC_impant_step-icon img {
+     filter: grayscale(100%) !important;
+     opacity: 0.6 !important;
+ }
+
+ .iD4_guide_CXCMC_impant_step-item.active .iD4_guide_CXCMC_impant_step-icon {
+     background: var(--id4-button-color) !important;
+     border-color: var(--id4-bordrer-color) !important;
+ }
+
+ .iD4_guide_CXCMC_impant_step-item.active .iD4_guide_CXCMC_impant_step-icon img {
+     filter: brightness(0) invert(1) !important;
+     opacity: 1 !important;
+ }

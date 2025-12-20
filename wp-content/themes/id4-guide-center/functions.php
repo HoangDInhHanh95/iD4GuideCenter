@@ -177,5 +177,28 @@ add_action('wp_enqueue_scripts', function () {
                 filemtime($iD4_solution_css)
             );
         }
+
+        // ID-4 Solution: Chính xác cho mọi ca Implant
+        $iD4_chinh_xac_moi_ca_implant = get_stylesheet_directory() . '/assets/css/iD4solution/iD-4-chinh-xac-moi-ca.css';
+        if (file_exists($iD4_chinh_xac_moi_ca_implant)) {
+            wp_enqueue_style(
+                'iD-4-chinh-xac-moi-ca-css',
+                get_stylesheet_directory_uri() . '/assets/css/iD4solution/iD-4-chinh-xac-moi-ca.css',
+                array('id4-global-css'), // ← global load trước
+                filemtime($iD4_chinh_xac_moi_ca_implant)
+            );
+        }
+
+        // ID-4 Solution: Chính xác cho mọi ca Implant JS
+        $iD4_chinh_xac_moi_ca_implant_js = get_stylesheet_directory() . '/assets/js/iD4solution/BDCG-Implant-chi-vs.js';
+        if (file_exists($iD4_chinh_xac_moi_ca_implant_js)) {
+            wp_enqueue_script(
+                'iD-4-chinh-xac-moi-ca-js',
+                get_stylesheet_directory_uri() . '/assets/js/iD4solution/BDCG-Implant-chi-vs.js',
+                array('jquery'),                 // nếu cần jQuery – có thể bỏ nếu không dùng
+                filemtime($iD4_chinh_xac_moi_ca_implant_js),           // cache-busting
+                true                             // load ở footer
+            );
+        }
     }
 }, 20); // <-- đóng hook
