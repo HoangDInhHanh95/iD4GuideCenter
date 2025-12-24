@@ -1,3 +1,35 @@
+/* File: assets/css/global.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Parisienne&family=Paytone+One&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Rochester&family=Sigmar+One&display=swap');
+
+:root {
+    --id4-container-color-xam: #f5f5f7;
+    --id4-button-color: #2e3192;
+    --id4-bordrer-color: #2e3192;
+    --id4-font-main: 'Open Sans';
+    --id4-font-weight-big-bold: 900;
+    --id4-font-weight-small-bold: 700;
+    --id4-font-weight-title: 600;
+    --id4-font-weight-desript: 400;
+    --id4-font-size-title: 32px;
+    --id4-font-size-desription: 18px;
+    --id4-container-width: 1100px;
+    --id4-header-height: 80px;
+    --id4-spacing-block: 40px;
+    --id4-spacing-sm: 8px;
+    --id4-spacing-md: 16px;
+    --id4-spacing-lg: 32px;
+    --id4-color-text-title: #2e3192;
+    --id4-color-text-desription: #000000;
+    --id4-border-radius-card: 28px;
+    --id4-border-radius-card-small: 16px;
+    --id4-text-indent: 25px;
+    --arrow-width: 40px;
+    --arrow-height: 35px;
+    --arrow-border-width: 3px;
+}
+
+
 /* --- 1. CORE RESET SCOPED --- */
 
 #iD4_guide_CXCMC_impant_wrapper {
@@ -68,7 +100,7 @@
 }
 
 .iD4_guide_CXCMC_impant_tab-btn {
-    padding: 6px 40px;
+    padding: 12px 30px;
     border: 2px solid var(--id4-bordrer-color);
     background: transparent;
     color: var(--id4-button-color);
@@ -80,47 +112,16 @@
     border-radius: 0;
 }
 
-
-/* FIX: bỏ margin mặc định của theme trên button */
-
-.iD4_guide_CXCMC_impant_tab-nav .iD4_guide_CXCMC_impant_tab-btn {
-    margin: 0 !important;
-}
-
-
-/* FIX: đảm bảo không có gap */
-
-.iD4_guide_CXCMC_impant_tab-nav {
-    gap: 0 !important;
-}
-
-
-/* FIX: dính sát viền (chống hở do border 2px) */
-
-.iD4_guide_CXCMC_impant_tab-nav .iD4_guide_CXCMC_impant_tab-btn+.iD4_guide_CXCMC_impant_tab-btn {
-    margin-left: -2px;
-    /* đúng bằng border-width */
-}
-
-
-/* Left Button Styling */
-
 .iD4_guide_CXCMC_impant_tab-btn:first-child {
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     border-right: none;
 }
 
-
-/* Right Button Styling */
-
 .iD4_guide_CXCMC_impant_tab-btn:last-child {
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
 }
-
-
-/* Active State */
 
 .iD4_guide_CXCMC_impant_tab-btn.active {
     background: var(--id4-button-color);
@@ -231,7 +232,7 @@
 }
 
 .iD4_guide_CXCMC_impant_btn {
-    padding: 6px 40px;
+    padding: 12px 25px;
     text-decoration: none;
     font-weight: var(--id4-font-weight-title);
     font-size: 0.9rem;
@@ -322,6 +323,9 @@
     font-weight: var(--id4-font-weight-title);
 }
 
+
+/* (giữ class play-btn, nhưng KHÔNG dùng chữ ▶ nữa - sẽ vẽ bằng ::before) */
+
 .iD4_guide_CXCMC_impant_play-btn {
     width: 60px;
     height: 60px;
@@ -393,7 +397,6 @@
     justify-content: center;
     margin-bottom: 15px;
     transition: all 0.3s ease;
-    /* padding: 15px; */
 }
 
 .iD4_guide_CXCMC_impant_step-icon img {
@@ -485,6 +488,9 @@
     transform: scale(1.05);
 }
 
+
+/* (giữ class step-play-icon, nhưng KHÔNG dùng chữ ▶ nữa - sẽ vẽ bằng ::before) */
+
 .iD4_guide_CXCMC_impant_step-play-icon {
     position: absolute;
     top: 50%;
@@ -536,7 +542,7 @@
 
 /* --- DEFAULT (DESKTOP/TABLET) STYLES --- */
 
-@media (min-width: 769px) {
+@media (min-width:769px) {
     .iD4_guide_CXCMC_impant_nav-buttons {
         justify-content: space-between;
     }
@@ -554,7 +560,7 @@
 
 /* --- MOBILE STYLES --- */
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
 
     .iD4_guide_CXCMC_impant_hero-section,
     .iD4_guide_CXCMC_impant_video-section,
@@ -729,29 +735,119 @@
 
 
 /* =========================================================
-   FIX THEO YÊU CẦU:
-   - Không bấm/click => icon BG xám
-   - Bấm/click (active) => icon BG xanh
-   (đặt ở CUỐI để chắc chắn ghi đè)
+   FIX THEO YÊU CẦU (CUỐI FILE) - ghi đè chắc chắn
+   A) Step icon: BG xám / active BG xanh
+   B) Play icon: vẽ tam giác bằng ::before/::after (content:"")
 ========================================================= */
 
-.iD4_guide_CXCMC_impant_step-item .iD4_guide_CXCMC_impant_step-icon {
+
+/* A) STEP ICON BG */
+
+#iD4_guide_CXCMC_impant_wrapper .iD4_guide_CXCMC_impant_step-item .iD4_guide_CXCMC_impant_step-icon {
     background: #606060 !important;
     border: 2px solid #e0e0e0 !important;
     transform: none !important;
 }
 
-.iD4_guide_CXCMC_impant_step-item .iD4_guide_CXCMC_impant_step-icon img {
+#iD4_guide_CXCMC_impant_wrapper .iD4_guide_CXCMC_impant_step-item .iD4_guide_CXCMC_impant_step-icon img {
     filter: grayscale(100%) !important;
     opacity: 0.6 !important;
 }
 
-.iD4_guide_CXCMC_impant_step-item.active .iD4_guide_CXCMC_impant_step-icon {
+#iD4_guide_CXCMC_impant_wrapper .iD4_guide_CXCMC_impant_step-item.active .iD4_guide_CXCMC_impant_step-icon {
     background: var(--id4-button-color) !important;
     border-color: var(--id4-bordrer-color) !important;
 }
 
-.iD4_guide_CXCMC_impant_step-item.active .iD4_guide_CXCMC_impant_step-icon img {
+#iD4_guide_CXCMC_impant_wrapper .iD4_guide_CXCMC_impant_step-item.active .iD4_guide_CXCMC_impant_step-icon img {
     filter: brightness(0) invert(1) !important;
     opacity: 1 !important;
+}
+
+
+/* B) PLAY ICON - bỏ ký tự ▶ (nếu còn) */
+
+#iD4_guide_CXCMC_impant_wrapper .iD4_guide_CXCMC_impant_play-btn,
+#iD4_guide_CXCMC_impant_wrapper .iD4_guide_CXCMC_impant_step-play-icon {
+    font-size: 0 !important;
+    /* ẩn ký tự ▶ nếu HTML còn */
+    line-height: 0 !important;
+}
+
+
+/* chống z-index bị theme chồng */
+
+#iD4_guide_CXCMC_impant_wrapper .iD4_guide_CXCMC_impant_video-placeholder,
+#iD4_guide_CXCMC_impant_wrapper .iD4_guide_CXCMC_impant_step-media-wrapper {
+    position: relative !important;
+    isolation: isolate;
+}
+
+
+/* PLAY LỚN: absolute center, giữ nền/viền như bạn muốn */
+
+#iD4_guide_CXCMC_impant_wrapper .iD4_guide_CXCMC_impant_play-btn {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 2 !important;
+    pointer-events: none;
+}
+
+
+/* Tam giác PLAY LỚN */
+
+#iD4_guide_CXCMC_impant_wrapper .iD4_guide_CXCMC_impant_play-btn::before {
+    content: "" !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -50%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 16px solid #ffffff;
+    /* MÀU TAM GIÁC (PLAY LỚN) */
+}
+
+
+/* Glow ring PLAY LỚN */
+
+#iD4_guide_CXCMC_impant_wrapper .iD4_guide_CXCMC_impant_play-btn::after {
+    content: "" !important;
+    position: absolute;
+    inset: -6px;
+    border-radius: 999px;
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+
+/* PLAY NHỎ (thumbnail step) */
+
+#iD4_guide_CXCMC_impant_wrapper .iD4_guide_CXCMC_impant_step-play-icon {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 2 !important;
+    pointer-events: none;
+}
+
+
+/* Tam giác PLAY NHỎ */
+
+#iD4_guide_CXCMC_impant_wrapper .iD4_guide_CXCMC_impant_step-play-icon::before {
+    content: "" !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -50%);
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 13px solid var(--id4-button-color);
+    /* MÀU TAM GIÁC (PLAY NHỎ) */
 }
