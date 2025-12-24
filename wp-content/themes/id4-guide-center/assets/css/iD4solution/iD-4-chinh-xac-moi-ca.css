@@ -592,6 +592,48 @@
         flex-direction: row;
     }
 
+    /* FIX MOBILE: chữ không tràn khỏi pill */
+    /* 1) Cho 2 nút stretch cùng chiều cao */
+    #iD4_guide_CXCMC_impant_wrapper .iD4_guide_CXCMC_impant_tab-nav {
+        display: flex !important;
+        align-items: stretch !important;
+        /* QUAN TRỌNG */
+        width: 100%;
+        gap: 0 !important;
+    }
+
+    /* 2) Button thành flex để chữ luôn nằm giữa theo cả 2 trục */
+    #iD4_guide_CXCMC_impant_wrapper .iD4_guide_CXCMC_impant_tab-btn {
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 10px 10px !important;
+        line-height: 1.15 !important;
+        white-space: normal !important;
+        /* cho xuống dòng */
+        text-align: center !important;
+    }
+
+    /* 3) Bắt 2 nút có chiều cao tối thiểu giống nhau */
+    #iD4_guide_CXCMC_impant_wrapper .iD4_guide_CXCMC_impant_tab-btn {
+        min-height: 52px !important;
+        /* bạn có thể tăng 56px nếu muốn dày hơn */
+    }
+
+    /* 4) Dính border ở giữa (tránh hở/viền đôi) */
+    #iD4_guide_CXCMC_impant_wrapper .iD4_guide_CXCMC_impant_tab-btn:first-child {
+        border-right: 0 !important;
+    }
+
+    #iD4_guide_CXCMC_impant_wrapper .iD4_guide_CXCMC_impant_tab-btn+#iD4_guide_CXCMC_impant_wrapper .iD4_guide_CXCMC_impant_tab-btn {
+        margin-left: -2px !important;
+        /* = border 2px */
+    }
+
+    /* end FIX MOBILE: chữ không tràn khỏi pill */
     .iD4_guide_CXCMC_impant_tab-btn {
         width: auto;
         flex: 1;
@@ -739,6 +781,34 @@
    A) Step icon: BG xám / active BG xanh
    B) Play icon: vẽ tam giác bằng ::before/::after (content:"")
 ========================================================= */
+
+
+/* FIX: xóa khoảng cách giữa 2 tab button */
+
+#iD4_guide_CXCMC_impant_wrapper .iD4_guide_CXCMC_impant_tab-nav {
+    display: inline-flex !important;
+    gap: 0 !important;
+}
+
+#iD4_guide_CXCMC_impant_wrapper .iD4_guide_CXCMC_impant_tab-btn {
+    margin: 0 !important;
+    /* Flatsome hay add margin cho button */
+}
+
+
+/* dính 2 nút lại: triệt khe do border 2px */
+
+#iD4_guide_CXCMC_impant_wrapper .iD4_guide_CXCMC_impant_tab-btn+#iD4_guide_CXCMC_impant_wrapper .iD4_guide_CXCMC_impant_tab-btn {
+    margin-left: -2px !important;
+    /* = đúng border 2px của bạn */
+}
+
+
+/* tránh viền đôi ở giữa */
+
+#iD4_guide_CXCMC_impant_wrapper .iD4_guide_CXCMC_impant_tab-btn:first-child {
+    border-right: 0 !important;
+}
 
 
 /* A) STEP ICON BG */
