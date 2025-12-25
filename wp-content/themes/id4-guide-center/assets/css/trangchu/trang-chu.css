@@ -1,4 +1,5 @@
 /* Thiết lập cơ bản */
+
 .iD4_guide-section {
     background-color: var(--id4-container-color-xam);
     padding: 80px 0 40px 0;
@@ -10,7 +11,9 @@
     padding: 0 15px;
 }
 
+
 /* Bố cục chính sử dụng Flexbox */
+
 .iD4_guide-content-wrapper {
     display: flex;
     align-items: center;
@@ -29,7 +32,9 @@
     justify-content: flex-end;
 }
 
+
 /* Hình ảnh thực tế */
+
 .iD4_guide-actual-image {
     width: 100%;
     height: auto;
@@ -59,7 +64,9 @@
     text-indent: var(--id4-text-indent);
 }
 
+
 /* Kiểu dáng nút bấm */
+
 .iD4_guide-actions {
     display: flex;
     /* gap: 15px; */
@@ -77,7 +84,9 @@
     text-decoration: none;
 }
 
+
 /* Trạng thái Primary (Màu xanh đậm) */
+
 .iD4_guide-btn-primary {
     background-color: var(--id4-button-color);
     border: 1px solid var(--id4-bordrer-color);
@@ -88,7 +97,9 @@
     background-color: var(--id4-button-color);
 }
 
+
 /* Trạng thái Secondary (Viền xanh) */
+
 .iD4_guide-btn-secondary {
     background-color: transparent;
     color: var(--id4-button-color);
@@ -102,7 +113,9 @@
 
 /* --- MEDIA QUERIES CHO RESPONSIVE --- */
 
+
 /* 1. Tablet (Màn hình từ 768px trở lên) */
+
 @media (max-width: 1024px) {
     .iD4_guide-content-wrapper {
         gap: 30px;
@@ -118,7 +131,9 @@
     }
 }
 
+
 /* 2. Mobile (Màn hình nhỏ hơn 768px) */
+
 @media (max-width: 767px) {
     .iD4_guide-content-wrapper {
         flex-direction: column-reverse;
@@ -152,7 +167,6 @@
     .iD4_guide-btn {
         font-family: var(--id4-font-main);
         font-weight: var(--id4-font-weight-small-bold);
-
     }
 
     .iD4_guide-image-content {

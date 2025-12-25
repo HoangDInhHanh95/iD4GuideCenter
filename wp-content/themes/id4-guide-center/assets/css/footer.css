@@ -1,6 +1,8 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@import url('../global.css');
 
 /* CSS đã được cập nhật prefix thành id4_footer */
+
 .id4_footer {
     font-family: var(--id4-font-main);
     background-color: var(--id4-button-color);
@@ -146,6 +148,7 @@
     border-radius: 8px;
     display: block;
 }
+
 
 /* CSS cho Responsive */
 

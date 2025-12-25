@@ -1,4 +1,5 @@
 /* Thiết lập cơ bản */
+
 .id4_guide_vtt-about-us-section {
     background-color: var(--id4-container-color-xam);
     padding: var(--id4-spacing-block) 0;
@@ -11,7 +12,9 @@
     margin: 0 auto;
 }
 
+
 /* Tiêu đề chính */
+
 .id4_guide_vtt-main-title {
     font-family: var(--id4-font-main);
     font-size: var(--id4-font-size-title);
@@ -21,7 +24,9 @@
     text-transform: uppercase;
 }
 
+
 /* Tiêu đề phụ */
+
 .id4_guide_vtt-subtitle {
     font-size: var(--id4-font-size-desription);
     color: var(--id4-color-text-desription);
@@ -29,21 +34,25 @@
     font-style: italic;
 }
 
+
 /* Nội dung mô tả */
+
 .id4_guide_vtt-description-content {
     font-family: var(--id4-font-main);
     font-size: var(--id4-font-size-desription);
     text-indent: var(--id4-text-indent);
     font-weight: var(--id4-font-weight-desript);
-
     line-height: 1.6;
     margin: 0 auto;
     text-align: justify;
 }
 
+
 /* --- MEDIA QUERIES CHO RESPONSIVE --- */
 
+
 /* Tablet (Màn hình nhỏ hơn 992px) */
+
 @media (max-width: 991px) {
     .id4_guide_vtt-about-us-section {
         padding: 60px 0;
@@ -63,7 +72,9 @@
     }
 }
 
+
 /* Mobile (Màn hình nhỏ hơn 576px) */
+
 @media (max-width: 575px) {
     .id4_guide_vtt-about-us-section {
         padding: 40px 0;

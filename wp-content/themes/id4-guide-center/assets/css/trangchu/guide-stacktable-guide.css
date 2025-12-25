@@ -1,4 +1,7 @@
+@import url('../global.css');
+
 /* Thiết lập cơ bản và font */
+
 .id4_guide_stacktable_container {
     background-color: var(--id4-container-color-xam);
     margin: 0;
@@ -8,7 +11,9 @@
     align-items: center;
 }
 
+
 /* Container chính của 2 card */
+
 .id4_guide_stacktable_card-container {
     display: flex;
     flex-wrap: wrap;
@@ -18,7 +23,9 @@
     justify-content: center;
 }
 
+
 /* Card sản phẩm chung */
+
 .id4_guide_stacktable_product-card {
     background-color: white;
     border-radius: 20px;
@@ -35,7 +42,9 @@
     text-align: justify;
 }
 
+
 /* Div bao bọc hình ảnh và text */
+
 .id4_guide_stacktable_product-content {
     padding: 25px 25px 0px 25px;
     padding-top: 0;
@@ -44,7 +53,9 @@
     height: 100%;
 }
 
+
 /* Wrapper hình ảnh */
+
 .id4_guide_stacktable_image-wrapper {
     margin: 0 -25px;
     margin-bottom: 20px;
@@ -63,7 +74,9 @@
     border-radius: 4px;
 }
 
+
 /* Khu vực văn bản */
+
 .id4_guide_stacktable_text-content {
     flex-grow: 1;
 }
@@ -86,7 +99,9 @@
     text-align: justify;
 }
 
+
 /* Nút CTA chung (Đã chuyển sang style cho thẻ a) */
+
 .id4_guide_stacktable_cta-button {
     display: inline-block;
     padding: 10px 40px;
@@ -99,7 +114,6 @@
     color: white;
     text-decoration: none;
     /* Bỏ gạch chân mặc định của link */
-
     /* Căn nút sang phải */
     align-self: flex-end;
     float: right !important;
@@ -110,13 +124,17 @@
     text-align: center;
 }
 
+
 /* MÀU NÚT CHO CARD 1 */
+
 .id4_guide_stacktable_cta-button {
     background-color: var(--id4-button-color);
     color: white;
 }
 
+
 /* MÀU NÚT CHO CARD 2 */
+
 .id4_guide_stacktable_primary-button {
     background-color: var(--id4-button-color);
     color: white;
@@ -127,9 +145,12 @@
     color: white;
 }
 
+
 /* --- RESPONSIVE MEDIA QUERIES --- */
 
+
 /* 1. Màn hình Mobile nhỏ (dưới 600px) */
+
 @media (max-width: 600px) {
     body {
         padding: 15px;
@@ -166,7 +187,9 @@
     }
 }
 
+
 /* 2. Màn hình Tablet (601px - 1024px) */
+
 @media (min-width: 601px) and (max-width: 1024px) {
     .id4_guide_stacktable_product-card {
         flex: 1 1 45%;
@@ -196,7 +219,9 @@
     }
 }
 
+
 /* 3. Màn hình Desktop (trên 1024px) */
+
 @media (min-width: 1025px) {
     .id4_guide_stacktable_product-card {
         /* Giữ max-width ở đây để fix lỗi lồi dòng và giới hạn độ rộng */

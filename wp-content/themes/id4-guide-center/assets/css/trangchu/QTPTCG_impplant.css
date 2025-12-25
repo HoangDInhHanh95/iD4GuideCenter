@@ -1,4 +1,5 @@
 /* Thiết lập cơ bản */
+
 .id4_QTDGD_implant-process-section {
     background-color: #ffffff;
     padding: 70px 0 80px 0;
@@ -11,7 +12,9 @@
     /* padding: 0 15px; */
 }
 
+
 /* Tiêu đề chính */
+
 .id4_QTDGD_implant-section-title {
     font-family: var(--id4-font-main);
     font-size: var(--id4-font-size-title);
@@ -21,7 +24,9 @@
     /* margin-bottom: 20px; */
 }
 
+
 /* Bố cục 3 bước dùng Flexbox */
+
 .id4_QTDGD_implant-process-steps {
     display: flex;
     justify-content: space-between;
@@ -44,7 +49,9 @@
     /* Làm mờ nhẹ icon nếu cần */
 }
 
+
 /* Nội dung mô tả */
+
 .id4_QTDGD_implant-step-description {
     font-family: var(--id4-font-main);
     font-size: var(--id4-font-size-desription);
@@ -55,7 +62,9 @@
     color: #333333;
 }
 
+
 /* Nút hành động */
+
 .id4_QTDGD_implant-action-button {
     font-family: var(--id4-font-main);
     font-size: var(--id4-font-size-desription);
@@ -76,9 +85,12 @@
     color: #ffffff;
 }
 
+
 /* --- MEDIA QUERIES CHO RESPONSIVE --- */
 
+
 /* Tablet (Màn hình nhỏ hơn 992px) */
+
 @media (max-width: 991px) {
     .id4_QTDGD_implant-step-item {
         /* Cho phép chúng co giãn và sử dụng flex-basis */
@@ -86,7 +98,9 @@
     }
 }
 
+
 /* Mobile và Tablet nhỏ (Màn hình nhỏ hơn 767px) */
+
 @media (max-width: 767px) {
     .id4_QTDGD_implant-process-section {
         padding: 40px 0;
