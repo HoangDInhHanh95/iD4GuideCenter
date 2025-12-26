@@ -1,6 +1,9 @@
 /* File: assets/css/global.css */
 
-@import url('../global.css');
+@import url('/wp-content/themes/id4-guide-center/assets/css/global.css');
+
+/* File: assets/css/global.css */
+
 
 /* --- 1. CORE RESET SCOPED --- */
 
@@ -36,7 +39,7 @@
 
 .iD4_guide_CXCMC_impant_header {
     text-align: center;
-    padding: var(--id4-spacing-block) 0 20px;
+    padding: 0 0 20px;
 }
 
 .iD4_guide_CXCMC_impant_header h1 {

@@ -9,10 +9,7 @@
 .id4_solution_wrapper {
     /* Biến màu sắc cục bộ */
     padding: 80px 0px;
-    font-family: var(--id4-font-main);
     background-color: var(--id4-container-color-xam);
-    color: var(--id4-color-text-desription);
-    line-height: 1.6;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -103,22 +100,22 @@
 }
 
 .id4_solution_btn {
+    padding: 8px 40px;
+    border-radius: 50px;
+    cursor: pointer;
     font-family: var(--id4-font-main);
-    font-size: var(--id4-font-size-desription);
+    font-size: var(--id4-font-weight-desript);
     font-weight: var(--id4-font-weight-small-bold);
+    transition: background-color 0.3s, opacity 0.3s, color 0.3s, border-color 0.3s;
     display: inline-block;
-    padding: var(--id4-padding-height-button) var(--id4-padding-width-button);
     background-color: var(--id4-button-color);
     color: white;
     border: none;
-    border-radius: 50px;
-    cursor: pointer;
     text-decoration: none;
-    transition: background-color 0.3s;
 }
 
 .id4_solution_btn_primary {
-    background-color: var(--id4-button-color);
+    /* background-color: var(--id4-button-color); */
     color: #fff !important;
     border: 2px solid var(--id4-button-color);
     /* box-shadow: 0 4px 10px rgba(49, 60, 163, 0.2); */

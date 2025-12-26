@@ -78,7 +78,7 @@
     border-radius: 50px;
     cursor: pointer;
     font-family: var(--id4-font-main);
-    font-size: var(--id4-font-weight-desript);
+    font-size: var(--id4-font-size-desription);
     font-weight: var(--id4-font-weight-small-bold);
     transition: background-color 0.3s, opacity 0.3s, color 0.3s, border-color 0.3s;
     text-decoration: none;
