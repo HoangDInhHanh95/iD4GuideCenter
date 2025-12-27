@@ -204,6 +204,17 @@ add_action('wp_enqueue_scripts', function () {
             );
         }
 
+        // ID-4 Solution: bảng giá
+        $iD4_solution_bang_gia = get_stylesheet_directory() . '/assets/css/iD4solution/bang-gia.css';
+        if (file_exists($iD4_solution_bang_gia)) {
+            wp_enqueue_style(
+                'iD-4-solution-bang-gia-css',
+                get_stylesheet_directory_uri() . '/assets/css/iD4solution/bang-gia.css',
+                array('id4-global-css'), // ← global load trước
+                filemtime($iD4_solution_bang_gia)
+            );
+        }
+
         // ID-4 Solution: Chính xác cho mọi ca Implant JS
         $iD4_chinh_xac_moi_ca_implant_js = get_stylesheet_directory() . '/assets/js/iD4solution/BDCG-Implant-chi-vs.js';
         if (file_exists($iD4_chinh_xac_moi_ca_implant_js)) {
