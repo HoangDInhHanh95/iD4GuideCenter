@@ -215,6 +215,17 @@ add_action('wp_enqueue_scripts', function () {
             );
         }
 
+        // ID-4 Solution: câu hỏi thường gặp
+        $iD4_solution_cau_hoi_thuong_gap = get_stylesheet_directory() . '/assets/css/iD4solution/cau-hoi-thuong-gap.css';
+        if (file_exists($iD4_solution_cau_hoi_thuong_gap)) {
+            wp_enqueue_style(
+                'iD-4-solution-cau-hoi-thuong-gap-css',
+                get_stylesheet_directory_uri() . '/assets/css/iD4solution/cau-hoi-thuong-gap.css',
+                array('id4-global-css'), // ← global load trước
+                filemtime($iD4_solution_cau_hoi_thuong_gap)
+            );
+        }
+
         // ID-4 Solution: Chính xác cho mọi ca Implant JS
         $iD4_chinh_xac_moi_ca_implant_js = get_stylesheet_directory() . '/assets/js/iD4solution/BDCG-Implant-chi-vs.js';
         if (file_exists($iD4_chinh_xac_moi_ca_implant_js)) {
@@ -223,6 +234,19 @@ add_action('wp_enqueue_scripts', function () {
                 get_stylesheet_directory_uri() . '/assets/js/iD4solution/BDCG-Implant-chi-vs.js',
                 array('jquery'),                 // nếu cần jQuery – có thể bỏ nếu không dùng
                 filemtime($iD4_chinh_xac_moi_ca_implant_js),           // cache-busting
+                true                             // load ở footer
+            );
+        }
+
+
+        // ID-4 Solution: cau hỏi thường gặp JS
+        $iD4_solution_cau_hoi_thuong_gap_js = get_stylesheet_directory() . '/assets/js/iD4solution/cau-hoi-thuong-gap.js';
+        if (file_exists($iD4_solution_cau_hoi_thuong_gap_js)) {
+            wp_enqueue_script(
+                'iD-4-solution-cau-hoi-thuong-gap-js',
+                get_stylesheet_directory_uri() . '/assets/js/iD4solution/cau-hoi-thuong-gap.js',
+                array('jquery'),                 // nếu cần jQuery – có thể bỏ nếu không dùng
+                filemtime($iD4_solution_cau_hoi_thuong_gap_js),           // cache-busting
                 true                             // load ở footer
             );
         }

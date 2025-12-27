@@ -1,70 +1,6 @@
 /* Bảng giá dịch vụ của ID-4 Solution */
 
 
-/* File: assets/css/global.css */
-
-@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Parisienne&family=Paytone+One&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Rochester&family=Sigmar+One&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    /* --- 1. MÀU SẮC (COLORS) --- */
-    --id4-container-color-xam: #f5f5f7;
-    --id4-button-color: #2e3192;
-    --id4-bordrer-color: #2e3192;
-    /* --- 2. FONT CHỮ (TYPOGRAPHY) --- */
-    /* Thin 100 - ExtraLight 200 - Light 300 - Regular 400 - 
-    Medium 500 - SemiBold 600 - Bold 700 - ExtraBold 800 - Black 900 */
-    --id4-font-main: 'Open Sans';
-    --id4-font-weight-big-bold: 900;
-    --id4-font-weight-small-bold: 700;
-    --id4-font-weight-title: 600;
-    --id4-font-weight-desript: 400;
-    /* Lưu ý: Font cần được load trong Flatsome hoặc Google Fonts trước */
-    --id4-font-size-title: 32px;
-    --id4-font-size-desription: 16px;
-    /* --- 
-        3. KÍCH THƯỚC & KHOẢNG CÁCH (DIMENSIONS & SPACING) 
-        - 
-    --- */
-    --id4-container-width: 1100px;
-    --id4-header-height: 80px;
-    --id4-spacing-block: 40px;
-    --id4-spacing-sm: 8px;
-    --id4-spacing-md: 16px;
-    --id4-spacing-lg: 32px;
-    /* --- 4. MÀU SẮC CHỮ --- */
-    --id4-color-text-title: #2e3192;
-    --id4-color-text-desription: #000000;
-    /* --- 4. BORDER & RADIUS --- */
-    --id4-border-radius-card: 28px;
-    --id4-border-radius-card-small: 16px;
-    /* --- 5. Khoảng cách --- */
-    --id4-text-indent: 25px;
-    /* 
-    -6. thêm kích thước cho thẻ trỏ xuống 
-    */
-    --arrow-width: 40px;
-    --arrow-height: 35px;
-    --arrow-border-width: 3px;
-    /* --- 
-        7. KÍCH THƯỚC & KHOẢNG CÁCH (DIMENSIONS & SPACING) 
-        - 
-    --- */
-    --id4-padding-height-button: 10px;
-    --id4-padding-width-button: 40px;
-}
-
-.iD-4-Bang-gia-main-wrapper * {
-    box-sizing: border-box;
-    font-family: var(--id4-font-main);
-}
-
-
 /* Container chính bao bọc toàn bộ giao diện */
 
 .iD-4-Bang-gia-main-wrapper {
@@ -96,10 +32,10 @@
 /* Wrapper cho bảng để xử lý scroll trên mobile */
 
 .iD-4-Bang-gia-table-scroll {
-    /* width: 100%; */
-    max-width: 900px;
+    width: 75%;
+    max-width: var(--id4-container-width);
     overflow-x: auto;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
 }
 
 
@@ -129,7 +65,7 @@
 /* Header của bảng */
 
 .iD-4-Bang-gia-row.iD-4-Bang-gia-header {
-    background-color: #30338a;
+    background-color: var(--id4-button-color);
     /* Màu nền header xanh đậm */
     color: #ffffff;
 }
@@ -139,7 +75,7 @@
 
 .iD-4-Bang-gia-row.iD-4-Bang-gia-data {
     background-color: #ffffff;
-    color: #30338a;
+    color: var(--id4-color-text-title);
     /* Màu chữ xanh */
     font-weight: 500;
 }
@@ -166,6 +102,7 @@
     font-family: var(--id4-font-main);
     font-size: var(--id4-font-size-desription);
     font-weight: var(--id4-font-weight-small-bold);
+    text-transform: capitalize;
     flex: 1;
     padding: 18px 10px;
     text-align: center;
