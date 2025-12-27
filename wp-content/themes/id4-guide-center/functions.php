@@ -1,5 +1,20 @@
 <?php
 
+
+// 1) Load GLOBAL thật sớm
+// add_action('wp_enqueue_scripts', function () {
+//     $global = get_stylesheet_directory() . '/assets/css/global.css';
+//     if (file_exists($global)) {
+//         wp_enqueue_style(
+//             'id4-global-css',
+//             get_stylesheet_directory_uri() . '/assets/css/global.css',
+//             [],
+//             filemtime($global)
+//         );
+//     }
+// }, 1);
+
+
 add_action('wp_enqueue_scripts', function () {
 
     // Load GLOBAL CSS

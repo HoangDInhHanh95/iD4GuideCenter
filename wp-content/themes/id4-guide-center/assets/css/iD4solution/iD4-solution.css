@@ -1,6 +1,5 @@
 /* File: assets/css/global.css */
 
-@import url('../global.css');
 
 /* ============================================================
            CSS COMPONENT (Tiền tố: id4_solution_)
@@ -75,7 +74,7 @@
     color: var(--id4-color-text-title);
     font-size: var(--id4-font-size-title);
     font-weight: var(--id4-font-weight-title);
-    margin: 0 0 25px 0;
+    margin: 0 0 var(--id4-spacing-lg) 0;
     line-height: 1.2;
     text-transform: uppercase;
 }
@@ -100,7 +99,7 @@
 }
 
 .id4_solution_btn {
-    padding: 8px 40px;
+    padding: var(--id4-padding-height-button) var(--id4-padding-width-button);
     border-radius: 50px;
     cursor: pointer;
     font-family: var(--id4-font-main);
