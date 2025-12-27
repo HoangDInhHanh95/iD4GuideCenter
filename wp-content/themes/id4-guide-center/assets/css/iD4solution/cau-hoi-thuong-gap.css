@@ -1,29 +1,90 @@
+/* File: assets/css/global.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Parisienne&family=Paytone+One&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Rochester&family=Sigmar+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* --- 1. MÀU SẮC (COLORS) --- */
+    --id4-container-color-xam: #f5f5f7;
+    --id4-button-color: #2e3192;
+    --id4-bordrer-color: #2e3192;
+    /* --- 2. FONT CHỮ (TYPOGRAPHY) --- */
+    /* Thin 100 - ExtraLight 200 - Light 300 - Regular 400 - 
+    Medium 500 - SemiBold 600 - Bold 700 - ExtraBold 800 - Black 900 */
+    --id4-font-main: 'Open Sans';
+    --id4-font-weight-big-bold: 900;
+    --id4-font-weight-small-bold: 700;
+    --id4-font-weight-title: 600;
+    --id4-font-weight-desript: 400;
+    /* Lưu ý: Font cần được load trong Flatsome hoặc Google Fonts trước */
+    --id4-font-size-title: 32px;
+    --id4-font-size-desription: 16px;
+    /* --- 
+        3. KÍCH THƯỚC & KHOẢNG CÁCH (DIMENSIONS & SPACING) 
+        - 
+    --- */
+    --id4-container-width: 1100px;
+    --id4-header-height: 80px;
+    --id4-spacing-block: 40px;
+    --id4-spacing-sm: 8px;
+    --id4-spacing-md: 16px;
+    --id4-spacing-lg: 32px;
+    /* --- 4. MÀU SẮC CHỮ --- */
+    --id4-color-text-title: #2e3192;
+    --id4-color-text-desription: #000000;
+    /* --- 4. BORDER & RADIUS --- */
+    --id4-border-radius-card: 28px;
+    --id4-border-radius-card-small: 16px;
+    /* --- 5. Khoảng cách --- */
+    --id4-text-indent: 25px;
+    /* 
+    -6. thêm kích thước cho thẻ trỏ xuống 
+    */
+    --arrow-width: 40px;
+    --arrow-height: 35px;
+    --arrow-border-width: 3px;
+    /* --- 
+        7. KÍCH THƯỚC & KHOẢNG CÁCH (DIMENSIONS & SPACING) 
+        - 
+    --- */
+    --id4-padding-height-button: 10px;
+    --id4-padding-width-button: 40px;
+}
+
+
 /* ===== iD4-solution-CHTG (Fixed Layout) ===== */
 
-:where(#iD4-solution-CHTG-wrapper, #iD4-solution-CHTG-wrapper *) {
+:where(#iD4-solution-CHTG-wrapper,
+    #iD4-solution-CHTG-wrapper *) {
     box-sizing: border-box;
 }
 
 #iD4-solution-CHTG-wrapper {
     font-family: inherit;
-    background: #f7f9fc;
+    background: var(--id4-container-color-xam);
     width: 100%;
-    padding: 40px 20px;
+    padding: var(--id4-header-height) 0px;
     color: #333;
 }
 
 #iD4-solution-CHTG-wrapper .iD4-solution-CHTG-title {
+    font-family: var(--id4-font-main);
+    font-size: var(--id4-font-size-title);
+    font-weight: var(--id4-font-weight-title);
     text-align: center;
-    color: #2c3e88;
-    font-size: 24px;
-    font-weight: 600;
+    color: var(--id4-color-text-title);
     text-transform: uppercase;
-    margin: 0 0 30px;
+    margin: 0 0 var(--id4-spacing-md);
 }
 
 #iD4-solution-CHTG-wrapper .iD4-solution-CHTG-list {
     width: 100%;
-    max-width: 900px;
+    max-width: var(--id4-container-width);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -39,11 +100,11 @@
 /* --- PHẦN NÚT CÂU HỎI (ĐÃ SỬA LẠI LOGIC CĂN LỀ) --- */
 
 #iD4-solution-CHTG-wrapper .iD4-solution-CHTG-q {
-    background: #fff;
-    color: #000;
-    font-weight: 600;
-    font-size: 16px;
-    padding: 20px 25px;
+    background-color: #fff;
+    font-family: var(--id4-font-main);
+    font-weight: var(--id4-font-weight-small-bold);
+    font-size: var(--id4-font-size-desription);
+    padding: 10px 25px;
     width: 100%;
     border: 0;
     cursor: pointer;
@@ -73,7 +134,7 @@
 
 #iD4-solution-CHTG-wrapper .iD4-solution-CHTG-icon {
     color: #ccc;
-    font-size: 20px;
+    font-size: 35px;
     font-weight: 700;
     transition: transform 0.3s ease, color 0.3s ease;
     /* MAGIC COMMAND: Dòng này sẽ đẩy icon ra sát lề phải */
@@ -93,7 +154,7 @@
 #iD4-solution-CHTG-wrapper .iD4-solution-CHTG-q.iD4-active {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    background: #2c3e88;
+    background: var(--id4-button-color);
     color: #fff;
 }
 
@@ -123,7 +184,7 @@
 #iD4-solution-CHTG-wrapper .iD4-solution-CHTG-content-inner {
     min-height: 0;
     padding: 0 25px;
-    color: #555;
+    color: var(--id4-color-text-desription);
     line-height: 1.7;
     opacity: 0;
     transform: translateY(-10px);
@@ -138,6 +199,9 @@
 }
 
 #iD4-solution-CHTG-wrapper .iD4-solution-CHTG-content-inner p {
+    font-family: var(--id4-font-main);
+    font-size: var(--id4-font-size-desription);
+    font-weight: var(--id4-font-weight-desript);
     margin: 0 0 10px;
 }
 

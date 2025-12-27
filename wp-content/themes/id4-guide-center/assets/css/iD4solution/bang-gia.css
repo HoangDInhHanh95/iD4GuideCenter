@@ -34,6 +34,7 @@
 .iD-4-Bang-gia-table-scroll {
     width: 75%;
     max-width: var(--id4-container-width);
+    box-shadow: 0 12px 30px -18px rgba(0, 0, 0, .53);
     overflow-x: auto;
     /* padding-bottom: 10px; */
 }
@@ -46,7 +47,7 @@
     flex-direction: column;
     width: 100%;
     min-width: 600px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 30px -18px rgba(0, 0, 0, .22);
     border-radius: 4px;
     overflow: hidden;
     /* Bo tròn góc */
