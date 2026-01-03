@@ -8,7 +8,7 @@
 .iD4_guide-container {
     max-width: var(--id4-container-width);
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 4%;
 }
 
 
@@ -73,12 +73,12 @@
 }
 
 .iD4_guide-btn {
-    padding: 4px 40px;
+    padding: var(--id4-padding-height-button) var(--id4-padding-width-button);
     border: none;
     border-radius: 50px;
     cursor: pointer;
     font-family: var(--id4-font-main);
-    font-size: var(--id4-font-size-desription);
+    font-size: var(--id4-font-size-button);
     font-weight: var(--id4-font-weight-small-bold);
     transition: background-color 0.3s, opacity 0.3s, color 0.3s, border-color 0.3s;
     text-decoration: none;
@@ -127,7 +127,7 @@
 
     .iD4_guide-btn {
         padding: 6px 20px;
-        font-size: 14px;
+        font-size: var(--id4-font-size-button);
     }
 }
 
@@ -167,6 +167,7 @@
     .iD4_guide-btn {
         font-family: var(--id4-font-main);
         font-weight: var(--id4-font-weight-small-bold);
+        font-size: var(--id4-font-size-button);
     }
 
     .iD4_guide-image-content {
