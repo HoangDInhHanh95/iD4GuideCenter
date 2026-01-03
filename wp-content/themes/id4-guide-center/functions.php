@@ -251,4 +251,17 @@ add_action('wp_enqueue_scripts', function () {
             );
         }
     }
+
+    // chỉ load trang chi phí cấy ghép implant
+    if (is_page('chi-phi-dich-vu')) {
+        $chi_phi_dich_vu_css = get_stylesheet_directory() . '/assets/css/chiphidichvu/chi-phi-dich-vu.css';
+        if (file_exists($chi_phi_dich_vu_css)) {
+            wp_enqueue_style(
+                'id4-chi-phi-dich-vu-css',
+                get_stylesheet_directory_uri() . '/assets/css/chiphidichvu/chi-phi-dich-vu.css',
+                array('id4-global-css'), // ← global load trước
+                filemtime($chi_phi_dich_vu_css)
+            );
+        }
+    }
 }, 20); // <-- đóng hook

@@ -1,0 +1,291 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* File: assets/css/global.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Parisienne&family=Paytone+One&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Rochester&family=Sigmar+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* --- 1. MÀU SẮC (COLORS) --- */
+    --id4-container-color-xam: #f5f5f7;
+    --id4-button-color: #2e3192;
+    --id4-bordrer-color: #2e3192;
+    /* --- 2. FONT CHỮ (TYPOGRAPHY) --- */
+    /* Thin 100 - ExtraLight 200 - Light 300 - Regular 400 - 
+    Medium 500 - SemiBold 600 - Bold 700 - ExtraBold 800 - Black 900 */
+    --id4-font-main: 'Open Sans';
+    --id4-font-weight-big-bold: 900;
+    --id4-font-weight-small-bold: 700;
+    --id4-font-weight-title: 600;
+    --id4-font-weight-desript: 400;
+    /* Lưu ý: Font cần được load trong Flatsome hoặc Google Fonts trước */
+    --id4-font-size-title: 32px;
+    --id4-font-size-desription: 16px;
+    /* --- 
+        3. KÍCH THƯỚC & KHOẢNG CÁCH (DIMENSIONS & SPACING) 
+        - 
+    --- */
+    --id4-container-width: 1100px;
+    --id4-header-height: 80px;
+    --id4-spacing-block: 40px;
+    --id4-spacing-sm: 8px;
+    --id4-spacing-md: 16px;
+    --id4-spacing-lg: 32px;
+    /* --- 4. MÀU SẮC CHỮ --- */
+    --id4-color-text-title: #2e3192;
+    --id4-color-text-desription: #000000;
+    /* --- 4. BORDER & RADIUS --- */
+    --id4-border-radius-card: 28px;
+    --id4-border-radius-card-small: 16px;
+    /* --- 5. Khoảng cách --- */
+    --id4-text-indent: 25px;
+    /* 
+    -6. thêm kích thước cho thẻ trỏ xuống 
+    */
+    --arrow-width: 40px;
+    --arrow-height: 35px;
+    --arrow-border-width: 3px;
+    /* --- 
+        7. KÍCH THƯỚC & KHOẢNG CÁCH (DIMENSIONS & SPACING) 
+        - 
+    --- */
+    --id4-padding-height-button: 10px;
+    --id4-padding-width-button: 40px;
+}
+
+
+/* --- MAIN WRAPPER --- */
+
+.id4-cg-wrapper {
+    font-family: var(--id4-font-main);
+    background-color: #fff;
+    color: var(--id4-color-text-desription);
+    width: 100%;
+    /* min-height: 100vh; */
+    padding: 40px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* --- TYPOGRAPHY & TITLES --- */
+
+.id4-cg-section-title {
+    color: #2e3b8f;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    margin-top: 40px;
+}
+
+.id4-cg-section-title:first-child {
+    margin-top: 0;
+}
+
+
+/* --- TABLE STRUCTURE USING FLEXBOX --- */
+
+.id4-cg-table-container {
+    width: 100%;
+    max-width: var(--id4-container-width);
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Hàng tiêu đề của bảng */
+
+.id4-cg-table-header {
+    display: flex;
+    background-color: #2e3b8f;
+    color: #ffffff;
+    font-weight: bold;
+    /* Đã bỏ padding top/bottom ở đây để border full chiều cao */
+}
+
+
+/* Các hàng dữ liệu */
+
+.id4-cg-table-row {
+    display: flex;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+}
+
+.id4-cg-table-row:last-child {
+    border-bottom: none;
+}
+
+.id4-cg-table-row:nth-child(even) {
+    background-color: #f3f6fa;
+}
+
+.id4-cg-table-row:hover {
+    background-color: #eef2ff;
+}
+
+
+/* Cột dữ liệu chung */
+
+.id4-cg-col {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    padding: 0 5px;
+}
+
+
+/* --- CSS MỚI CẬP NHẬT: Style riêng cho cột trong Header --- */
+
+
+/* Thêm đường kẻ dọc màu trắng mờ giữa các cột tiêu đề */
+
+.id4-cg-table-header .id4-cg-col {
+    padding: 15px 5px;
+    /* Padding cho header */
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+    /* Đường kẻ dọc */
+}
+
+
+/* Bỏ đường kẻ dọc ở cột cuối cùng */
+
+.id4-cg-table-header .id4-cg-col:last-child {
+    border-right: none;
+}
+
+
+/* Cột đầu tiên (Đơn vị) đậm hơn */
+
+.id4-cg-col:first-child {
+    font-weight: 600;
+}
+
+
+/* Cột cuối cùng (Tổng chi phí) đậm hơn */
+
+.id4-cg-col:last-child {
+    font-weight: 700;
+}
+
+
+/* Màu chữ riêng cho cột tổng chi phí ở phần body (không phải header) */
+
+.id4-cg-table-row .id4-cg-col:last-child {
+    color: #2e3b8f;
+}
+
+
+/* --- BUTTON STYLES --- */
+
+.id4-cg-btn-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.id4-cg-btn {
+    display: inline-block;
+    background-color: #2e3b8f;
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(46, 59, 143, 0.3);
+}
+
+.id4-cg-btn:hover {
+    background-color: #1a2366;
+    transform: translateY(-2px);
+}
+
+
+/* --- FOOTER NOTE --- */
+
+.id4-cg-footer-note {
+    max-width: 900px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #555;
+    margin-top: 20px;
+    line-height: 1.5;
+    padding: 0 20px;
+}
+
+.id4-cg-footer-title {
+    color: #2e3b8f;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+
+/* --- RESPONSIVE BREAKPOINTS --- */
+
+@media (max-width: 768px) {
+    .id4-cg-wrapper {
+        padding: 20px 10px;
+    }
+
+    .id4-cg-section-title {
+        font-size: 1.1rem;
+    }
+
+    .id4-cg-col {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .id4-cg-table-header {
+        font-size: 0.75rem;
+    }
+
+    .id4-cg-col {
+        font-size: 0.8rem;
+        padding: 0 2px;
+    }
+
+    /* Table header padding chỉnh lại chút cho mobile */
+    .id4-cg-table-header .id4-cg-col {
+        padding: 12px 2px;
+    }
+
+    .id4-cg-table-container {
+        overflow-x: auto;
+        display: block;
+    }
+
+    .id4-cg-table-header,
+    .id4-cg-table-row {
+        min-width: 400px;
+        display: flex;
+    }
+}
