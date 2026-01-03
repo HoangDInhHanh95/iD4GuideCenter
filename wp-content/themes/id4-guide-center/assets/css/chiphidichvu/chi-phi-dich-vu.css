@@ -21,46 +21,62 @@
     --id4-button-color: #2e3192;
     --id4-bordrer-color: #2e3192;
     /* --- 2. FONT CHỮ (TYPOGRAPHY) --- */
-    /* Thin 100 - ExtraLight 200 - Light 300 - Regular 400 - 
-    Medium 500 - SemiBold 600 - Bold 700 - ExtraBold 800 - Black 900 */
+    /* Thin 100 - ExtraLight 200 - Light 300 - Regular 400 -
+       Medium 500 - SemiBold 600 - Bold 700 - ExtraBold 800 - Black 900 */
     --id4-font-main: 'Open Sans';
     --id4-font-weight-big-bold: 900;
     --id4-font-weight-small-bold: 700;
     --id4-font-weight-title: 600;
     --id4-font-weight-desript: 400;
     /* Lưu ý: Font cần được load trong Flatsome hoặc Google Fonts trước */
-    --id4-font-size-title: 32px;
-    --id4-font-size-desription: 16px;
-    /* --- 
-        3. KÍCH THƯỚC & KHOẢNG CÁCH (DIMENSIONS & SPACING) 
-        - 
+    /* Font size co giãn: ~24px → 32px */
+    --id4-font-size-title: clamp(1.5rem, 1.2vw + 1.2rem, 2rem);
+    /* Font size co giãn: ~15px → 16px */
+    --id4-font-size-desription: clamp(0.9375rem, 0.25vw + 0.9rem, 1rem);
+    /* ---
+        3. KÍCH THƯỚC & KHOẢNG CÁCH (DIMENSIONS & SPACING)
+        -
     --- */
-    --id4-container-width: 1100px;
-    --id4-header-height: 80px;
-    --id4-spacing-block: 40px;
-    --id4-spacing-sm: 8px;
-    --id4-spacing-md: 16px;
-    --id4-spacing-lg: 32px;
+    /* Container: 1100px nhưng tự co theo màn hình (chừa padding 2rem) */
+    --id4-container-width: min(68.75rem, calc(100% - 2rem));
+    /* Header height co giãn: ~60px → 80px */
+    --id4-header-height: clamp(3.75rem, 5vw, 5rem);
+    /* Spacing block co giãn: ~24px → 40px */
+    --id4-spacing-block: clamp(1.5rem, 3vw, 2.5rem);
+    /* Spacing sm: 8px */
+    --id4-spacing-sm: 0.5rem;
+    /* Spacing md: 16px */
+    --id4-spacing-md: 1rem;
+    /* Spacing lg: 32px */
+    --id4-spacing-lg: 2rem;
     /* --- 4. MÀU SẮC CHỮ --- */
     --id4-color-text-title: #2e3192;
     --id4-color-text-desription: #000000;
     /* --- 4. BORDER & RADIUS --- */
-    --id4-border-radius-card: 28px;
-    --id4-border-radius-card-small: 16px;
+    /* Radius card: 28px */
+    --id4-border-radius-card: 1.75rem;
+    /* Radius card small: 16px */
+    --id4-border-radius-card-small: 1rem;
     /* --- 5. Khoảng cách --- */
-    --id4-text-indent: 25px;
-    /* 
-    -6. thêm kích thước cho thẻ trỏ xuống 
-    */
-    --arrow-width: 40px;
-    --arrow-height: 35px;
-    --arrow-border-width: 3px;
-    /* --- 
-        7. KÍCH THƯỚC & KHOẢNG CÁCH (DIMENSIONS & SPACING) 
-        - 
+    /* Text indent: 25px */
+    --id4-text-indent: 1.5625rem;
+    /* ---
+        6. thêm kích thước cho thẻ trỏ xuống
     --- */
-    --id4-padding-height-button: 10px;
-    --id4-padding-width-button: 40px;
+    /* Arrow width co giãn: ~32px → 40px */
+    --arrow-width: clamp(2rem, 4vw, 2.5rem);
+    /* Arrow height co giãn: ~28px → 35px */
+    --arrow-height: clamp(1.75rem, 3.5vw, 2.1875rem);
+    /* Arrow border: 3px */
+    --arrow-border-width: 0.1875rem;
+    /* ---
+        7. KÍCH THƯỚC & KHOẢNG CÁCH (DIMENSIONS & SPACING)
+        -
+    --- */
+    /* Button padding height: 10px */
+    --id4-padding-height-button: 0.625rem;
+    /* Button padding width: 40px */
+    --id4-padding-width-button: 2.5rem;
 }
 
 
@@ -72,7 +88,7 @@
     color: var(--id4-color-text-desription);
     width: 100%;
     /* min-height: 100vh; */
-    padding: 40px 15px;
+    padding: var(--id4-header-height) 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,13 +98,14 @@
 /* --- TYPOGRAPHY & TITLES --- */
 
 .id4-cg-section-title {
-    color: #2e3b8f;
-    font-weight: 700;
+    font-family: var(--id4-font-main);
+    color: var(--id4-color-text-title);
+    font-weight: var(--id4-font-weight-small-bold);
+    font-size: var(--id4-font-size-title);
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 20px;
-    font-size: 1.2rem;
-    margin-top: 40px;
+    margin-top: var(--id4-spacing-block);
 }
 
 .id4-cg-section-title:first-child {
@@ -115,10 +132,12 @@
 
 .id4-cg-table-header {
     display: flex;
-    background-color: #2e3b8f;
+    background-color: var(--id4-button-color);
     color: #ffffff;
-    font-weight: bold;
+    font-weight: var(--id4-font-weight-small-bold);
+    font-size: var(--id4-color-text-desription);
     /* Đã bỏ padding top/bottom ở đây để border full chiều cao */
+    text-transform: uppercase;
 }
 
 
@@ -126,8 +145,8 @@
 
 .id4-cg-table-row {
     display: flex;
-    padding: 12px 0;
-    border-bottom: 1px solid #eee;
+    padding: 16px 0;
+    border-bottom: 1px solid #f8f9fa;
     transition: background-color 0.2s;
 }
 
@@ -152,7 +171,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.95rem;
+    /* font-size: 0.95rem; */
     padding: 0 5px;
 }
 
@@ -163,10 +182,8 @@
 /* Thêm đường kẻ dọc màu trắng mờ giữa các cột tiêu đề */
 
 .id4-cg-table-header .id4-cg-col {
-    padding: 15px 5px;
-    /* Padding cho header */
-    border-right: 1px solid rgba(255, 255, 255, 0.4);
-    /* Đường kẻ dọc */
+    padding: clamp(0.75rem, 1vw, 0.9375rem) !important;
+    border-right: 0.125rem solid rgba(255, 255, 255, 0.4);
 }
 
 
@@ -194,7 +211,7 @@
 /* Màu chữ riêng cho cột tổng chi phí ở phần body (không phải header) */
 
 .id4-cg-table-row .id4-cg-col:last-child {
-    color: #2e3b8f;
+    color: var(--id4-color-text-title);
 }
 
 
@@ -204,24 +221,26 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: var(--id4-spacing-sm);
 }
 
 .id4-cg-btn {
     display: inline-block;
-    background-color: #2e3b8f;
+    font-family: var(--id4-font-main);
+    background-color: var(--id4-button-color);
+    padding: var(--id4-padding-height-button) var(--id4-padding-width-button);
+    font-weight: var(--id4-font-weight-small-bold);
+    font-size: var(--id4-font-size-desription);
     color: white;
     text-decoration: none;
-    padding: 10px 30px;
     border-radius: 25px;
-    font-weight: 600;
-    font-size: 0.9rem;
     transition: background-color 0.3s ease, transform 0.2s;
-    box-shadow: 0 4px 6px rgba(46, 59, 143, 0.3);
+    /* box-shadow: 0 4px 6px var(--id4-button-color); */
 }
 
 .id4-cg-btn:hover {
-    background-color: #1a2366;
+    background-color: var(--id4-button-color);
+    color: #ffffff;
     transform: translateY(-2px);
 }
 

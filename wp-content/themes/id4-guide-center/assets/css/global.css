@@ -14,44 +14,60 @@
     --id4-button-color: #2e3192;
     --id4-bordrer-color: #2e3192;
     /* --- 2. FONT CHỮ (TYPOGRAPHY) --- */
-    /* Thin 100 - ExtraLight 200 - Light 300 - Regular 400 - 
-    Medium 500 - SemiBold 600 - Bold 700 - ExtraBold 800 - Black 900 */
+    /* Thin 100 - ExtraLight 200 - Light 300 - Regular 400 -
+       Medium 500 - SemiBold 600 - Bold 700 - ExtraBold 800 - Black 900 */
     --id4-font-main: 'Open Sans';
     --id4-font-weight-big-bold: 900;
     --id4-font-weight-small-bold: 700;
     --id4-font-weight-title: 600;
     --id4-font-weight-desript: 400;
     /* Lưu ý: Font cần được load trong Flatsome hoặc Google Fonts trước */
-    --id4-font-size-title: 32px;
-    --id4-font-size-desription: 16px;
-    /* --- 
-        3. KÍCH THƯỚC & KHOẢNG CÁCH (DIMENSIONS & SPACING) 
-        - 
+    /* Font size co giãn: ~24px → 32px */
+    --id4-font-size-title: clamp(1.5rem, 1.2vw + 1.2rem, 2rem);
+    /* Font size co giãn: ~15px → 16px */
+    --id4-font-size-desription: clamp(0.9375rem, 0.25vw + 0.9rem, 1rem);
+    /* ---
+        3. KÍCH THƯỚC & KHOẢNG CÁCH (DIMENSIONS & SPACING)
+        -
     --- */
-    --id4-container-width: 1100px;
-    --id4-header-height: 80px;
-    --id4-spacing-block: 40px;
-    --id4-spacing-sm: 8px;
-    --id4-spacing-md: 16px;
-    --id4-spacing-lg: 32px;
+    /* Container: 1100px nhưng tự co theo màn hình (chừa padding 2rem) */
+    --id4-container-width: min(68.75rem, calc(100% - 2rem));
+    /* Header height co giãn: ~60px → 80px */
+    --id4-header-height: clamp(3.75rem, 5vw, 5rem);
+    /* Spacing block co giãn: ~24px → 40px */
+    --id4-spacing-block: clamp(1.5rem, 3vw, 2.5rem);
+    /* Spacing sm: 8px */
+    --id4-spacing-sm: 0.5rem;
+    /* Spacing md: 16px */
+    --id4-spacing-md: 1rem;
+    /* Spacing lg: 32px */
+    --id4-spacing-lg: 2rem;
     /* --- 4. MÀU SẮC CHỮ --- */
     --id4-color-text-title: #2e3192;
     --id4-color-text-desription: #000000;
     /* --- 4. BORDER & RADIUS --- */
-    --id4-border-radius-card: 28px;
-    --id4-border-radius-card-small: 16px;
+    /* Radius card: 28px */
+    --id4-border-radius-card: 1.75rem;
+    /* Radius card small: 16px */
+    --id4-border-radius-card-small: 1rem;
     /* --- 5. Khoảng cách --- */
-    --id4-text-indent: 25px;
-    /* 
-    -6. thêm kích thước cho thẻ trỏ xuống 
-    */
-    --arrow-width: 40px;
-    --arrow-height: 35px;
-    --arrow-border-width: 3px;
-    /* --- 
-        7. KÍCH THƯỚC & KHOẢNG CÁCH (DIMENSIONS & SPACING) 
-        - 
+    /* Text indent: 25px */
+    --id4-text-indent: 1.5625rem;
+    /* ---
+        6. thêm kích thước cho thẻ trỏ xuống
     --- */
-    --id4-padding-height-button: 10px;
-    --id4-padding-width-button: 40px;
+    /* Arrow width co giãn: ~32px → 40px */
+    --arrow-width: clamp(2rem, 4vw, 2.5rem);
+    /* Arrow height co giãn: ~28px → 35px */
+    --arrow-height: clamp(1.75rem, 3.5vw, 2.1875rem);
+    /* Arrow border: 3px */
+    --arrow-border-width: 0.1875rem;
+    /* ---
+        7. KÍCH THƯỚC & KHOẢNG CÁCH (DIMENSIONS & SPACING)
+        -
+    --- */
+    /* Button padding height: 10px */
+    --id4-padding-height-button: 0.625rem;
+    /* Button padding width: 40px */
+    --id4-padding-width-button: 2.5rem;
 }
