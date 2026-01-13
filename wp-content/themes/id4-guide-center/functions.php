@@ -264,4 +264,17 @@ add_action('wp_enqueue_scripts', function () {
             );
         }
     }
+
+    // chỉ load trang giới thiệu
+    if (is_page('ve-chung-toi')) {
+        $gioi_thieu_css = get_stylesheet_directory() . '/assets/css/abous/gioi_thieu.css';
+        if (file_exists($gioi_thieu_css)) {
+            wp_enqueue_style(
+                'id4-gioi-thieu-css',
+                get_stylesheet_directory_uri() . '/assets/css/abous/gioi_thieu.css',
+                array('id4-global-css'), // ← global load trước
+                filemtime($gioi_thieu_css)
+            );
+        }
+    }
 }, 20); // <-- đóng hook
