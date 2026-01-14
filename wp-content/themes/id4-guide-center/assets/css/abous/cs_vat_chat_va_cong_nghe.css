@@ -142,7 +142,7 @@
 
 .iD-4-CSVC-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: var(--arrow-width);
 }
 
 .iD-4-CSVC-title {
@@ -175,7 +175,7 @@
     align-items: center;
     /* Căn giữa trục dọc để ảnh giữa to ra 2 đầu */
     gap: 40px;
-    padding: 20px 0;
+    /* padding: 20px 0; */
 }
 
 

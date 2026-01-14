@@ -1,0 +1,375 @@
+/* =========================================
+           RESET CSS & CẤU HÌNH CƠ BẢN
+        ========================================= */
+
+:root {
+    --primary-color: #2b3481;
+    /* Màu xanh đậm thương hiệu */
+    --text-color: #333;
+    --bg-color: #f8fbff;
+    --item-bg: #ffffff;
+    --gap-item: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Animation xuất hiện */
+
+@keyframes id4-slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes id4-pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(43, 52, 129, 0.1);
+    }
+
+    70% {
+        transform: scale(1.02);
+        box-shadow: 0 0 0 20px rgba(43, 52, 129, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(43, 52, 129, 0);
+    }
+}
+
+
+/* Wrapper bao ngoài (thay thế body) */
+
+.id4-cktc5p-wrapper {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    overflow-x: hidden;
+}
+
+
+/* Container chính */
+
+.id4-cktc5p-container {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+}
+
+
+/* =========================================
+           HEADER
+        ========================================= */
+
+.id4-cktc5p-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.id4-cktc5p-title {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+           CONTENT AREA (FLEXBOX CHÍNH)
+        ========================================= */
+
+.id4-cktc5p-content-area {
+    display: flex;
+    align-items: center;
+    /* Căn giữa theo trục dọc */
+    justify-content: center;
+    /* Khoảng cách giữa hình tròn và danh sách */
+    gap: 0px;
+}
+
+
+/* --- CỘT TRÁI: VÒNG TRÒN 5P --- */
+
+.id4-cktc5p-visual {
+    flex: 0 0 40%;
+    /* Chiếm khoảng 40% chiều rộng */
+    display: flex;
+    justify-content: center;
+    /* Căn hình tròn vào giữa cột của nó */
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Vòng tròn mờ bao ngoài (Outer Glow) */
+
+.id4-cktc5p-circle-outer {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: #fff;
+    /* Đổ bóng mềm tạo hiệu ứng nổi nhẹ */
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+/* Vòng tròn trang trí mờ nhạt bao quanh */
+
+.id4-cktc5p-circle-outer::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    z-index: -1;
+}
+
+
+/* Vòng tròn đậm bên trong chứa chữ 5P */
+
+.id4-cktc5p-circle-inner {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.05);
+    /* Bóng đổ vào trong */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0c4a8e;
+    /* Màu xanh chữ 5P */
+    font-size: 5rem;
+    font-weight: 900;
+    border: 10px solid #f4f7f9;
+    /* Viền xám nhạt */
+    animation: id4-pulse 3s infinite;
+}
+
+
+/* --- CỘT PHẢI: DANH SÁCH ITEM --- */
+
+.id4-cktc5p-list {
+    flex: 1;
+    /* Chiếm phần còn lại */
+    display: flex;
+    flex-direction: column;
+    /* Xếp dọc */
+    gap: 25px;
+    /* Khoảng cách giữa các item */
+    padding-right: 20px;
+}
+
+
+/* Style chung cho từng thẻ Item */
+
+.id4-cktc5p-item {
+    background: var(--item-bg);
+    border-radius: 100px;
+    /* Bo tròn cực đại tạo hình viên thuốc */
+    padding: 15px 30px 15px 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    /* Animation xuất hiện */
+    opacity: 0;
+    animation: id4-slideInRight 0.6s ease-out forwards;
+}
+
+.id4-cktc5p-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(43, 52, 129, 0.15);
+    z-index: 10;
+}
+
+
+/* Số thứ tự (Badge tròn màu xanh) */
+
+.id4-cktc5p-number {
+    flex-shrink: 0;
+    width: 65px;
+    height: 65px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-right: 25px;
+    box-shadow: 0 4px 10px rgba(43, 52, 129, 0.3);
+}
+
+
+/* Nhóm text (Tiêu đề + Mô tả) */
+
+.id4-cktc5p-text-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.id4-cktc5p-item-title {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.id4-cktc5p-item-desc {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+
+/* =========================================
+           LOGIC TẠO ĐỘ CONG (CURVE) - DESKTOP ONLY
+           Sử dụng margin-left để đẩy các mục ra xa dần
+        ========================================= */
+
+@media (min-width: 992px) {
+
+    /* Item 3: Trung tâm - Sát bên trái nhất (Gần vòng tròn nhất) */
+    .id4-cktc5p-item:nth-child(3) {
+        margin-left: 0px;
+        animation-delay: 0.2s;
+    }
+
+    /* Item 2 & 4: Lùi ra một chút (Tạo độ thoải) */
+    .id4-cktc5p-item:nth-child(2),
+    .id4-cktc5p-item:nth-child(4) {
+        margin-left: 50px;
+    }
+
+    .id4-cktc5p-item:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+
+    .id4-cktc5p-item:nth-child(4) {
+        animation-delay: 0.3s;
+    }
+
+    /* Item 1 & 5: Lùi ra xa nhất (Tạo đỉnh cong) */
+    .id4-cktc5p-item:nth-child(1),
+    .id4-cktc5p-item:nth-child(5) {
+        margin-left: 110px;
+    }
+
+    .id4-cktc5p-item:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .id4-cktc5p-item:nth-child(5) {
+        animation-delay: 0.4s;
+    }
+}
+
+
+/* =========================================
+           RESPONSIVE: TABLET & MOBILE
+        ========================================= */
+
+
+/* Tablet (Dưới 992px) */
+
+@media (max-width: 992px) {
+    .id4-cktc5p-content-area {
+        flex-direction: column;
+        /* Chuyển thành cột dọc */
+        gap: 40px;
+    }
+
+    .id4-cktc5p-visual {
+        flex: auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Ẩn vòng tròn trang trí lớn để gọn giao diện */
+    .id4-cktc5p-circle-outer::before {
+        display: none;
+    }
+
+    .id4-cktc5p-list {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    /* Reset toàn bộ margin để thẳng hàng */
+    .id4-cktc5p-item:nth-child(n) {
+        margin-left: 0;
+    }
+}
+
+
+/* Mobile (Dưới 600px) */
+
+@media (max-width: 600px) {
+    .id4-cktc5p-wrapper {
+        padding: 10px;
+    }
+
+    .id4-cktc5p-title {
+        font-size: 1.4rem;
+    }
+
+    .id4-cktc5p-circle-outer {
+        width: 200px;
+        height: 200px;
+    }
+
+    .id4-cktc5p-circle-inner {
+        width: 140px;
+        height: 140px;
+        font-size: 3rem;
+    }
+
+    .id4-cktc5p-item {
+        flex-direction: column;
+        text-align: center;
+        border-radius: 20px;
+        padding: 20px;
+        align-items: center;
+    }
+
+    .id4-cktc5p-number {
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .id4-cktc5p-item-desc {
+        text-align: center;
+    }
+}

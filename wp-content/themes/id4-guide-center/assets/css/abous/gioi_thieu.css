@@ -13,7 +13,7 @@
     /* line-height: 1.6; */
     width: 100%;
     overflow-x: hidden;
-    padding: var(--id4-header-height) 20px;
+    padding: var(--id4-header-height) 20px var(--arrow-width) 20px;
 }
 
 .iD-4-gioi-thieu-container {

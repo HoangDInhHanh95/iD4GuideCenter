@@ -287,5 +287,16 @@ add_action('wp_enqueue_scripts', function () {
                 filemtime($cs_vat_chat_va_cong_nghe_css)
             );
         }
+
+        // ID-4 Solution: cam kết chuẩn 5P - ID-4™ Guide Center
+        $cam_ket_chuan_5P_css = get_stylesheet_directory() . '/assets/css/abous/cam_ket_tieu_chuan_5P.css';
+        if (file_exists($cam_ket_chuan_5P_css)) {
+            wp_enqueue_style(
+                'id4-cam_ket_tieu_chuan_5P-css',
+                get_stylesheet_directory_uri() . '/assets/css/abous/cam_ket_tieu_chuan_5P.css',
+                array('id4-global-css'), // ← global load trước
+                filemtime($cam_ket_chuan_5P_css)
+            );
+        }
     }
 }, 20); // <-- đóng hook
