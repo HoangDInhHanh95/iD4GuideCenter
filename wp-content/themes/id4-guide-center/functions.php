@@ -276,5 +276,16 @@ add_action('wp_enqueue_scripts', function () {
                 filemtime($gioi_thieu_css)
             );
         }
+
+        // ID-4 Solution: chăm sóc và hỗ trợ khách hàng với công nghệ VAT Chat
+        $cs_vat_chat_va_cong_nghe_css = get_stylesheet_directory() . '/assets/css/abous/cs_vat_chat_va_cong_nghe.css';
+        if (file_exists($cs_vat_chat_va_cong_nghe_css)) {
+            wp_enqueue_style(
+                'id4-cs-vat-chat-va-cong-nghe-css',
+                get_stylesheet_directory_uri() . '/assets/css/abous/cs_vat_chat_va_cong_nghe.css',
+                array('id4-global-css'), // ← global load trước
+                filemtime($cs_vat_chat_va_cong_nghe_css)
+            );
+        }
     }
 }, 20); // <-- đóng hook
