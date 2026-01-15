@@ -5,6 +5,15 @@
 ========================================= */
 
 
+/* BACKGROUND NỀN */
+
+
+/* background: linear-gradient(180deg, #ffffff 0%, #f0f4fc 100%); */
+
+
+/* Tạo đường cong ở đáy section (giả lập đường cong trong thiết kế) */
+
+
 /* 
     - WRAPPER CHÍNH
     - Thêm background gradient nhẹ (Trắng -> Xanh nhạt)
@@ -96,16 +105,13 @@
  ========================================= */
 
 .iD-4-CSVC-wrapper {
-    /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
     width: 100%;
     position: relative;
-    padding: 60px 0 80px 0;
+    padding: 30px 0 40px 0;
     overflow: hidden;
-    /* BACKGROUND NỀN */
-    /* background: linear-gradient(180deg, #ffffff 0%, #f0f4fc 100%); */
-    /* Tạo đường cong ở đáy section (giả lập đường cong trong thiết kế) */
-    border-bottom-left-radius: 50% 100px;
-    border-bottom-right-radius: 50% 100px;
+    background-color: #f7f9f9;
+    /* border-bottom-left-radius: 50% 100px;
+    border-bottom-right-radius: 50% 100px; */
 }
 
 
@@ -146,20 +152,21 @@
 }
 
 .iD-4-CSVC-title {
-    color: #2b3a98;
-    /* Xanh đậm thương hiệu */
-    font-size: 2.2rem;
-    font-weight: 700;
+    font-family: var(--id4-font-main);
+    color: var(--id4-button-color);
+    font-size: var(--id4-font-size-title);
+    font-weight: var(--id4-font-weight-title);
     text-transform: uppercase;
     margin-bottom: 20px;
     letter-spacing: 1px;
 }
 
 .iD-4-CSVC-desc {
-    font-size: 1rem;
+    font-family: var(--id4-font-main);
+    font-size: var(--id4-font-size-desription);
+    color: var(--id4-color-text-desription);
+    max-width: var(--id4-container-width);
     line-height: 1.6;
-    color: #444;
-    max-width: 800px;
     margin: 0 auto;
     text-align: center;
 }

@@ -3,18 +3,82 @@
         ========================================= */
 
 :root {
-    --primary-color: #2b3481;
-    /* Màu xanh đậm thương hiệu */
-    --text-color: #333;
-    --bg-color: #f8fbff;
-    --item-bg: #ffffff;
-    --gap-item: 20px;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    /* TYPOGRAPHY ---------------------
+     - font chính
+     - font-weight
+  -------------------------------- */
+    --id4-font-main: 'Open Sans';
+    --id4-font-weight-big-bold: 900;
+    --id4-font-weight-small-bold: 700;
+    --id4-font-weight-title: 600;
+    --id4-font-weight-desript: 400;
+    /* COLORS -------------------------
+     - nền xám
+     - màu nút
+     - màu viền
+  -------------------------------- */
+    --id4-container-color-xam: #f5f5f7;
+    --id4-button-color: #2e3192;
+    --id4-bordrer-color: #2e3192;
+    /* SCALE --------------------------
+     - 1 biến gốc dùng chung
+     - desktop mặc định: 1rem ≈ 16px
+  -------------------------------- */
+    --id4-unit: 1rem;
+    /* FONT SIZES ---------------------
+     - title: 2 * unit ≈ 32px
+     - description: 1 * unit ≈ 16px
+     - button: 0.875 * unit ≈ 14px
+  -------------------------------- */
+    --id4-font-size-title: calc(var(--id4-unit) * 2);
+    --id4-font-size-desription: calc(var(--id4-unit) * 1);
+    --id4-font-size-button: calc(var(--id4-unit) * 0.875);
+    /* LAYOUT SIZES -------------------
+     - container width: 68.75 * unit ≈ 1100px
+     - header height: 5 * unit ≈ 80pxS
+  -------------------------------- */
+    --id4-container-width: calc(var(--id4-unit) * 68.75);
+    --id4-header-height: calc(var(--id4-unit) * 5);
+    /* SPACING ------------------------
+     - block: 2.5 * unit ≈ 40px
+     - sm: 0.5 * unit ≈ 8px
+     - md: 1 * unit ≈ 16px
+     - lg: 2 * unit ≈ 32px
+  -------------------------------- */
+    --id4-spacing-block: calc(var(--id4-unit) * 2.5);
+    --id4-spacing-sm: calc(var(--id4-unit) * 0.5);
+    --id4-spacing-md: calc(var(--id4-unit) * 1);
+    --id4-spacing-lg: calc(var(--id4-unit) * 2);
+    /* TEXT COLORS --------------------
+     - title
+     - description
+  -------------------------------- */
+    --id4-color-text-title: #2e3192;
+    --id4-color-text-desription: #000000;
+    /* RADIUS -------------------------
+     - card: 1.75 * unit ≈ 28px
+     - card small: 1 * unit ≈ 16px
+  -------------------------------- */
+    --id4-border-radius-card: calc(var(--id4-unit) * 1.75);
+    --id4-border-radius-card-small: calc(var(--id4-unit) * 1);
+    /* MISC ---------------------------
+     - text indent: 1.5625 * unit ≈ 25px
+  -------------------------------- */
+    --id4-text-indent: calc(var(--id4-unit) * 1.5625);
+    /* ARROW --------------------------
+     - width: 2.5 * unit ≈ 40px
+     - height: 2.1875 * unit ≈ 35px
+     - border: giữ px (ổn định)
+  -------------------------------- */
+    --arrow-width: calc(var(--id4-unit) * 2.5);
+    --arrow-height: calc(var(--id4-unit) * 2.1875);
+    --arrow-border-width: 3px;
+    /* BUTTON PADDING -----------------
+     - height: 0.625 * unit ≈ 10px
+     - width: 2.5 * unit ≈ 40px
+  -------------------------------- */
+    --id4-padding-height-button: calc(var(--id4-unit) * 0.625);
+    --id4-padding-width-button: calc(var(--id4-unit) * 2.5);
 }
 
 
@@ -53,10 +117,11 @@
 /* Wrapper bao ngoài (thay thế body) */
 
 .id4-cktc5p-wrapper {
-    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: var(--bg-color);
+    background-image: url("http://localhost/iD4GuideCenter/wp-content/uploads/2026/01/Artboard-5-7@2x.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
     width: 100%;
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,14 +134,14 @@
 
 .id4-cktc5p-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: var(--id4-container-width);
     position: relative;
 }
 
 
 /* =========================================
-           HEADER
-        ========================================= */
+    HEADER
+========================================= */
 
 .id4-cktc5p-header {
     text-align: center;
@@ -84,11 +149,12 @@
 }
 
 .id4-cktc5p-title {
-    color: var(--primary-color);
-    font-size: 2rem;
-    font-weight: 700;
+    font-family: var(--id4-font-main);
+    font-size: var(--id4-font-size-title);
+    color: var(--id4-color-text-title);
+    font-weight: var(--id4-font-weight-title);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.2px;
 }
 
 

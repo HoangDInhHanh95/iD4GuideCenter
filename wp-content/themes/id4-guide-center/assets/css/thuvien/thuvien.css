@@ -1,0 +1,51 @@
+/* Card giống mẫu */
+
+.id4-post-cards .box {
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, .06);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .10);
+    background: #fff;
+}
+
+
+/* Ảnh đầu card */
+
+.id4-post-cards .box-image img {
+    aspect-ratio: 16/9;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* Nội dung card */
+
+.id4-post-cards .box-text {
+    padding: 16px 18px 18px;
+}
+
+
+/* Nút */
+
+.id4-post-cards .button {
+    border-radius: 999px;
+    padding: 10px 18px;
+    margin-top: 12px;
+}
+
+
+/* Dots (chấm) */
+
+.id4-post-cards .flickity-page-dots {
+    bottom: -18px;
+}
+
+.id4-post-cards .flickity-page-dots .dot {
+    width: 10px;
+    height: 10px;
+    opacity: .25;
+}
+
+.id4-post-cards .flickity-page-dots .dot.is-selected {
+    opacity: 1;
+}

@@ -10,6 +10,11 @@
 }
 
 .iD-4-gioi-thieu-wrapper {
+    background-image: url("http://localhost/iD4GuideCenter/wp-content/uploads/2026/01/Artboard-4-6@2x.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% auto;
+    /* kích thước 100% */
     /* line-height: 1.6; */
     width: 100%;
     overflow-x: hidden;
@@ -102,11 +107,14 @@
 /* === STATS SECTION === */
 
 .iD-4-gioi-thieu-stats-row {
+    font-family: var(--id4-font-main);
+    font-size: var(--id4-font-size-desription);
+    color: var(--id4-color-text-desription);
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
-    border-top: 2px solid #eef2f9;
-    padding-top: 30px;
+    border-top: 1px solid var(--id4-color-text-desription);
+    padding-top: 20px;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -125,9 +133,10 @@
 }
 
 .iD-4-gioi-thieu-stat-label {
-    font-size: 14px;
-    font-weight: 600;
-    color: #666;
+    font-family: var(--id4-font-main);
+    font-size: var(--id4-font-size-desription);
+    color: var(--id4-color-text-desription);
+    font-weight: var(--id4-font-weight-small-bold);
 }
 
 

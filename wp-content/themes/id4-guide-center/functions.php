@@ -299,4 +299,18 @@ add_action('wp_enqueue_scripts', function () {
             );
         }
     }
+
+
+    // chỉ load trang thư viện
+    if (is_page('thu-vien')) {
+        $thu_vien_css = get_stylesheet_directory() . '/assets/css/thuvien/thuvien.css';
+        if (file_exists($thu_vien_css)) {
+            wp_enqueue_style(
+                'id4-thu-vien-css',
+                get_stylesheet_directory_uri() . '/assets/css/thuvien/thuvien.css',
+                array('id4-global-css'), // ← global load trước
+                filemtime($thu_vien_css)
+            );
+        }
+    }
 }, 20); // <-- đóng hook
