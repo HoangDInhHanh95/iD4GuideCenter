@@ -1,4 +1,6 @@
 <?php
+// Knowledge Slider Shortcode về thư viện bài viết
+require_once get_stylesheet_directory() . '/inc/knowledge-slider.php';
 
 
 // 1) Load GLOBAL thật sớm
@@ -314,3 +316,14 @@ add_action('wp_enqueue_scripts', function () {
         }
     }
 }, 20); // <-- đóng hook
+
+
+// // Thêm chức năng hỗ trợ hình ảnh đại diện cho bài viết
+// add_action('wp_enqueue_scripts', function () {
+//     wp_enqueue_style(
+//         'id4-knowledge-slider',
+//         get_stylesheet_directory_uri() . '/assets/css/knowledge-slider.css',
+//         [],
+//         filemtime(get_stylesheet_directory() . '/assets/css/knowledge-slider.css')
+//     );
+// }, 30);

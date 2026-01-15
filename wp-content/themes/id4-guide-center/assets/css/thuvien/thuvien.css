@@ -1,51 +1,193 @@
-/* Card giống mẫu */
+:root {
+    --id4tv-blue: #1b2a86;
+    --id4tv-title: #1e3a8a;
+    --id4tv-border: rgba(0, 0, 0, .06);
+    --id4tv-shadow: 0 10px 24px rgba(0, 0, 0, .10);
+    --id4tv-r: 18px;
+    --id4tv-ri: 16px;
+}
 
-.id4-post-cards .box {
-    border-radius: 18px;
+
+/* wrapper */
+
+.id4_thu_vien {
+    max-width: 1080px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 44px;
+}
+
+.id4_thu_vien__viewport {
     overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, .06);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, .10);
+}
+
+
+/* track trượt theo page */
+
+.id4_thu_vien__track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    transform: translateX(0);
+    transition: transform .45s ease;
+    will-change: transform;
+}
+
+
+/* 1 page = full width */
+
+.id4_thu_vien__page {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+    padding: 0 6px;
+    box-sizing: border-box;
+}
+
+
+/* card = 3 cột */
+
+.id4_thu_vien__card {
+    flex: 1 1 0;
     background: #fff;
+    border: 1px solid var(--id4tv-border);
+    border-radius: var(--id4tv-r);
+    box-shadow: var(--id4tv-shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 
-/* Ảnh đầu card */
+/* image */
 
-.id4-post-cards .box-image img {
-    aspect-ratio: 16/9;
+.id4_thu_vien__img {
+    display: block;
+    margin: 16px 16px 0;
+    border-radius: var(--id4tv-ri);
+    overflow: hidden;
+    background: #f3f4f6;
+}
+
+.id4_thu_vien__img img {
     width: 100%;
+    display: block;
+    aspect-ratio: 16/9;
     object-fit: cover;
+    height: auto;
 }
 
 
-/* Nội dung card */
+/* body */
 
-.id4-post-cards .box-text {
-    padding: 16px 18px 18px;
+.id4_thu_vien__body {
+    padding: 14px 18px 18px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.id4_thu_vien__title {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.id4_thu_vien__title a {
+    color: var(--id4tv-title);
+    text-decoration: none;
+}
+
+.id4_thu_vien__excerpt {
+    font-size: 13.5px;
+    line-height: 1.65;
+    opacity: .85;
 }
 
 
-/* Nút */
+/* button */
 
-.id4-post-cards .button {
-    border-radius: 999px;
+.id4_thu_vien__btn {
+    margin-top: auto;
+    display: inline-block;
+    width: max-content;
     padding: 10px 18px;
-    margin-top: 12px;
+    border-radius: 999px;
+    background: var(--id4tv-blue);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: none;
 }
 
 
-/* Dots (chấm) */
+/* dots */
 
-.id4-post-cards .flickity-page-dots {
-    bottom: -18px;
+.id4_thu_vien__dots {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
-.id4-post-cards .flickity-page-dots .dot {
-    width: 10px;
-    height: 10px;
-    opacity: .25;
+.id4_thu_vien__dot {
+    width: 18px;
+    height: 6px;
+    border-radius: 999px;
+    background: #cfd6e4;
+    opacity: .55;
+    border: 0;
+    cursor: pointer;
 }
 
-.id4-post-cards .flickity-page-dots .dot.is-selected {
+.id4_thu_vien__dot[aria-current="true"] {
+    background: var(--id4tv-blue);
     opacity: 1;
+}
+
+
+/* ===== Responsive ===== */
+
+
+/* Tablet: 2 cột (ẩn card thứ 3) */
+
+@media (max-width: 991px) {
+    .id4_thu_vien {
+        padding: 0 16px 44px;
+    }
+
+    .id4_thu_vien__page {
+        gap: 20px;
+    }
+
+    .id4_thu_vien__card:nth-child(3) {
+        display: none;
+    }
+}
+
+
+/* Mobile: 1 cột (ẩn card thứ 2 và 3) */
+
+@media (max-width: 575px) {
+    .id4_thu_vien__page {
+        gap: 14px;
+    }
+
+    .id4_thu_vien__card:nth-child(2),
+    .id4_thu_vien__card:nth-child(3) {
+        display: none;
+    }
+
+    .id4_thu_vien__title {
+        font-size: 16px;
+    }
 }
