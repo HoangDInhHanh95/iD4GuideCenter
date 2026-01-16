@@ -315,6 +315,18 @@ add_action('wp_enqueue_scripts', function () {
             );
         }
     }
+
+    // ID-4 Solution: thư viện JS
+    $thu_vien_js = get_stylesheet_directory() . '/assets/js/thuvien/thuvien.js';
+    if (file_exists($thu_vien_js)) {
+        wp_enqueue_script(
+            'id4-thu-vien-js',
+            get_stylesheet_directory_uri() . '/assets/js/thuvien/thuvien.js',
+            array('jquery'),                 // nếu cần jQuery – có thể bỏ nếu không dùng
+            filemtime($thu_vien_js),           // cache-busting
+            true                             // load ở footer
+        );
+    }
 }, 20); // <-- đóng hook
 
 
