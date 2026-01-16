@@ -327,6 +327,17 @@ add_action('wp_enqueue_scripts', function () {
             true                             // load ở footer
         );
     }
+
+    // thêm css cho TB_ca_lam_sang
+    $TB_ca_lam_sang_css = get_stylesheet_directory() . '/assets/css/thuvien/TB_ca_lam_sang.css';
+    if (file_exists($TB_ca_lam_sang_css)) {
+        wp_enqueue_style(
+            'id4-TB_ca_lam_sang-css',
+            get_stylesheet_directory_uri() . '/assets/css/thuvien/TB_ca_lam_sang.css',
+            array('id4-global-css'), // ← global load trước
+            filemtime($TB_ca_lam_sang_css)
+        );
+    }
 }, 20); // <-- đóng hook
 
 

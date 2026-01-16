@@ -3,6 +3,7 @@
     --id4-primary: #2e3192;
     --id4-text: #333;
     --id4-bg-gray: #f5f5f7;
+    --id4tv-shadow: 0 10px 10px rgba(0, 0, 0, .10);
 }
 
 :root {
@@ -85,19 +86,148 @@
 }
 
 
+/* --- tiêu đề  --- */
+
+
+/* 1. Style cho khung bao ngoài (thẻ div có class ttitle_ky-thuat_cong_nghe) */
+
+.ttitle_ky-thuat_cong_nghe {
+    width: 100%;
+    max-width: var(--id4-container-width);
+    margin: 0 auto;
+    padding: 80px 0px 30px 0px;
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
+}
+
+
+/* 2. Style cho thẻ H2 nằm bên trong class đó */
+
+.ttitle_ky-thuat_cong_nghe h2 {
+    /* Font và màu sắc */
+    font-family: var(--id4-font-main);
+    color: var(--id4-color-text-title);
+    font-size: var(--id4-font-size-title);
+    font-weight: var(--id4-font-weight-title);
+    text-transform: uppercase;
+    line-height: 1.5;
+    margin: 0;
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+
+
+/* --- RESPONSIVE (Áp dụng lên thẻ h2 con) --- */
+
+
+/* Mobile (< 768px) */
+
+@media (max-width: 767px) {
+    .ttitle_ky-thuat_cong_nghe h2 {
+        font-size: 16px;
+        padding: 0 5px;
+    }
+}
+
+
+/* Tablet (768px - 1023px) */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .ttitle_ky-thuat_cong_nghe h2 {
+        font-size: 22px;
+    }
+}
+
+
+/* Desktop (>= 1024px) */
+
+@media (min-width: 1024px) {
+    .ttitle_ky-thuat_cong_nghe h2 {
+        font-family: var(--id4-font-main);
+        color: var(--id4-color-text-title);
+        font-size: var(--id4-font-size-title);
+        font-weight: var(--id4-font-weight-title);
+    }
+}
+
+
+/* end tiêu đề */
+
+
+/* ================= Ca lâm sàng ================= */
+
+
+/* Container bao ngoài: ttitle_ca_lam_sang */
+
+.ttitle_ca_lam_sang {
+    width: 100%;
+    max-width: var(--id4-container-width);
+    /* ~1100px */
+    margin: 0 auto;
+    padding: 80px 15px 15px 15px;
+    /* ~16px */
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
+}
+
+
+/* Thẻ H2 bên trong */
+
+.ttitle_ca_lam_sang h2 {
+    font-family: var(--id4-font-main);
+    color: var(--id4-color-text-title);
+    font-weight: var(--id4-font-weight-title);
+    font-size: var(--id4-font-size-title);
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin: 0;
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+
+
+/* --- RESPONSIVE CHO ttitle_ca_lam_sang --- */
+
+
+/* Mobile (< 768px) */
+
+@media (max-width: 767px) {
+    .ttitle_ca_lam_sang h2 {
+        /* Mobile: 65% kích thước gốc (~20px) */
+        font-size: calc(var(--id4-font-size-title) * 0.65);
+        padding: 0 5px;
+    }
+}
+
+
+/* Tablet (768px - 1023px) */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .ttitle_ca_lam_sang h2 {
+        /* Tablet: 80% kích thước gốc (~25px) */
+        font-size: calc(var(--id4-font-size-title) * 0.8);
+    }
+}
+
+
+/* ================= end Ca lâm sàng ================= */
+
+
 /* --- Layout Chung --- */
 
 .id4_slider_wrapper {
     max-width: var(--id4-container-width);
     margin: 0 auto;
-    padding: 40px 15px;
+    padding: 0px 20px 60px 20px;
     position: relative;
     box-sizing: border-box;
 }
 
 .id4_slider_viewport {
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .id4_slider_track {
@@ -112,9 +242,10 @@
 
 .id4_slider_card {
     background: #fff;
+    padding: 5px;
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--id4tv-shadow);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -193,6 +324,12 @@
     border-radius: 20px;
     text-decoration: none;
     width: fit-content;
+}
+
+.id4_card_btn:hover {
+    background: var(--id4-button-color);
+    transform: scale(1.05);
+    color: #fff;
 }
 
 
