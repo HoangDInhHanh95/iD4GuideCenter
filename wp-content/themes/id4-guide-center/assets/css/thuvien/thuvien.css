@@ -227,11 +227,12 @@
 
 .id4_slider_viewport {
     width: 100%;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .id4_slider_track {
     display: flex;
+    padding-bottom: 25px;
     gap: var(--id4-gap);
     width: 100%;
     transition: transform 0.5s ease-in-out;
@@ -339,7 +340,7 @@
     display: flex;
     justify-content: center;
     gap: 8px;
-    margin-top: 30px;
+    margin-top: 5px;
     line-height: 0 !important;
     padding: 0 !important;
 }
