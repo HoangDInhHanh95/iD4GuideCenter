@@ -84,6 +84,12 @@
   -------------------------------- */
     --id4-padding-height-button: calc(var(--id4-unit) * 0.625);
     --id4-padding-width-button: calc(var(--id4-unit) * 2.5);
+    /* GAP ----------------
+     - height: 0.625 * unit ≈ 10px
+     - width: 2.5 * unit ≈ 40px
+  -------------------------------- */
+    --id4-gap: calc(var(--id4-unit) * 1.25);
+    --id4tv-shadow: 0 calc(var(--id4-unit) * 0.625) calc(var(--id4-unit) * 0.625) rgba(0, 0, 0, .10);
 }
 
 

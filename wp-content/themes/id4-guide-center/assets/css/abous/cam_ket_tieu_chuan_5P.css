@@ -79,6 +79,12 @@
   -------------------------------- */
     --id4-padding-height-button: calc(var(--id4-unit) * 0.625);
     --id4-padding-width-button: calc(var(--id4-unit) * 2.5);
+    /* GAP ----------------
+     - height: 0.625 * unit ≈ 10px
+     - width: 2.5 * unit ≈ 40px
+  -------------------------------- */
+    --id4-gap: calc(var(--id4-unit) * 1.25);
+    --id4tv-shadow: 0 calc(var(--id4-unit) * 0.625) calc(var(--id4-unit) * 0.625) rgba(0, 0, 0, .10);
 }
 
 
@@ -175,7 +181,7 @@
 /* --- CỘT TRÁI: VÒNG TRÒN 5P --- */
 
 .id4-cktc5p-visual {
-    flex: 0 0 40%;
+    flex: 0 0 4%;
     /* Chiếm khoảng 40% chiều rộng */
     display: flex;
     justify-content: center;
@@ -207,8 +213,8 @@
 .id4-cktc5p-circle-outer::before {
     content: "";
     position: absolute;
-    width: 450px;
-    height: 450px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.4);
     border: 1px solid rgba(0, 0, 0, 0.02);
@@ -242,13 +248,11 @@
 
 .id4-cktc5p-list {
     flex: 1;
-    /* Chiếm phần còn lại */
     display: flex;
     flex-direction: column;
-    /* Xếp dọc */
     gap: 25px;
     /* Khoảng cách giữa các item */
-    padding-right: 20px;
+    /* padding-right: 20px; */
 }
 
 
@@ -282,7 +286,7 @@
     flex-shrink: 0;
     width: 65px;
     height: 65px;
-    background-color: var(--primary-color);
+    background-color: var(--id4-button-color);
     color: #fff;
     border-radius: 50%;
     display: flex;
@@ -291,7 +295,7 @@
     font-size: 2.2rem;
     font-weight: 700;
     margin-right: 25px;
-    box-shadow: 0 4px 10px rgba(43, 52, 129, 0.3);
+    box-shadow: var(--id4tv-shadow);
 }
 
 
@@ -303,15 +307,18 @@
 }
 
 .id4-cktc5p-item-title {
-    color: var(--primary-color);
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-family: var(--id4-font-main);
+    color: var(--id4-color-text-title);
+    font-size: var(--id4-font-size-desription);
+    font-weight: var(--id4-font-weight-small-bold);
     margin-bottom: 5px;
 }
 
 .id4-cktc5p-item-desc {
-    color: #555;
-    font-size: 0.9rem;
+    font-family: var(--id4-font-main);
+    color: var(--id4-color-text-desription);
+    font-size: var(--id4-font-size-desription);
+    text-indent: var(--id4-text-indent);
     line-height: 1.4;
     text-align: justify;
 }
@@ -326,7 +333,7 @@
 
     /* Item 3: Trung tâm - Sát bên trái nhất (Gần vòng tròn nhất) */
     .id4-cktc5p-item:nth-child(3) {
-        margin-left: 0px;
+        margin-left: 80px;
         animation-delay: 0.2s;
     }
 
@@ -347,7 +354,8 @@
     /* Item 1 & 5: Lùi ra xa nhất (Tạo đỉnh cong) */
     .id4-cktc5p-item:nth-child(1),
     .id4-cktc5p-item:nth-child(5) {
-        margin-left: 110px;
+        /* margin-left: 110px; */
+        margin-right: 20px;
     }
 
     .id4-cktc5p-item:nth-child(1) {
