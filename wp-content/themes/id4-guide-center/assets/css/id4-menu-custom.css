@@ -1,0 +1,114 @@
+/* ======================================================
+   PHẦN 1: GLOBAL VARS (Đảm bảo biến --id4 luôn hoạt động)
+   ====================================================== */
+
+
+/* 2.1. Cấu hình chung cho Menu Item */
+
+#masthead .nav>li>a {
+    font-family: var(--id4-font-main);
+    font-weight: var(--id4-font-weight-title);
+    color: var(--id4-color-text-desription);
+    font-size: 12px !important;
+}
+
+
+/* ------------------------------------------------------
+   2.2. NÚT VIỀN: .id4-menu-btn-outline
+   ------------------------------------------------------ */
+
+#masthead .nav>li.id4-menu-btn-outline>a {
+    /* Reset style mặc định của Flatsome */
+    font-family: var(--id4-font-main);
+    font-size: 12px !important;
+    font-weight: var(--id4-font-weight-title) !important;
+    background: transparent;
+    border: 2px solid var(--id4-bordrer-color) !important;
+    color: var(--id4-button-color) !important;
+    padding: 10px 30px !important;
+    border-radius: var(--id4-border-radius-card-small);
+    /* Layout */
+    margin-left: 5px;
+    height: auto !important;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+
+/* Hover Effect */
+
+#masthead .nav>li.id4-menu-btn-outline>a:hover {
+    background-color: var(--id4-button-color) !important;
+    color: #fff !important;
+    box-shadow: var(--id4tv-shadow);
+}
+
+
+/* ------------------------------------------------------
+   2.3. NÚT ĐẶC: .id4-menu-btn-solid
+   ------------------------------------------------------ */
+
+#masthead .nav>li.id4-menu-btn-solid>a {
+    /* Style ID4 */
+    font-family: var(--id4-font-main);
+    background-color: var(--id4-button-color) !important;
+    border: 2px solid var(--id4-bordrer-color) !important;
+    border-radius: var(--id4-border-radius-card-small);
+    box-shadow: var(--id4tv-shadow);
+    font-size: 12px !important;
+    color: #fff !important;
+    padding: 10px 30px !important;
+    /* Layout */
+    margin-left: 5px;
+    height: auto !important;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+
+/* Hover Effect */
+
+#masthead .nav>li.id4-menu-btn-solid>a:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+
+/* ======================================================
+   PHẦN 3: MOBILE / TABLET RESPONSIVE
+   ====================================================== */
+
+@media (max-width: 849px) {
+
+    /* Ẩn các style định dạng inline block của Flatsome */
+    .mobile-sidebar .nav>li.id4-menu-btn-outline,
+    .mobile-sidebar .nav>li.id4-menu-btn-solid {
+        width: 90%;
+        margin: 10px auto;
+        display: block;
+    }
+
+    /* Style lại nút cho to ra dễ bấm */
+    .mobile-sidebar .nav>li.id4-menu-btn-outline>a,
+    .mobile-sidebar .nav>li.id4-menu-btn-solid>a {
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        padding: 12px 0 !important;
+    }
+
+    /* Giữ nguyên màu sắc nhận diện thương hiệu */
+    .mobile-sidebar .nav>li.id4-menu-btn-outline>a {
+        border-color: var(--id4-bordrer-color);
+        color: var(--id4-button-color) !important;
+    }
+
+    .mobile-sidebar .nav>li.id4-menu-btn-solid>a {
+        background-color: var(--id4-button-color);
+        color: #fff !important;
+    }
+}
