@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
 /* ======================================================
 --- IGNORE ---
    PHẦN 2: STYLE RIÊNG CHO "ID4 MENU" (Độ ưu tiên cao)
+   - thêm mới bởi ID4 Guide Center
+   - thêm link dẫn đến Google Drive cho 2 nút trên header
 --- IGNORE ---
    ====================================================== */
 /* File: assets/js/id4-menu-link.js */

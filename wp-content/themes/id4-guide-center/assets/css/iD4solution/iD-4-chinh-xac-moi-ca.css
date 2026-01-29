@@ -1,13 +1,98 @@
 /* File: assets/css/global.css */
 
+:root {
+    /* TYPOGRAPHY ---------------------
+     - font chính
+     - font-weight
+  -------------------------------- */
+    --id4-font-main: 'Open Sans';
+    --id4-font-weight-big-bold: 900;
+    --id4-font-weight-small-bold: 700;
+    --id4-font-weight-title: 600;
+    --id4-font-weight-desript: 400;
+    /* COLORS -------------------------
+     - nền xám
+     - màu nút
+     - màu viền
+  -------------------------------- */
+    --id4-container-color-xam: #f5f5f7;
+    --id4-button-color: #2e3192;
+    --id4-bordrer-color: #2e3192;
+    /* SCALE --------------------------
+     - 1 biến gốc dùng chung
+     - desktop mặc định: 1rem ≈ 16px
+  -------------------------------- */
+    --id4-unit: 1rem;
+    /* FONT SIZES ---------------------
+     - title: 2 * unit ≈ 32px
+     - description: 1 * unit ≈ 16px
+     - button: 0.875 * unit ≈ 14px
+  -------------------------------- */
+    --id4-font-size-title: calc(var(--id4-unit) * 2);
+    --id4-font-size-desription: calc(var(--id4-unit) * 1);
+    --id4-font-size-button: calc(var(--id4-unit) * 0.875);
+    /* LAYOUT SIZES -------------------
+     - container width: 68.75 * unit ≈ 1100px
+     - header height: 5 * unit ≈ 80pxS
+  -------------------------------- */
+    --id4-container-width: calc(var(--id4-unit) * 68.75);
+    --id4-header-height: calc(var(--id4-unit) * 5);
+    /* SPACING ------------------------
+     - block: 2.5 * unit ≈ 40px
+     - sm: 0.5 * unit ≈ 8px
+     - md: 1 * unit ≈ 16px
+     - lg: 2 * unit ≈ 32px
+  -------------------------------- */
+    --id4-spacing-block: calc(var(--id4-unit) * 2.5);
+    --id4-spacing-sm: calc(var(--id4-unit) * 0.5);
+    --id4-spacing-md: calc(var(--id4-unit) * 1);
+    --id4-spacing-lg: calc(var(--id4-unit) * 2);
+    /* TEXT COLORS --------------------
+     - title
+     - description
+  -------------------------------- */
+    --id4-color-text-title: #2e3192;
+    --id4-color-text-desription: #000000;
+    /* RADIUS -------------------------
+     - card: 1.75 * unit ≈ 28px
+     - card small: 1 * unit ≈ 16px
+  -------------------------------- */
+    --id4-border-radius-card: calc(var(--id4-unit) * 1.75);
+    --id4-border-radius-card-small: calc(var(--id4-unit) * 1);
+    /* MISC ---------------------------
+     - text indent: 1.5625 * unit ≈ 25px
+  -------------------------------- */
+    --id4-text-indent: calc(var(--id4-unit) * 1.5625);
+    /* ARROW --------------------------
+     - width: 2.5 * unit ≈ 40px
+     - height: 2.1875 * unit ≈ 35px
+     - border: giữ px (ổn định)
+  -------------------------------- */
+    --arrow-width: calc(var(--id4-unit) * 2.5);
+    --arrow-height: calc(var(--id4-unit) * 2.1875);
+    --arrow-border-width: 3px;
+    /* BUTTON PADDING -----------------
+     - height: 0.625 * unit ≈ 10px
+     - width: 2.5 * unit ≈ 40px
+  -------------------------------- */
+    --id4-padding-height-button: calc(var(--id4-unit) * 0.625);
+    --id4-padding-width-button: calc(var(--id4-unit) * 2.5);
+    /* GAP ----------------
+     - height: 0.625 * unit ≈ 10px
+     - width: 2.5 * unit ≈ 40px
+  -------------------------------- */
+    --id4-gap: calc(var(--id4-unit) * 1.25);
+    --id4tv-shadow: 0 calc(var(--id4-unit) * 0.625) calc(var(--id4-unit) * 0.625) rgba(0, 0, 0, .10);
+}
+
 
 /* --- 1. CORE RESET SCOPED --- */
 
 #iD4_guide_CXCMC_impant_wrapper {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
+    font-family: var(--id4-font-main);
     color: var(--id4-color-text-desription);
     line-height: 1.6;
-    font-family: var(--id4-font-main);
     box-sizing: border-box;
     width: 100%;
     overflow-x: hidden;
@@ -27,7 +112,7 @@
 .iD4_guide_CXCMC_impant_container {
     max-width: var(--id4-container-width);
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 70px 20px 0 20px;
 }
 
 

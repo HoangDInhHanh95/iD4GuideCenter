@@ -5,7 +5,7 @@
 .id4_guide_stacktable_container {
     background-color: var(--id4-container-color-xam);
     margin: 0;
-    padding: 80px 1%;
+    padding: 80px 10px;
     display: flex;
     justify-content: center;
     align-items: center;

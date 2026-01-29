@@ -207,7 +207,7 @@
 
 @media (max-width: 768px) {
     .id4_DNBS_KT_container {
-        padding: 30px 15px;
+        padding: 80px 20px;
     }
 
     .id4_DNBS_KT_main-title {
@@ -225,7 +225,10 @@
     }
 
     .id4_DNBS_KT_description {
-        text-align: center;
+        font-family: var(--id4-font-main);
+        text-align: justify;
+        text-indent: var(--id4-text-indent);
+        color: var(--id4-color-text-desription);
         font-size: 14px;
     }
 

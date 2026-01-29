@@ -66,7 +66,7 @@
     font-size: var(--id4-font-size-title);
     font-weight: var(--id4-font-weight-title);
     text-transform: uppercase;
-    margin-bottom: 10px;
+    /* margin-bottom: 2px; */
     display: block;
 }
 

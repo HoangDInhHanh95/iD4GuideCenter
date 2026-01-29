@@ -5,7 +5,7 @@
 
 .iD-4-Bang-gia-main-wrapper {
     width: 100%;
-    padding: var(--id4-header-height) 20px;
+    padding: 60px 20px var(--id4-header-height) 20px;
     /* Padding trên dưới rộng hơn chút cho thoáng */
     background-color: #fff;
     display: flex;

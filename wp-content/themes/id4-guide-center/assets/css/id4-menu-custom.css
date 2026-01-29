@@ -9,7 +9,7 @@
     font-family: var(--id4-font-main);
     font-weight: var(--id4-font-weight-title);
     color: var(--id4-color-text-desription);
-    font-size: 12px !important;
+    font-size: 13px !important;
 }
 
 
@@ -73,7 +73,7 @@
 /* Hover Effect */
 
 #masthead .nav>li.id4-menu-btn-solid>a:hover {
-    opacity: 0.9;
+    /* opacity: 0.9; */
     transform: translateY(-2px);
 }
 
