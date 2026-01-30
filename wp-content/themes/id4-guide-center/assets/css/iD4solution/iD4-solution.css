@@ -2,21 +2,82 @@
 
 
 /* ============================================================
-           CSS COMPONENT (Tiền tố: id4_solution_)
+   ROOT (CHUẨN - dùng đúng biến bạn đưa, KHÔNG thêm biến mới)
+============================================================ */
+
+:root {
+    /* TYPOGRAPHY --------------------- */
+    --id4-font-main: 'Open Sans';
+    --id4-font-weight-big-bold: 900;
+    --id4-font-weight-small-bold: 700;
+    --id4-font-weight-title: 600;
+    --id4-font-weight-desript: 400;
+    /* COLORS ------------------------- */
+    --id4-container-color-xam: #f5f5f7;
+    --id4-button-color: #2e3192;
+    --id4-bordrer-color: #2e3192;
+    /* SCALE -------------------------- */
+    --id4-unit: 1rem;
+    /* FONT SIZES --------------------- */
+    --id4-font-size-title: calc(var(--id4-unit) * 2);
+    --id4-font-size-desription: calc(var(--id4-unit) * 1);
+    --id4-font-size-button: calc(var(--id4-unit) * 0.875);
+    /* LAYOUT SIZES ------------------- */
+    --id4-container-width: calc(var(--id4-unit) * 68.75);
+    --id4-header-height: calc(var(--id4-unit) * 5);
+    /* SPACING ------------------------ */
+    --id4-spacing-block: calc(var(--id4-unit) * 2.5);
+    --id4-spacing-sm: calc(var(--id4-unit) * 0.5);
+    --id4-spacing-md: calc(var(--id4-unit) * 1);
+    --id4-spacing-lg: calc(var(--id4-unit) * 2);
+    /* TEXT COLORS -------------------- */
+    --id4-color-text-title: #2e3192;
+    --id4-color-text-desription: #000000;
+    /* RADIUS ------------------------- */
+    --id4-border-radius-card: calc(var(--id4-unit) * 1.75);
+    --id4-border-radius-card-small: calc(var(--id4-unit) * 1);
+    /* MISC --------------------------- */
+    --id4-text-indent: calc(var(--id4-unit) * 1.5625);
+    /* ARROW -------------------------- */
+    --arrow-width: calc(var(--id4-unit) * 2.5);
+    --arrow-height: calc(var(--id4-unit) * 2.1875);
+    --arrow-border-width: 3px;
+    /* BUTTON PADDING ----------------- */
+    --id4-padding-height-button: calc(var(--id4-unit) * 0.625);
+    --id4-padding-width-button: calc(var(--id4-unit) * 2.5);
+    /* GAP ---------------------------- */
+    --id4-gap: calc(var(--id4-unit) * 1.25);
+    --id4tv-shadow: 0 calc(var(--id4-unit) * 0.625) calc(var(--id4-unit) * 0.625) rgba(0, 0, 0, .10);
+}
+
+
+/* BREAKPOINT SCALE */
+
+@media (max-width: 768px) {
+    :root {
+        --id4-unit: 0.9375rem;
+    }
+}
+
+@media (min-width: 1536px) {
+    :root {
+        --id4-unit: 1.0625rem;
+    }
+}
+
+
+/* ============================================================
+   COMPONENT: id4_solution_
 ============================================================ */
 
 .id4_solution_wrapper {
-    /* Biến màu sắc cục bộ */
-    padding: 80px 0px;
+    padding: calc(var(--id4-spacing-block) * 2) 0;
     background-color: var(--id4-container-color-xam);
     width: 100%;
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
 }
-
-
-/* Reset box-sizing cho tất cả phần tử con */
 
 .id4_solution_wrapper *,
 .id4_solution_wrapper *::before,
@@ -25,11 +86,11 @@
 }
 
 
-/* Nền kẻ sọc */
+/* Background */
 
 .id4_solution_background {
     width: 100%;
-    padding: var(--id4-spacing-block-lg) 20px;
+    /* padding: 80px 20px; */
     display: flex;
     justify-content: center;
     background-position: center top;
@@ -44,21 +105,21 @@
 }
 
 
-/* Layout Flexbox */
+/* Layout */
 
 .id4_solution_row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 80px;
+    gap: calc(var(--id4-spacing-block) * 2);
 }
 
 
-/* Cột nội dung */
+/* Content */
 
 .id4_solution_col_content {
     flex: 1;
-    max-width: 600px;
+    max-width: calc(var(--id4-unit) * 37.5);
 }
 
 .id4_solution_brand {
@@ -66,7 +127,6 @@
     font-size: var(--id4-font-size-title);
     font-weight: var(--id4-font-weight-title);
     text-transform: uppercase;
-    /* margin-bottom: 2px; */
     display: block;
 }
 
@@ -80,44 +140,42 @@
 }
 
 .id4_solution_desc p {
-    margin-bottom: 15px;
+    margin: 0 0 calc(var(--id4-unit) * 0.9375) 0;
     font-size: var(--id4-font-size-desription);
     color: var(--id4-color-text-desription);
     font-weight: var(--id4-font-weight-desript);
     text-align: justify;
-    margin-top: 0;
     text-indent: var(--id4-text-indent);
 }
 
 
-/* Nút bấm */
+/* Buttons */
 
 .id4_solution_actions {
-    margin-top: 25px;
+    margin-top: calc(var(--id4-unit) * 1.5625);
     display: flex;
-    gap: 20px;
+    gap: var(--id4-gap);
+    flex-wrap: wrap;
 }
 
 .id4_solution_btn {
     padding: var(--id4-padding-height-button) var(--id4-padding-width-button);
-    border-radius: 50px;
+    border-radius: calc(var(--id4-unit) * 3.125);
     cursor: pointer;
     font-family: var(--id4-font-main);
-    font-size: var(--id4-font-weight-desript);
+    font-size: var(--id4-font-size-button);
     font-weight: var(--id4-font-weight-small-bold);
-    transition: background-color 0.3s, opacity 0.3s, color 0.3s, border-color 0.3s;
+    transition: all .2s ease;
     display: inline-block;
     background-color: var(--id4-button-color);
-    color: white;
+    color: #fff;
     border: none;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .id4_solution_btn_primary {
-    /* background-color: var(--id4-button-color); */
-    color: #fff !important;
     border: 2px solid var(--id4-button-color);
-    /* box-shadow: 0 4px 10px rgba(49, 60, 163, 0.2); */
 }
 
 .id4_solution_btn_primary:hover {
@@ -137,36 +195,33 @@
 }
 
 
-/* Thống kê */
+/* Stats */
 
 .id4_solution_stats {
-    /* margin-top: 20px; */
     display: flex;
-    gap: 50px;
-    padding-top: 40px;
+    gap: calc(var(--id4-spacing-block) * 1.25);
+    padding-top: calc(var(--id4-spacing-block) * 1);
 }
 
 .id4_solution_stat_item {
-    /* display: flex; */
+    display: flex;
     flex-direction: column;
 }
 
 .id4_solution_stat_num {
-    font-size: 32px;
-    font-weight: 700;
+    font-size: calc(var(--id4-unit) * 2);
+    font-weight: var(--id4-font-weight-small-bold);
     color: var(--id4-color-text-title);
-    line-height: 1.2;
 }
 
 .id4_solution_stat_label {
-    font-size: 14px;
-    font-weight: 600;
-    color: #1a1a1a;
-    margin-top: 5px;
+    font-size: calc(var(--id4-unit) * 0.875);
+    font-weight: var(--id4-font-weight-title);
+    margin-top: -10px;
 }
 
 
-/* Cột hình ảnh */
+/* Image */
 
 .id4_solution_col_image {
     flex: 1;
@@ -179,16 +234,13 @@
     max-width: 100%;
     height: auto;
     display: block;
-    /* Bóng đổ tạo khối 3D */
-    /* filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15)); */
-    /* Animation */
     animation: id4_solution_floatIn 1s ease-out;
 }
 
 @keyframes id4_solution_floatIn {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(calc(var(--id4-unit) * 1.25));
     }
 
     to {
@@ -198,66 +250,133 @@
 }
 
 
-/* RESPONSIVE */
+/* ============================================================
+   RESPONSIVE
+============================================================ */
 
 
-/* Tablet (< 992px) */
+/* Tablet */
 
 @media (max-width: 992px) {
+    .id4_solution_wrapper {
+        padding: 80px 0;
+    }
+
     .id4_solution_row {
         flex-direction: column;
-        gap: 40px;
+        gap: calc(var(--id4-spacing-lg) * 1.25);
     }
 
     .id4_solution_col_content {
         max-width: 100%;
         order: 2;
-        /* Đẩy chữ xuống dưới */
     }
 
     .id4_solution_col_image {
         order: 1;
-        /* Đưa ảnh lên trên */
         width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .id4_solution_col_image img {
-        max-height: 400px;
-    }
-}
-
-
-/* Mobile (< 600px) */
-
-@media (max-width: 600px) {
-    .id4_solution_title {
-        font-size: 28px;
-    }
-
-    .id4_solution_desc p {
-        text-align: left;
-        text-align: justify;
-        text-indent: var(--id4-text-indent);
-    }
-
-    .id4_solution_actions {
-        flex-direction: column;
-        width: 100%;
-        gap: 0px !important;
-    }
-
-    .id4_solution_btn {
-        width: 100%;
-        text-align: center;
     }
 
     .id4_solution_stats {
         flex-wrap: wrap;
-        gap: 30px;
+        gap: calc(var(--id4-spacing-lg) * 1);
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .id4_solution_wrapper {
+        padding: 80px 20px;
+    }
+
+    .id4_solution_title {
+        font-size: calc(var(--id4-unit) * 1.75);
+    }
+
+    /* Buttons: 1 hàng */
+    .id4_solution_actions {
+        flex-direction: row;
+        width: 100%;
+        gap: var(--id4-spacing-sm);
+    }
+
+    .id4_solution_btn {
+        flex: 1;
+        text-align: center;
+        white-space: normal;
+    }
+
+    /* Stats: 1 hàng + CANH GIỮA */
+    .id4_solution_stats {
+        font-family: var(--id4-font-main);
+        color: var(--id4-color-text-title);
+        flex-wrap: nowrap;
+        justify-content: center;
+        /* canh giữa cả hàng */
+        align-items: center;
+        /* canh giữa theo trục dọc */
+        gap: var(--id4-spacing-lg);
+        /* giữ khoảng cách đẹp */
     }
 
     .id4_solution_stat_item {
-        width: 45%;
+        flex: 0 0 auto;
+        /* không kéo giãn, giữ gọn */
+        text-align: center;
+        /* canh giữa nội dung từng item */
+    }
+
+    @media (max-width: 600px) {
+
+        /* reset margin mặc định (thường là do thẻ p) */
+        .id4_solution_stat_num,
+        .id4_solution_stat_label,
+        .id4_solution_stat_item p {
+            margin: 0;
+        }
+
+        /* làm số sát hơn */
+        .id4_solution_stat_num {
+            line-height: 1.05;
+        }
+
+        /* giảm khoảng cách giữa số và chữ */
+        .id4_solution_stat_label {
+            margin-top: calc(var(--id4-unit) * -0.85);
+            /* ~2px */
+            line-height: 1.1;
+        }
+    }
+
+    .id4_solution_stat_num {
+        font-size: calc(var(--id4-unit) * 1.5);
+    }
+
+    .id4_solution_stat_label {
+        font-size: calc(var(--id4-unit) * 0.85);
+        white-space: nowrap;
+    }
+}
+
+
+/* Mobile nhỏ */
+
+@media (max-width: 380px) {
+    .id4_solution_actions {
+        flex-direction: column;
+    }
+
+    .id4_solution_btn {
+        width: 100%;
+    }
+
+    .id4_solution_stats {
+        flex-direction: column;
+    }
+
+    .id4_solution_stat_item {
+        text-align: center;
     }
 }

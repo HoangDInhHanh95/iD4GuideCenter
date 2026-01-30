@@ -131,8 +131,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: var(--id4-header-height) 20px;
+    padding: 50px 20px var(--id4-header-height) 20px;
     overflow-x: hidden;
+    position: relative;
+    top: -1px;
+}
+
+@media (max-width: 600px) {
+    .id4-cktc5p-wrapper {
+        background-image: url("/wp-content/uploads/2026/01/BG-MOBILE.png");
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+    }
 }
 
 
@@ -379,7 +390,6 @@
 @media (max-width: 992px) {
     .id4-cktc5p-content-area {
         flex-direction: column;
-        /* Chuyển thành cột dọc */
         gap: 40px;
     }
 
@@ -396,7 +406,7 @@
 
     .id4-cktc5p-list {
         width: 100%;
-        padding: 0 20px;
+        /* padding: 0px 0px var(--id4-header-height) 0px; */
     }
 
     /* Reset toàn bộ margin để thẳng hàng */
@@ -410,7 +420,7 @@
 
 @media (max-width: 600px) {
     .id4-cktc5p-wrapper {
-        padding: 10px;
+        padding-top: var(--id4-header-height);
     }
 
     .id4-cktc5p-title {

@@ -1,4 +1,66 @@
-/* === CORE RESET & BASE STYLES === */
+/* ================================
+   ROOT (THEO FILE CHUẨN CỦA BẠN)
+================================ */
+
+:root {
+    --id4-font-main: 'Open Sans';
+    --id4-font-weight-big-bold: 900;
+    --id4-font-weight-small-bold: 700;
+    --id4-font-weight-title: 600;
+    --id4-font-weight-desript: 400;
+    --id4-container-color-xam: #f5f5f7;
+    --id4-button-color: #2e3192;
+    --id4-bordrer-color: #2e3192;
+    --id4-unit: 1rem;
+    --id4-font-size-title: calc(var(--id4-unit) * 2);
+    --id4-font-size-desription: calc(var(--id4-unit) * 1);
+    --id4-font-size-button: calc(var(--id4-unit) * 0.875);
+    --id4-container-width: calc(var(--id4-unit) * 68.75);
+    --id4-header-height: calc(var(--id4-unit) * 5);
+    --id4-spacing-block: calc(var(--id4-unit) * 2.5);
+    --id4-spacing-sm: calc(var(--id4-unit) * 0.5);
+    --id4-spacing-md: calc(var(--id4-unit) * 1);
+    --id4-spacing-lg: calc(var(--id4-unit) * 2);
+    --id4-color-text-title: #2e3192;
+    --id4-color-text-desription: #000000;
+    --id4-border-radius-card: calc(var(--id4-unit) * 1.75);
+    --id4-border-radius-card-small: calc(var(--id4-unit) * 1);
+    --id4-text-indent: calc(var(--id4-unit) * 1.5625);
+    --arrow-width: calc(var(--id4-unit) * 2.5);
+    --arrow-height: calc(var(--id4-unit) * 2.1875);
+    --arrow-border-width: 3px;
+    --id4-padding-height-button: calc(var(--id4-unit) * 0.625);
+    --id4-padding-width-button: calc(var(--id4-unit) * 2.5);
+    --id4-gap: calc(var(--id4-unit) * 1.25);
+    --id4tv-shadow: 0 calc(var(--id4-unit) * 0.625) calc(var(--id4-unit) * 0.625) rgba(0, 0, 0, .10);
+    /* ==== STATS UI (theo ảnh) ==== */
+    --id4-stats-bg: #ffffff;
+    --id4-stats-sep: rgba(0, 0, 0, 0.10);
+    --id4-stats-radius: calc(var(--id4-unit) * 0.75);
+    --id4-stats-padding-y: calc(var(--id4-unit) * 0.9);
+    --id4-stats-padding-x: calc(var(--id4-unit) * 1.0);
+    --id4-stats-number-size: calc(var(--id4-unit) * 1.5);
+    /* số lớn như ảnh */
+    --id4-stats-label-size: calc(var(--id4-unit) * 0.85);
+    /* chữ nhỏ */
+}
+
+@media (max-width: 768px) {
+    :root {
+        --id4-unit: 0.9375rem;
+    }
+}
+
+@media (min-width: 1536px) {
+    :root {
+        --id4-unit: 1.0625rem;
+    }
+}
+
+
+/* ================================
+   iD-4 GIỚI THIỆU - FULL CSS
+================================ */
 
 
 /* === CORE RESET & BASE STYLES === */
@@ -9,16 +71,32 @@
     padding: 0;
 }
 
+
+/* ===== BACKGROUND DESKTOP + TABLET ===== */
+
 .iD-4-gioi-thieu-wrapper {
     background-image: url("http://localhost/iD4GuideCenter/wp-content/uploads/2026/01/Artboard-4-6@2x.png");
     background-repeat: no-repeat;
-    background-position: center bottom;
+    background-position: center bottom !important;
     background-size: 100% auto;
-    /* kích thước 100% */
-    /* line-height: 1.6; */
     width: 100%;
     overflow-x: hidden;
-    padding: var(--id4-header-height) 20px var(--arrow-width) 20px;
+    padding: var(--id4-header-height) 20px 20px 20px;
+}
+
+
+/* ===== BACKGROUND MOBILE ===== */
+
+@media (max-width: 768px) {
+    .iD-4-gioi-thieu-wrapper {
+        background-image: url("http://localhost/iD4GuideCenter/wp-content/uploads/2026/01/bg-mobile.png");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: cover;
+        width: 100%;
+        overflow-x: hidden;
+        padding: 80px 20px;
+    }
 }
 
 .iD-4-gioi-thieu-container {
@@ -32,12 +110,11 @@
 .iD-4-gioi-thieu-main-title {
     font-family: var(--id4-font-main);
     color: var(--id4-color-text-title);
-    /* Xanh đậm thương hiệu */
     font-size: var(--id4-font-size-title);
     font-weight: var(--id4-font-weight-title);
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 40px;
+    margin-bottom: var(--id4-spacing-block);
 }
 
 .iD-4-gioi-thieu-sub-heading {
@@ -45,8 +122,8 @@
     color: var(--id4-color-text-title);
     font-size: var(--id4-font-size-title);
     font-weight: var(--id4-font-weight-title);
-    margin-bottom: 15px;
-    margin-top: 30px;
+    margin-bottom: var(--id4-spacing-sm);
+    margin-top: var(--id4-spacing-lg);
 }
 
 .iD-4-gioi-thieu-sub-heading:first-of-type {
@@ -57,22 +134,26 @@
     font-family: var(--id4-font-main);
     font-size: var(--id4-font-size-desription);
     color: var(--id4-color-text-desription);
-    margin-bottom: 20px;
+    margin-bottom: var(--id4-spacing-md);
     text-align: justify;
     text-indent: var(--id4-text-indent);
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
 
 .iD-4-gioi-thieu-quote {
     font-style: italic;
-    border-left: 4px solid var(--id4-button-color);
+    border-left: var(--arrow-border-width) solid var(--id4-button-color);
     background: var(--id4-container-color-xam);
     color: var(--id4-color-text-desription);
     font-size: var(--id4-font-size-desription);
     text-indent: var(--id4-text-indent);
     text-align: justify;
-    padding: 20px;
-    border-radius: 0 12px 12px 0;
-    margin: 25px 0;
+    padding: var(--id4-spacing-md);
+    border-radius: 0 var(--id4-border-radius-card-small) var(--id4-border-radius-card-small) 0;
+    margin: var(--id4-spacing-md) 0;
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
 
 
@@ -81,62 +162,93 @@
 .iD-4-gioi-thieu-content-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: var(--id4-spacing-block);
+    align-items: flex-start;
 }
-
-
-/* Left Column (Text) */
 
 .iD-4-gioi-thieu-text-col {
     flex: 1 1 45%;
-    min-width: 300px;
+    min-width: calc(var(--id4-unit) * 20);
 }
-
-
-/* Right Column (Images) */
 
 .iD-4-gioi-thieu-image-col {
     flex: 1 1 45%;
-    min-width: 300px;
+    min-width: calc(var(--id4-unit) * 20);
     position: relative;
-    min-height: 650px;
-    padding: 20px;
+    min-height: calc(var(--id4-unit) * 40.625);
+    padding: var(--id4-spacing-md);
 }
 
 
-/* === STATS SECTION === */
+/* =========================================================
+   STATS SECTION (THEO GIAO DIỆN ẢNH: 3 CỘT + VẠCH NGĂN)
+========================================================= */
+
+
+/* Row dạng “thanh” như ảnh */
 
 .iD-4-gioi-thieu-stats-row {
-    font-family: var(--id4-font-main);
-    font-size: var(--id4-font-size-desription);
-    color: var(--id4-color-text-desription);
-    display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-    border-top: 1px solid var(--id4-color-text-desription);
-    padding-top: 20px;
-    flex-wrap: wrap;
-    gap: 20px;
+    margin-top: var(--id4-spacing-block);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+    /* background: var(--id4-stats-bg); */
+    /* border-radius: var(--id4-stats-radius); */
+    /* box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06); */
+    overflow: hidden;
 }
+
+
+/* Mỗi item canh giữa, số trên - chữ dưới */
 
 .iD-4-gioi-thieu-stat-item {
-    flex: 1;
-    min-width: 120px;
+    font-family: var(--id4-font-main);
+    padding: var(--id4-stats-padding-y) var(--id4-stats-padding-x);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: calc(var(--id4-spacing-sm) * 0.35);
+    position: relative;
 }
 
+
+/* Vạch ngăn giữa các cột */
+
+
+/* .iD-4-gioi-thieu-stat-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 18%;
+    bottom: 18%;
+    right: 0;
+    width: 1px;
+    background: var(--id4-stats-sep);
+} */
+
+
+/* Số lớn màu xanh */
+
 .iD-4-gioi-thieu-stat-number {
-    color: #2a3b90;
-    font-size: 32px;
-    font-weight: 800;
-    display: block;
-    line-height: 1.2;
+    color: var(--id4-color-text-title);
+    font-size: var(--id4-stats-number-size);
+    font-weight: var(--id4-font-weight-big-bold);
+    line-height: 1.1;
+    white-space: nowrap;
 }
+
+
+/* Chữ nhỏ bên dưới */
 
 .iD-4-gioi-thieu-stat-label {
     font-family: var(--id4-font-main);
-    font-size: var(--id4-font-size-desription);
+    font-size: var(--id4-stats-label-size);
     color: var(--id4-color-text-desription);
     font-weight: var(--id4-font-weight-small-bold);
+    line-height: 1.2;
+    white-space: nowrap;
+    /* giống ảnh: 1 dòng */
 }
 
 
@@ -144,16 +256,16 @@
 
 .iD-4-gioi-thieu-img-card {
     position: absolute;
-    border-radius: 20px;
+    border-radius: var(--id4-border-radius-card-small);
     overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--id4tv-shadow);
     background: #fff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .iD-4-gioi-thieu-img-card:hover {
-    transform: translateY(-5px) scale(1.01);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(calc(var(--id4-unit) * -0.3125)) scale(1.01);
+    box-shadow: 0 calc(var(--id4-unit) * 1.25) calc(var(--id4-unit) * 2.5) rgba(0, 0, 0, 0.2);
 }
 
 .iD-4-gioi-thieu-img-card img {
@@ -162,12 +274,6 @@
     object-fit: cover;
     display: block;
 }
-
-
-/* --- Vị trí và Thứ tự xếp chồng (Z-Index) --- */
-
-
-/* Ảnh 1: Bảng hiệu (Top Left) */
 
 .iD-4-gioi-thieu-img-1 {
     width: 60%;
@@ -181,15 +287,12 @@
     z-index: 11;
 }
 
-
-/* Ảnh 2: Máy móc (Center Right) */
-
 .iD-4-gioi-thieu-img-2 {
     width: 70%;
     aspect-ratio: 4/3;
     top: 22%;
     right: 0;
-    border: 2px solid #fff;
+    border: calc(var(--id4-unit) * 0.125) solid #fff;
     z-index: 20;
 }
 
@@ -197,140 +300,144 @@
     z-index: 21;
 }
 
-
-/* Ảnh 3: Mẫu hàm (Bottom Left) - LUÔN NẰM TRÊN CÙNG */
-
 .iD-4-gioi-thieu-img-3 {
     width: 58%;
     aspect-ratio: 16/10;
     bottom: 26%;
     left: 5%;
     background-color: #1a1a1a;
-    border: 2px solid #fff;
+    border: calc(var(--id4-unit) * 0.125) solid #fff;
     z-index: 30;
-    /* Z-index cao nhất */
 }
 
 .iD-4-gioi-thieu-img-3:hover {
     z-index: 31;
 }
 
-
-/* Họa tiết chấm bi */
-
 .iD-4-gioi-thieu-dots-pattern {
     position: absolute;
     bottom: 10%;
     right: 18%;
-    width: 150px;
-    height: 200px;
+    width: calc(var(--id4-unit) * 9.375);
+    height: calc(var(--id4-unit) * 12.5);
     z-index: 1;
-    background-image: radial-gradient(var(--id4-button-color) 2.5px, transparent 2.5px);
-    background-size: 20px 20px;
+    background-image: radial-gradient(var(--id4-button-color) calc(var(--id4-unit) * 0.15625), transparent calc(var(--id4-unit) * 0.15625));
+    background-size: calc(var(--id4-unit) * 1.25) calc(var(--id4-unit) * 1.25);
     opacity: 0.7;
 }
 
 
-/* === RESPONSIVE MEDIA QUERIES === */
+/* =========================
+   RESPONSIVE
+========================= */
 
 
-/* Tablet (Dưới 1024px) */
+/* Tablet (<= 1024px) */
 
 @media (max-width: 1024px) {
     .iD-4-gioi-thieu-image-col {
-        min-height: 550px;
+        min-height: calc(var(--id4-unit) * 34.375);
+        padding: var(--id4-spacing-sm);
     }
 
-    .iD-4-gioi-thieu-main-title {
-        font-size: 22px;
+    /* stats vẫn 3 cột, nhưng chữ nhỏ hơn nhẹ */
+    .iD-4-gioi-thieu-stat-number {
+        font-size: calc(var(--id4-stats-number-size) * 0.95);
+    }
+
+    .iD-4-gioi-thieu-stat-label {
+        font-size: calc(var(--id4-stats-label-size) * 0.95);
     }
 }
 
 
-/* Mobile & Tablet nhỏ (Dưới 768px) */
+/* Mobile & Tablet nhỏ (<= 768px) */
 
 @media (max-width: 768px) {
     .iD-4-gioi-thieu-content-row {
         flex-direction: column;
-        gap: 40px;
+        gap: var(--id4-spacing-lg);
     }
 
-    /* --- ĐẨY CỘT HÌNH ẢNH LÊN TRÊN --- */
     .iD-4-gioi-thieu-image-col {
         order: -1;
-        /* Đảo thứ tự hiển thị: Hình ảnh lên đầu */
-        /* Reset layout cho cột ảnh trên mobile */
+        position: static;
         flex: auto;
         width: 100%;
         min-height: auto;
         padding: 0;
         display: flex;
         flex-direction: column;
-        gap: 25px;
-        margin-bottom: 20px;
-        /* Thêm khoảng cách dưới với phần chữ */
+        gap: var(--id4-gap);
+        margin-bottom: var(--id4-spacing-sm);
     }
 
     .iD-4-gioi-thieu-text-col {
         flex: auto;
         width: 100%;
+        min-width: auto;
     }
 
-    /* Reset style ảnh cho mobile */
     .iD-4-gioi-thieu-img-card {
         position: static;
         width: 100%;
         aspect-ratio: 16/9;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--id4tv-shadow);
         border: none;
         z-index: auto !important;
+        transform: none;
     }
 
     .iD-4-gioi-thieu-img-card:hover {
         transform: none;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--id4tv-shadow);
     }
 
     .iD-4-gioi-thieu-dots-pattern {
         display: none;
     }
 
-    /* Stats */
+    /* Stats: vẫn giữ 3 cột 1 hàng như ảnh */
     .iD-4-gioi-thieu-stats-row {
-        justify-content: flex-start;
-        gap: 25px;
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .iD-4-gioi-thieu-stat-item {
-        flex: 0 0 auto;
-        margin-right: 20px;
-    }
-
+    /* chữ co lại để không vỡ layout */
     .iD-4-gioi-thieu-stat-number {
-        font-size: 28px;
+        font-size: calc(var(--id4-stats-number-size) * 0.9);
+    }
+
+    .iD-4-gioi-thieu-stat-label {
+        font-size: calc(var(--id4-stats-label-size) * 0.9);
     }
 }
 
 
-/* Mobile nhỏ (Dưới 480px) */
+/* Mobile nhỏ (<= 480px) */
 
 @media (max-width: 480px) {
-    .iD-4-gioi-thieu-main-title {
-        font-size: 20px;
-        text-align: center;
+
+    .iD-4-gioi-thieu-paragraph,
+    .iD-4-gioi-thieu-quote {
+        text-indent: 0;
     }
 
-    .iD-4-gioi-thieu-stat-item {
-        flex: 1 1 100%;
-        text-align: left;
-        margin-right: 0;
-        display: flex;
-        align-items: center;
-        gap: 15px;
+    /* nếu màn quá hẹp: cho label tự xuống dòng (tránh tràn) */
+    .iD-4-gioi-thieu-stat-label {
+        white-space: normal;
     }
 
     .iD-4-gioi-thieu-stat-number {
-        font-size: 24px;
-        margin-bottom: 0;
+        font-size: calc(var(--id4-stats-number-size) * 0.85);
+    }
+
+    .iD-4-gioi-thieu-stat-label {
+        font-size: calc(var(--id4-stats-label-size) * 0.9);
+    }
+
+    /* vạch ngăn mềm hơn */
+    .iD-4-gioi-thieu-stat-item:not(:last-child)::after {
+        top: 22%;
+        bottom: 22%;
     }
 }

@@ -1,0 +1,336 @@
+/* === CORE RESET & BASE STYLES === */
+
+
+/* === CORE RESET & BASE STYLES === */
+
+.iD-4-gioi-thieu-wrapper * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.iD-4-gioi-thieu-wrapper {
+    /* background-image: url("http://localhost/iD4GuideCenter/wp-content/uploads/2026/01/Artboard-4-6@2x.png"); */
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% auto;
+    /* kích thước 100% */
+    /* line-height: 1.6; */
+    width: 100%;
+    overflow-x: hidden;
+    padding: var(--id4-header-height) 20px var(--arrow-width) 20px;
+}
+
+.iD-4-gioi-thieu-container {
+    max-width: var(--id4-container-width);
+    margin: 0 auto;
+}
+
+
+/* === TYPOGRAPHY === */
+
+.iD-4-gioi-thieu-main-title {
+    font-family: var(--id4-font-main);
+    color: var(--id4-color-text-title);
+    /* Xanh đậm thương hiệu */
+    font-size: var(--id4-font-size-title);
+    font-weight: var(--id4-font-weight-title);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.iD-4-gioi-thieu-sub-heading {
+    font-family: var(--id4-font-main);
+    color: var(--id4-color-text-title);
+    font-size: var(--id4-font-size-title);
+    font-weight: var(--id4-font-weight-title);
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.iD-4-gioi-thieu-sub-heading:first-of-type {
+    margin-top: 0;
+}
+
+.iD-4-gioi-thieu-paragraph {
+    font-family: var(--id4-font-main);
+    font-size: var(--id4-font-size-desription);
+    color: var(--id4-color-text-desription);
+    margin-bottom: 20px;
+    text-align: justify;
+    text-indent: var(--id4-text-indent);
+}
+
+.iD-4-gioi-thieu-quote {
+    font-style: italic;
+    border-left: 4px solid var(--id4-button-color);
+    background: var(--id4-container-color-xam);
+    color: var(--id4-color-text-desription);
+    font-size: var(--id4-font-size-desription);
+    text-indent: var(--id4-text-indent);
+    text-align: justify;
+    padding: 20px;
+    border-radius: 0 12px 12px 0;
+    margin: 25px 0;
+}
+
+
+/* === MAIN LAYOUT (FLEXBOX) === */
+
+.iD-4-gioi-thieu-content-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+
+/* Left Column (Text) */
+
+.iD-4-gioi-thieu-text-col {
+    flex: 1 1 45%;
+    min-width: 300px;
+}
+
+
+/* Right Column (Images) */
+
+.iD-4-gioi-thieu-image-col {
+    flex: 1 1 45%;
+    min-width: 300px;
+    position: relative;
+    min-height: 650px;
+    padding: 20px;
+}
+
+
+/* === STATS SECTION === */
+
+.iD-4-gioi-thieu-stats-row {
+    font-family: var(--id4-font-main);
+    font-size: var(--id4-font-size-desription);
+    color: var(--id4-color-text-desription);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    border-top: 1px solid var(--id4-color-text-desription);
+    padding-top: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.iD-4-gioi-thieu-stat-item {
+    flex: 1;
+    min-width: 120px;
+}
+
+.iD-4-gioi-thieu-stat-number {
+    color: #2a3b90;
+    font-size: 32px;
+    font-weight: 800;
+    display: block;
+    line-height: 1.2;
+}
+
+.iD-4-gioi-thieu-stat-label {
+    font-family: var(--id4-font-main);
+    font-size: var(--id4-font-size-desription);
+    color: var(--id4-color-text-desription);
+    font-weight: var(--id4-font-weight-small-bold);
+}
+
+
+/* === COMPLEX IMAGE LAYOUT STYLES (DESKTOP) === */
+
+.iD-4-gioi-thieu-img-card {
+    position: absolute;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.05);
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.iD-4-gioi-thieu-img-card:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.iD-4-gioi-thieu-img-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* --- Vị trí và Thứ tự xếp chồng (Z-Index) --- */
+
+
+/* Ảnh 1: Bảng hiệu (Top Left) */
+
+.iD-4-gioi-thieu-img-1 {
+    width: 60%;
+    aspect-ratio: 16/10;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.iD-4-gioi-thieu-img-1:hover {
+    z-index: 11;
+}
+
+
+/* Ảnh 2: Máy móc (Center Right) */
+
+.iD-4-gioi-thieu-img-2 {
+    width: 70%;
+    aspect-ratio: 4/3;
+    top: 22%;
+    right: 0;
+    border: 2px solid #fff;
+    z-index: 20;
+}
+
+.iD-4-gioi-thieu-img-2:hover {
+    z-index: 21;
+}
+
+
+/* Ảnh 3: Mẫu hàm (Bottom Left) - LUÔN NẰM TRÊN CÙNG */
+
+.iD-4-gioi-thieu-img-3 {
+    width: 58%;
+    aspect-ratio: 16/10;
+    bottom: 26%;
+    left: 5%;
+    background-color: #1a1a1a;
+    border: 2px solid #fff;
+    z-index: 30;
+    /* Z-index cao nhất */
+}
+
+.iD-4-gioi-thieu-img-3:hover {
+    z-index: 31;
+}
+
+
+/* Họa tiết chấm bi */
+
+.iD-4-gioi-thieu-dots-pattern {
+    position: absolute;
+    bottom: 10%;
+    right: 18%;
+    width: 150px;
+    height: 200px;
+    z-index: 1;
+    background-image: radial-gradient(var(--id4-button-color) 2.5px, transparent 2.5px);
+    background-size: 20px 20px;
+    opacity: 0.7;
+}
+
+
+/* === RESPONSIVE MEDIA QUERIES === */
+
+
+/* Tablet (Dưới 1024px) */
+
+@media (max-width: 1024px) {
+    .iD-4-gioi-thieu-image-col {
+        min-height: 550px;
+    }
+
+    .iD-4-gioi-thieu-main-title {
+        font-size: 22px;
+    }
+}
+
+
+/* Mobile & Tablet nhỏ (Dưới 768px) */
+
+@media (max-width: 768px) {
+    .iD-4-gioi-thieu-content-row {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    /* --- ĐẨY CỘT HÌNH ẢNH LÊN TRÊN --- */
+    .iD-4-gioi-thieu-image-col {
+        order: -1;
+        /* Đảo thứ tự hiển thị: Hình ảnh lên đầu */
+        /* Reset layout cho cột ảnh trên mobile */
+        flex: auto;
+        width: 100%;
+        min-height: auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-bottom: 20px;
+        /* Thêm khoảng cách dưới với phần chữ */
+    }
+
+    .iD-4-gioi-thieu-text-col {
+        flex: auto;
+        width: 100%;
+    }
+
+    /* Reset style ảnh cho mobile */
+    .iD-4-gioi-thieu-img-card {
+        position: static;
+        width: 100%;
+        aspect-ratio: 16/9;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border: none;
+        z-index: auto !important;
+    }
+
+    .iD-4-gioi-thieu-img-card:hover {
+        transform: none;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .iD-4-gioi-thieu-dots-pattern {
+        display: none;
+    }
+
+    /* Stats */
+    .iD-4-gioi-thieu-stats-row {
+        justify-content: flex-start;
+        gap: 25px;
+    }
+
+    .iD-4-gioi-thieu-stat-item {
+        flex: 0 0 auto;
+        margin-right: 20px;
+    }
+
+    .iD-4-gioi-thieu-stat-number {
+        font-size: 28px;
+    }
+}
+
+
+/* Mobile nhỏ (Dưới 480px) */
+
+@media (max-width: 480px) {
+    .iD-4-gioi-thieu-main-title {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .iD-4-gioi-thieu-stat-item {
+        flex: 1 1 100%;
+        text-align: left;
+        margin-right: 0;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .iD-4-gioi-thieu-stat-number {
+        font-size: 24px;
+        margin-bottom: 0;
+    }
+}

@@ -32,7 +32,7 @@
 /* Wrapper cho bảng để xử lý scroll trên mobile */
 
 .iD-4-Bang-gia-table-scroll {
-    width: 75%;
+    width: 100%;
     max-width: var(--id4-container-width);
     box-shadow: 0 12px 30px -18px rgba(0, 0, 0, .53);
     overflow-x: auto;
@@ -134,7 +134,7 @@
 
 @media (max-width: 992px) {
     .iD-4-Bang-gia-main-wrapper {
-        padding: 20px 10px;
+        padding: 80px 20px;
     }
 
     .iD-4-Bang-gia-cell {
