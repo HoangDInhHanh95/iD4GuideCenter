@@ -74,12 +74,12 @@
 .id4-guide-cg-noi-gi-testimonial-item__quote-icon {
     position: absolute;
     top: 15px;
-    left: 20px;
+    left: 25px;
     z-index: 2;
     content: "";
-    width: 40px;
-    height: 30px;
-    background-image: url("http://localhost/iD4Center/wp-content/uploads/2025/09/icon-dau-ngoac@4x.png");
+    width: 150px;
+    height: 36px;
+    background-image: url("http://localhost/iD4GuideCenter/wp-content/uploads/2026/02/5-ngoi-sao-@3x.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;

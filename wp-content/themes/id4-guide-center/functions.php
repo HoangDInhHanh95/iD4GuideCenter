@@ -67,11 +67,11 @@ add_action('wp_enqueue_scripts', function () {
     }
 
     // custom id4-menu-custom.css
-    $iD4_menu_custom = get_stylesheet_directory() . '/assets/css/iD4-menu-custom.css';
+    $iD4_menu_custom = get_stylesheet_directory() . '/assets/css/id4-menu-custom.css';
     if (file_exists($iD4_menu_custom)) {
         wp_enqueue_style(
             'id4-iD4-menu-custom-css',
-            get_stylesheet_directory_uri() . '/assets/css/iD4-menu-custom.css',
+            get_stylesheet_directory_uri() . '/assets/css/id4-menu-custom.css',
             array(),
             filemtime($iD4_menu_custom)
         );

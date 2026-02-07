@@ -42,7 +42,7 @@ jQuery(document).ready(function($) {
     const linkDriveLienHe = "https://drive.google.com/drive/folders/LINK-CUA-BAN-1";
 
     // Link cho nút "Đặt máng ngay" (Nền đặc)
-    const linkDriveDatMang = "https://docs.google.com/forms/d/e/1FAIpQLSeveLdr5y5nTa6x9Kkr_Wr6lJ94Bo1I01QhqEIPRqvRASl9sA/viewform?pli=1";
+    const linkDriveDatMang = "https://docs.google.com/forms/d/e/1FAIpQLSctOLaFgMYk1b7eOppb-T5IwcpjWTACY0rMchHElkTbX0C5Lg/viewform";
 
 
     // ---------------------------------------------
