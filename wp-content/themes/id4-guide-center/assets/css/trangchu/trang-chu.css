@@ -1,5 +1,11 @@
 /* Thiết lập cơ bản */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .iD4_guide-section {
     background-color: var(--id4-container-color-xam);
     padding: 80px 10px 40px 10px;
@@ -103,7 +109,7 @@
 .iD4_guide-btn-secondary {
     background-color: transparent;
     color: var(--id4-button-color);
-    border: 1px solid var(--id4-bordrer-color);
+    border: var(--id4-border);
 }
 
 .iD4_guide-btn-secondary:hover {
@@ -178,3 +184,25 @@
         max-width: 90%;
     }
 }
+
+
+/* code css banner trang chủ  */
+
+
+/* ===========================start======================= */
+
+.banner-container {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.responsive-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 1920 / 730;
+}
+
+
+/* ========================= end ========================== */

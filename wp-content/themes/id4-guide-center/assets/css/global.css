@@ -78,6 +78,7 @@ body {
   -------------------------------- */
    --id4-border-radius-card: calc(var(--id4-unit) * 1.75);
    --id4-border-radius-card-small: calc(var(--id4-unit) * 1);
+   --id4-border: 2px solid var(--id4-bordrer-color) !important;
    /* MISC ---------------------------
      - text indent: 1.5625 * unit ≈ 25px
   -------------------------------- */
