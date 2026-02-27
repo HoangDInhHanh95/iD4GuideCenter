@@ -84,6 +84,10 @@
     /* Cho phép phần văn bản chiếm không gian còn lại */
 }
 
+.id4_tsnc_feature-text .id4_tsnc_feature.description {
+    text-indent: var(--id4-text-indent);
+}
+
 .id4_tsnc_feature-title {
     font-family: var(--id4-font-main);
     font-size: var(--id4-font-size-desription);
@@ -152,5 +156,9 @@
 
     .id4_tsnc_feature-description {
         font-size: 14px;
+    }
+
+    .id4_tsnc_feature-text .id4_tsnc_feature.description {
+        text-indent: var(--id4-text-indent);
     }
 }
